@@ -1,43 +1,107 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rkowert.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Home page Dr. Rachel Kowert containing information on her research, publications, and current projects",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.1.31",
-    "gatsby-image": "^2.0.33",
-    "gatsby-plugin-manifest": "^2.0.24",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.9",
-    "gatsby-plugin-sharp": "^2.0.28",
-    "gatsby-source-filesystem": "^2.0.24",
-    "gatsby-transformer-sharp": "^2.1.17",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.16.4"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "author": "Dr. Rachel Kowert <rkowert@gmail.com>",
+  "homepage": "https://rkowert.com",
+  "keywords": [],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkowert/rkowert.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rkowert/rkowert.com/issues"
+  },
   "scripts": {
     "build": "gatsby build",
+    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) rkowert.com",
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "dry": "yarn build && cp now.json public/ && cd public && now",
+    "format": "prettier --write '{gatsby-*.js,src/**/*.{css,js,json,ts,tsx}}'",
+    "lint": "./node_modules/.bin/eslint --ext .js,.ts,.tsx --ignore-pattern public .",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  "browserslist": "last 2 versions",
+  "dependencies": {
+    "eslint-plugin-prettier": "^3.0.1",
+    "gatsby": "^2.1.31",
+    "gatsby-image": "^2.0.33",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-postcss": "^2.0.6",
+    "gatsby-plugin-react-helmet": "^3.0.9",
+    "gatsby-plugin-sharp": "^2.0.29",
+    "gatsby-plugin-typescript": "^2.0.11",
+    "gatsby-remark-autolink-headers": "^2.0.16",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-source-filesystem": "^2.0.24",
+    "gatsby-transformer-remark": "^2.3.5",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "gatsby-transformer-typescript-css-modules": "^1.0.14",
+    "postcss-nesting": "^7.0.0",
+    "postcss-normalize": "^7.0.1",
+    "postcss-preset-env": "^6.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-headroom": "^2.2.8",
+    "react-helmet": "^5.2.0"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "devDependencies": {
+    "@types/react-headroom": "^2.2.1",
+    "@types/react-helmet": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-eslint": "^2.0.4",
+    "prettier": "^1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "typescript": "^3.3.3333"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "prettier/react"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": "error"
+    }
   }
 }

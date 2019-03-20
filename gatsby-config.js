@@ -1,34 +1,108 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: 'Dr. Rachel Kowert',
+    description:
+      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    keywords: '',
+    navLinks: [
+      {
+        name: 'blog',
+        link: '/blog',
+      },
+      {
+        name: 'about',
+        link: '/about',
+      },
+      {
+        name: 'publications',
+        link: '/publications',
+      },
+      {
+        name: 'media',
+        link: '/media',
+      },
+      {
+        name: 'contact',
+        link: '/contact',
+      },
+    ],
+    siteUrl: 'https://rkowert.com',
+    social: {
+      gscholar: 'DKS1kSQAAAAJ',
+      linkedin: 'rachelkowert',
+      researchGate: 'Rachel_Kowert',
+      twitter: 'linacaruso',
+    },
+    title: 'Gatsby Default Starter',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-eslint',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-alias-imports',
       options: {
-        name: `images`,
+        alias: {
+          components: 'src/components',
+          utils: 'src/utils',
+        },
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-typescript-css-modules',
+    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog-posts',
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1.0725rem',
+            },
+          },
+          'gatsby-remark-autolink-headers',
+          // 'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-external-links',
+        ],
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};

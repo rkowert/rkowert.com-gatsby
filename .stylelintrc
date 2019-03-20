@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-empty-line-before": [ "always", {
+      "ignore": ["after-comment", "blockless-after-blockless"]
+    } ]
+  }
+}
