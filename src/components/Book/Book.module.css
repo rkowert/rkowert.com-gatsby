@@ -1,0 +1,12 @@
+.BuyButtons {
+  display: flex;
+  flex-flow: row wrap;
+
+  & a {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

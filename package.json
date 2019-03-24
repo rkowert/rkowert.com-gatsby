@@ -22,12 +22,15 @@
     "dry": "yarn build && cp now.json public/ && cd public && now",
     "format": "prettier --write '{gatsby-*.js,src/**/*.{css,js,json,ts,tsx}}'",
     "lint": "./node_modules/.bin/eslint --ext .js,.ts,.tsx --ignore-pattern public .",
+    "new": "ts-node ./scripts/new.ts",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "browserslist": "last 2 versions",
   "dependencies": {
+    "@types/inquirer": "^6.0.0",
+    "@types/moment": "^2.13.0",
     "eslint-plugin-prettier": "^3.0.1",
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
@@ -38,6 +41,7 @@
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.0.29",
     "gatsby-plugin-typescript": "^2.0.11",
+    "gatsby-plugin-typography": "^2.2.10",
     "gatsby-remark-autolink-headers": "^2.0.16",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.0.10",
@@ -47,6 +51,8 @@
     "gatsby-transformer-remark": "^2.3.5",
     "gatsby-transformer-sharp": "^2.1.17",
     "gatsby-transformer-typescript-css-modules": "^1.0.14",
+    "inquirer": "^6.2.2",
+    "moment": "^2.24.0",
     "postcss-nesting": "^7.0.0",
     "postcss-normalize": "^7.0.1",
     "postcss-preset-env": "^6.6.0",
@@ -54,7 +60,13 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-headroom": "^2.2.8",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.5.0",
+    "react-typography": "^0.16.19",
+    "ts-node": "^8.0.3",
+    "typography": "^0.16.19",
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "wizard": "^2.0.0"
   },
   "devDependencies": {
     "@types/react-headroom": "^2.2.1",
@@ -97,6 +109,12 @@
       "prettier"
     ],
     "rules": {
+      "no-plusplus": [
+        "error",
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ],
       "quotes": [
         "error",
         "single"

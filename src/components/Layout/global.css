@@ -1,10 +1,19 @@
-@import-normalize;
+/* @import-normalize; */
+
+/*
+import {
+  TABLET_WIDTH,
+  LARGE_DISPLAY_WIDTH,
+} from 'typography-breakpoint-constants';
+*/
 
 @custom-media --viewport-medium (width <= 50rem);
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 :root {
-  --mainColor: #12345678;
+  --colorLink: #a353c4;
+  --colorLinkHover: #bf61e6;
+  --colorSeparator: #e6e7e8;
   --fluidFontScreenWidthMin: 480px;
   --fluidFontScreenWidthMax: 1280px;
   --fontSizeBase: 16px;
@@ -60,10 +69,24 @@ body {
 }
 
 a {
-  color: rgb(0 0 100% / 90%);
+  color: var(--colorLink);
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: var(--colorLinkHover);
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
 
   &:hover {
-    color: rebeccapurple;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:visited {
+    color: var(--colorLink);
   }
 }
 

@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -12,17 +5,27 @@ import { graphql, useStaticQuery } from 'gatsby';
 interface MetaDatum {
   content: string;
   name: string;
-};
+}
 
 interface Props {
   description?: string;
+  image?: string;
   lang?: string;
   meta?: MetaDatum[];
   keywords?: string[];
+  slug?: string;
   title: string;
-};
+}
 
-function SEO({ description, lang = 'en', meta = [], keywords = [], title }: Props) {
+export default function SEO({
+  description,
+  image,
+  lang = 'en',
+  meta = [],
+  keywords = [],
+  slug = '',
+  title,
+}: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,6 +33,7 @@ function SEO({ description, lang = 'en', meta = [], keywords = [], title }: Prop
           siteMetadata {
             author
             description
+            siteUrl
             title
           }
         }
@@ -38,6 +42,8 @@ function SEO({ description, lang = 'en', meta = [], keywords = [], title }: Prop
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaImage = image ? `${site.siteMetadata.siteUrl}${image}` : null;
+  const url = `${site.siteMetadata.siteUrl}${slug}`;
 
   return (
     <Helmet
@@ -48,49 +54,59 @@ function SEO({ description, lang = 'en', meta = [], keywords = [], title }: Prop
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website',
+        },
+        // {
+        //   property: 'og:url',
+        //   content: url,
+        // },
+        {
+          name: 'twitter:card',
+          content: 'summary',
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
+          name: 'twitter:creator',
           content: site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ]
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
+                name: 'keywords',
+                content: keywords.join(', '),
               }
+            : []
+        )
+        .concat(
+          metaImage
+            ? [
+                { property: 'og:image', content: metaImage },
+                { name: 'twitter:image', content: metaImage },
+              ]
             : []
         )
         .concat(meta)}
     />
-  )
+  );
 }
-
-export default SEO;

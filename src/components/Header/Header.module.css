@@ -15,6 +15,10 @@
     align-items: center;
     display: flex;
   }
+
+  & img {
+    margin-bottom: 0;
+  }
 }
 
 .LogoImage {
@@ -37,18 +41,19 @@
     padding: 0;
 
     & li {
-      padding: 1em;
+      margin: 0;
+      padding: 0.5rem 1rem;
 
       & a {
         color: #404041;
-
-        /* font-family: Metropolis; */
-
-        /* font-size: 0.75rem; */
         text-decoration: none;
+        text-transform: capitalize;
 
-        &:hover {
+        &:focus {
           text-decoration: underline;
+        }
+        &:hover {
+          color: var(--colorLink);
         }
       }
 

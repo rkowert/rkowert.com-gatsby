@@ -1,61 +1,108 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+// const { getBlogIndexPagePath } = require('./src/utils/helpers');
+function getBlogIndexPagePath(pageNumber) {
+  return `/blog${pageNumber === 1 ? '' : `/page/${pageNumber}`}`;
+}
+
+function isBlogPostSource(sourceInstanceName) {
+  return sourceInstanceName === 'blog-posts';
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+  const fileNode = getNode(node.parent);
+
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
+    // Create slugs
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: isBlogPostSource(fileNode.sourceInstanceName)
+        ? 'content/blog/'
+        : 'pages/',
+      trailingSlash: false,
+    });
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: `${
+        isBlogPostSource(fileNode.sourceInstanceName) ? '/blog' : ''
+      }${slug}`,
+    });
+
+    // Allow allMarkdownRemark query to filter on sourceInstanceName values
+    createNodeField({
+      node,
+      name: 'collection',
+      value: fileNode.sourceInstanceName,
     });
   }
 };
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
+  const blogIndexTemplate = path.resolve(
+    './src/components/BlogIndex/BlogIndex.tsx'
+  );
   const blogPostTemplate = path.resolve(
     './src/components/BlogPost/BlogPost.tsx'
   );
 
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
+  // Get all blog posts via GQL
+  const blogPostsQueryResults = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { fields: { collection: { eq: "blog-posts" } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `).then(result => {
-      if (result.errors) {
-        return reject(result.errors);
-      }
+    }
+  `);
 
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: blogPostTemplate,
-          context: {
-            slug: node.fields.slug,
-          },
-        });
-      });
-      return resolve();
+  // Paginate the blog index
+  const blogPosts = blogPostsQueryResults.data.allMarkdownRemark.edges;
+  const postsPerPage = 10;
+  const numPages = Math.ceil(blogPosts.length / postsPerPage);
+  for (let i = 0; i < numPages; i++) {
+    createPage({
+      path: getBlogIndexPagePath(i + 1),
+      component: blogIndexTemplate,
+      context: {
+        currentPage: i + 1,
+        limit: postsPerPage,
+        numPages,
+        skip: i * postsPerPage,
+      },
+    });
+  }
+
+  // Create individual blog post pages
+  blogPosts.forEach(({ node }, i) => {
+    const next = i === 0 ? null : blogPosts[i - 1].node;
+    const prev = i === blogPosts.length - 1 ? null : blogPosts[i + 1].node;
+
+    createPage({
+      path: node.fields.slug,
+      component: blogPostTemplate,
+      context: {
+        next,
+        prev,
+        // The slug must be included here so that it can be used in blogPostTemplate's PageQuery filter
+        slug: node.fields.slug,
+      },
     });
   });
 };
@@ -89,7 +136,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
   const matches = page.path.match(/\/(?:([^/]+)\/)?([^/]+)\/$/);
   if (matches && matches[1] && matches[2] && matches[1] === matches[2]) {
-    // Replace "/Page/Page/" with "/page"
+    // Replace "/Page/Page/" with "/page", i.e., accomodate our opinionated file layout
     newPage.path = `/${matches[1].toLowerCase()}`;
   } else {
     // Remove trailing slash unless page is "/"

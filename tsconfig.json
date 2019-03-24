@@ -2,10 +2,12 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
+      "components": ["components/index.ts"],
       "components/*": ["components/*"],
       "utils/*": ["utils/*"]
     },
     "jsx": "react",
-    "target": "ES6"
+    "target": "esnext",
+    "resolveJsonModule": true
   }
 }

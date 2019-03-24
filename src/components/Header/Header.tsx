@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
-import Headroom from 'react-headroom';
 import * as React from 'react';
+import Headroom from 'react-headroom';
 
 import { ScreenReadersOnly } from 'components';
 import * as styles from './Header.module.css';

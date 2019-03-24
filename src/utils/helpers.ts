@@ -1,3 +1,7 @@
+export function getBlogIndexPagePath(pageNumber: number) {
+  return `/blog${pageNumber === 1 ? '' : `/page/${pageNumber}`}`;
+}
+
 /**
  * Format a blog post's reading time for display
  *
@@ -6,14 +10,14 @@
  * @param minutes Reading time of a blog post in number of minutes
  */
 export function formatReadingTime(minutes: number) {
-  const cups = Math.round(minutes / 5);
-  if (cups > 5) {
-    return `${new Array(Math.round(cups / Math.E))
-      .fill('🍱')
-      .join('')} ${minutes} min read`;
-  }
-
-  return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
+  // const cups = Math.round(minutes / 5);
+  // if (cups > 5) {
+  //   return `${new Array(Math.round(cups / Math.E))
+  //     .fill('🍱')
+  //     .join('')} ${minutes} min read`;
+  // }
+  // return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
+  return `${minutes > 15 ? '🍲' : '☕️'} ${minutes} minute read`;
 }
 
 /**

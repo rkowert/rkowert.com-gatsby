@@ -1,7 +1,30 @@
+.Home {
+  margin: 0;
+  max-width: auto;
+
+  & > section {
+    & > div {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.Hello {
+  & > div {
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 18rem 1fr;
+    grid-column-gap: 4rem;
+  }
+}
+
 .Left {
   display: block;
+  grid-area: left;
 }
 
 .Right {
   display: block;
+  grid-area: right;
 }

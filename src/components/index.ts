@@ -1,8 +1,17 @@
+export { default as AmazonBuyButton } from './AmazonBuyButton';
+export { default as BlogIndex } from './BlogIndex';
 export { default as BlogPost } from './BlogPost';
+export { default as BlogPostExcerpt } from './BlogPostExcerpt';
 export { default as BlogPostLink } from './BlogPostLink';
+export { default as Book } from './Book';
+export { default as BookReview } from './BookReview';
 export { default as Header } from './Header';
 export { default as Image } from './Image';
+export { default as IndieboundBuyButton } from './IndieboundBuyButton';
 export { default as Layout } from './Layout';
+export { default as ProfilePhoto } from './ProfilePhoto';
 export { default as RecentBlogPosts } from './RecentBlogPosts';
 export { default as ScreenReadersOnly } from './ScreenReadersOnly';
 export { default as SEO } from './SEO';
+export { default as SocialMediaIcons } from './SocialMediaIcons';
+export { default as Welcome } from './Welcome';

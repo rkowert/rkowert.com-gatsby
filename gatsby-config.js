@@ -29,14 +29,17 @@ module.exports = {
     siteUrl: 'https://rkowert.com',
     social: {
       gscholar: 'DKS1kSQAAAAJ',
+      instagram: 'drrachelkowert',
       linkedin: 'rachelkowert',
       researchGate: 'Rachel_Kowert',
       twitter: 'linacaruso',
+      youtube: 'UC2wWdpJ8CQaulB44RLZ4gWw',
     },
     title: 'Gatsby Default Starter',
   },
   plugins: [
     'gatsby-plugin-typescript',
+    'gatsby-transformer-typescript-css-modules',
     'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-alias-imports',
@@ -48,13 +51,33 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-typescript-css-modules',
     'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog-posts',
         path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'books',
+        path: `${__dirname}/content/books`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'site-content',
+        path: `${__dirname}/content`,
+        ignore: ['./blog', './books/*'],
       },
     },
     {
