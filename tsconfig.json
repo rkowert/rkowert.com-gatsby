@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
+    "esModuleInterop": true,
     "paths": {
       "components": ["components/index.ts"],
       "components/*": ["components/*"],
       "utils/*": ["utils/*"]
     },
     "jsx": "react",
+    "moduleResolution": "node",
     "target": "esnext",
     "resolveJsonModule": true
   }

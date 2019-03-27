@@ -3,6 +3,7 @@ import { Tracing } from 'trace_events';
 export interface BlogPost {
   excerpt: string;
   fields: {
+    path: string;
     slug: string;
   };
   frontmatter: {
@@ -22,6 +23,8 @@ export interface BookReview {
 }
 
 export interface Book {
+  coverImage: any;
+  excerpt?: string;
   frontmatter: {
     cover?: string;
     date: string;
@@ -37,4 +40,6 @@ export interface Book {
   };
   html: string;
   id: string;
+  path: string;
+  slug: string;
 }

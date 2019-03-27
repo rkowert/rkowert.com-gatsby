@@ -1,0 +1,38 @@
+.Header {
+  align-items: center;
+  background: white;
+  box-shadow: 0 3px 8px 0 #ccc;
+  display: flex;
+  padding: 0.5em 1.5em;
+}
+
+.Logo {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+
+  & a {
+    align-items: center;
+    display: flex;
+  }
+
+  & img {
+    margin-bottom: 0;
+  }
+}
+
+.LogoImage {
+  margin-right: 1rem;
+  max-height: 2.5rem;
+}
+
+.LogoText {
+  max-height: 1.5rem;
+}
+
+.Navigation {
+
+  @media (--expanded-nav) {
+    flex: 1;
+  }
+}

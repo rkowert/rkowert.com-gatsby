@@ -43,7 +43,7 @@ export default function SEO({
 
   const metaDescription = description || site.siteMetadata.description;
   const metaImage = image ? `${site.siteMetadata.siteUrl}${image}` : null;
-  const url = `${site.siteMetadata.siteUrl}${slug}`;
+  // const url = `${site.siteMetadata.siteUrl}${slug}`;
 
   return (
     <Helmet

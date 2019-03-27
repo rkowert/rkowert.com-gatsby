@@ -1,42 +1,116 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-// const { getBlogIndexPagePath } = require('./src/utils/helpers');
+function findFileNode({ node, getNode }) {
+  // Find the file node.
+  let fileNode = node;
+  let whileCount = 0;
+
+  while (
+    fileNode.internal.type !== 'File' &&
+    fileNode.parent &&
+    getNode(fileNode.parent) !== undefined &&
+    whileCount < 101
+  ) {
+    fileNode = getNode(fileNode.parent);
+    whileCount += 1;
+
+    if (whileCount > 100) {
+      console.log(
+        "It looks like you have a node that's set its parent as itself",
+        fileNode
+      );
+    }
+  }
+
+  return fileNode;
+}
+
 function getBlogIndexPagePath(pageNumber) {
   return `/blog${pageNumber === 1 ? '' : `/page/${pageNumber}`}`;
 }
 
-function isBlogPostSource(sourceInstanceName) {
-  return sourceInstanceName === 'blog-posts';
+function isBlogPostNode({ node, getNode }) {
+  const fileNode = findFileNode({
+    node,
+    getNode,
+  });
+  if (!fileNode) return false;
+  return fileNode.sourceInstanceName === 'blog-posts';
+}
+
+function isBookNode({ node, getNode }) {
+  const fileNode = findFileNode({
+    node,
+    getNode,
+  });
+  if (!fileNode) return false;
+  return fileNode.sourceInstanceName === 'books';
+}
+
+function getBasePath({ node, getNode }) {
+  if (isBlogPostNode({ node, getNode })) {
+    return 'content/blog/';
+  }
+  if (isBookNode({ node, getNode })) {
+    return 'content/books/';
+  }
+
+  return 'src/pages/';
+}
+
+function getSlugFromNode({ node, getNode }) {
+  const relativeFilePath = createFilePath({
+    node,
+    getNode,
+    basePath: getBasePath({ node, getNode }),
+    trailingSlash: false,
+  });
+
+  return relativeFilePath.slice(1);
+}
+
+function getUrlPathFromNode({ node, getNode }) {
+  const relativeFilePath = createFilePath({
+    node,
+    getNode,
+    basePath: getBasePath({ node, getNode }),
+    trailingSlash: false,
+  });
+
+  if (isBlogPostNode({ node, getNode })) {
+    return `/blog${relativeFilePath}`;
+  }
+  if (isBookNode({ node, getNode })) {
+    return `/books#${relativeFilePath.slice(1)}`;
+  }
+
+  return relativeFilePath.slice(1);
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   const fileNode = getNode(node.parent);
 
-  if (node.internal.type === 'MarkdownRemark') {
-    // Create slugs
-    const slug = createFilePath({
-      node,
-      getNode,
-      basePath: isBlogPostSource(fileNode.sourceInstanceName)
-        ? 'content/blog/'
-        : 'pages/',
-      trailingSlash: false,
-    });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: `${
-        isBlogPostSource(fileNode.sourceInstanceName) ? '/blog' : ''
-      }${slug}`,
-    });
-
-    // Allow allMarkdownRemark query to filter on sourceInstanceName values
+  if (fileNode) {
+    // Enable queries to filter on sourceInstanceName values
     createNodeField({
       node,
       name: 'collection',
       value: fileNode.sourceInstanceName,
+    });
+  }
+
+  if (node.internal.type === 'MarkdownRemark') {
+    createNodeField({
+      node,
+      name: 'slug',
+      value: getSlugFromNode({ node, getNode }),
+    });
+    createNodeField({
+      node,
+      name: 'path',
+      value: getUrlPathFromNode({ node, getNode }),
     });
   }
 };
@@ -45,10 +119,10 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogIndexTemplate = path.resolve(
-    './src/components/BlogIndex/BlogIndex.tsx'
+    './src/components/Blog/BlogIndex/BlogIndex.tsx'
   );
   const blogPostTemplate = path.resolve(
-    './src/components/BlogPost/BlogPost.tsx'
+    './src/components/Blog/BlogPost/BlogPost.tsx'
   );
 
   // Get all blog posts via GQL
@@ -61,6 +135,7 @@ exports.createPages = async ({ actions, graphql }) => {
         edges {
           node {
             fields {
+              path
               slug
             }
             frontmatter {
@@ -95,13 +170,13 @@ exports.createPages = async ({ actions, graphql }) => {
     const prev = i === blogPosts.length - 1 ? null : blogPosts[i + 1].node;
 
     createPage({
-      path: node.fields.slug,
+      path: node.fields.path,
       component: blogPostTemplate,
       context: {
         next,
         prev,
-        // The slug must be included here so that it can be used in blogPostTemplate's PageQuery filter
-        slug: node.fields.slug,
+        // The path must be included here so that it can be used in blogPostTemplate's PageQuery filter
+        // path: node.fields.path,
       },
     });
   });

@@ -7,13 +7,16 @@ import {
 } from 'typography-breakpoint-constants';
 */
 
+/*
 @custom-media --viewport-medium (width <= 50rem);
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
+*/
 
 :root {
   --colorLink: #a353c4;
   --colorLinkHover: #bf61e6;
   --colorSeparator: #e6e7e8;
+  --colorTextSubdued: #a7a9ab;
   --fluidFontScreenWidthMin: 480px;
   --fluidFontScreenWidthMax: 1280px;
   --fontSizeBase: 16px;
@@ -55,18 +58,16 @@ html {
 body {
   margin: 0;
   padding: 0;
-
-  /* color: var(--mainColor);
-  font-family: system-ui;
-  overflow-wrap: break-word; */
 }
 
+/*
 :--heading {
-  /* background-image: image-set(url(img/heading.png) 1x, url(img/heading@2x.png) 2x); */
+  background-image: image-set(url(img/heading.png) 1x, url(img/heading@2x.png) 2x);
   @media (--viewport-medium) {
     margin-block: 0;
   }
 }
+*/
 
 a {
   color: var(--colorLink);
@@ -87,6 +88,10 @@ a {
 
   &:visited {
     color: var(--colorLink);
+  }
+
+  & > svg {
+    vertical-align: middle;
   }
 }
 

@@ -1,0 +1,26 @@
+.BlogPostExcerpt {
+  border-bottom: 2px solid var(--colorSeparator);
+  margin-bottom: 1.53rem; /* TODO: Extract this from Typography? */
+}
+
+.ContinueReadingLink {
+  & svg {
+    vertical-align: middle;
+  }
+}
+
+.Title {
+  margin-bottom: 0;
+}
+
+.Date {
+  color: var(--colorTextSubdued);
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+}
+
+.Excerpt {
+  & > p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import { Book, Layout, SEO } from 'components';
 
@@ -8,9 +8,9 @@ import * as styles from './Books.module.css';
 export default function Books({
   data: {
     allMarkdownRemark: { edges: books },
+    allImageSharp: { edges: images },
   },
 }) {
-  console.log(books);
   return (
     <Layout>
       <SEO
@@ -19,9 +19,18 @@ export default function Books({
       />
       <main>
         <h1>Books</h1>
-        {books.map(({ node: book }) => (
-          <Book book={book} key={book.id} />
-        ))}
+        {books.map(({ node }) => {
+          const img = images.find(
+            ({ node: { fluid: image } }) =>
+              image.originalName === node.frontmatter.cover
+          );
+          const book = {
+            ...node,
+            coverImage: img ? img['node'] : null,
+          };
+
+          return <Book book={book} key={book.id} id={book.fields.slug} />;
+        })}
       </main>
     </Layout>
   );
@@ -38,9 +47,11 @@ export const pageQuery = graphql`
           id
           html
           fields {
+            path
             slug
           }
           frontmatter {
+            cover
             date(formatString: "MMMM DD, YYYY")
             # isbn10
             # isbn13
@@ -55,6 +66,16 @@ export const pageQuery = graphql`
             }
             subtitle
             title
+          }
+        }
+      }
+    }
+    allImageSharp(filter: { fields: { collection: { eq: "images" } } }) {
+      edges {
+        node {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            originalName
           }
         }
       }

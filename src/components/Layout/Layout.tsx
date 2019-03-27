@@ -8,9 +8,10 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Header } from 'components';
+import { SiteHeader } from 'components';
 import * as styles from './Layout.module.css';
 import './global.css';
+import SocialMediaIcons from 'components/SocialMediaIcons/index';
 
 interface Props {
   children: React.ReactNode;
@@ -36,13 +37,16 @@ const Layout = ({ children }: Props) => (
     `}
     render={data => (
       <>
-        <Header
+        <SiteHeader
           siteTitle={data.site.siteMetadata.title}
           navLinks={data.site.siteMetadata.navLinks}
         />
         <div className={styles.PageContent}>{children}</div>
-        <footer>
-          © {new Date().getFullYear()}, {data.site.siteMetadata.author}
+        <footer className={styles.SiteFooter}>
+          <SocialMediaIcons />
+          <p className={styles.Copyright}>
+            © {new Date().getFullYear()}, {data.site.siteMetadata.author}
+          </p>
         </footer>
       </>
     )}

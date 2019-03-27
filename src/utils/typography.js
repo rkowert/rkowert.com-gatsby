@@ -59,18 +59,18 @@ import theme from 'typography-theme-us-web-design-standards';
 // };
 
 theme.baseFontSize = '16px';
-theme.bodyWeight = 400;
+theme.bodyWeight = 300;
 theme.googleFonts = [
   {
     name: 'Muli',
-    styles: ['300'],
+    styles: ['300', '300i', '700', '800'],
   },
   {
     name: 'Montserrat',
     styles: ['400', '400i', '700', '800'],
   },
 ];
-theme.headerFontFamily = ['Montserrat', 'sans-serif'];
+theme.headerFontFamily = ['Muli', 'sans-serif'];
 theme.bodyFontFamily = ['Muli', 'sans-serif'];
 // theme.includeNormalize = false;
 

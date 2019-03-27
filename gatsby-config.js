@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     author: 'Dr. Rachel Kowert',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    keywords: '',
+      'The web site of Dr. Rachel Kowert containing information on her research, publications, and current projects',
+    keywords: 'rachel kowert, psychology, research, gaming',
     navLinks: [
       {
         name: 'blog',
@@ -14,8 +14,8 @@ module.exports = {
         link: '/about',
       },
       {
-        name: 'publications',
-        link: '/publications',
+        name: 'books',
+        link: '/books',
       },
       {
         name: 'media',
@@ -35,7 +35,7 @@ module.exports = {
       twitter: 'linacaruso',
       youtube: 'UC2wWdpJ8CQaulB44RLZ4gWw',
     },
-    title: 'Gatsby Default Starter',
+    title: 'Dr. Rachel Kowert',
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -122,6 +122,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/assets/images/logos/logo-1500.png',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
