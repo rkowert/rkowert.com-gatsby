@@ -7,7 +7,7 @@ import { BlogPost as BlogPostType } from 'types';
 import { formatPostDate, formatReadingTime } from 'utils/helpers';
 // import { rhythm, scale } from 'utils/typography';
 
-import * as styles from './BlogPost.module.css';
+import * as styles from './BlogPostPage.module.css';
 import TagCloud from 'components/TagCloud';
 
 interface Props {
@@ -23,7 +23,7 @@ interface Props {
 const GITHUB_USERNAME = 'rkowert';
 const GITHUB_REPO_NAME = 'rkowert.com';
 
-export default function BlogPost({ data, pageContext }: Props) {
+export default function BlogPostPage({ data, pageContext }: Props) {
   const { markdownRemark: post } = data;
   const { next, prev } = pageContext;
   const lang = 'en';
@@ -47,46 +47,51 @@ export default function BlogPost({ data, pageContext }: Props) {
         // }
       />
       {/* TODO Replace <main> with <Container /> */}
-      <main>
-        <article>
-          <header>
-            <h1 className={styles.Title}>{post.frontmatter.title}</h1>
-            <p>
-              {formatPostDate(post.frontmatter.date)}
-              {` • ${formatReadingTime(post.timeToRead)}`}
-            </p>
-          </header>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer>
-            <p>
-              <a href={discussUrl} target="_blank" rel="noopener noreferrer">
-                Discuss on Twitter
-              </a>
-              {' • '}
-              <a href={editUrl} target="_blank" rel="noopener noreferrer">
-                Edit on GitHub
-              </a>
-            </p>
-            <nav className={styles.BlogNavigation} aria-label="Blog navigation">
-              {prev && (
-                <Link to={prev.fields.path} rel="prev">
-                  <FaArrowLeft aria-hidden="true" /> Older
-                  <p>{prev.frontmatter.title}</p>
-                </Link>
-              )}
-              {next && (
-                <Link to={next.fields.path} rel="next">
-                  Newer <FaArrowRight aria-hidden="true" />
-                  <p>{next.frontmatter.title}</p>
-                </Link>
-              )}
-            </nav>
-          </footer>
-        </article>
-      </main>
-      <div>
-        <h3>Tag Cloud</h3>
-        <TagCloud />
+      <div className={styles.BlogPostPage}>
+        <main>
+          <article>
+            <header>
+              <h1 className={styles.Title}>{post.frontmatter.title}</h1>
+              <p>
+                {formatPostDate(post.frontmatter.date)}
+                {` • ${formatReadingTime(post.timeToRead)}`}
+              </p>
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <footer>
+              <p>
+                <a href={discussUrl} target="_blank" rel="noopener noreferrer">
+                  Discuss on Twitter
+                </a>
+                {' • '}
+                <a href={editUrl} target="_blank" rel="noopener noreferrer">
+                  Edit on GitHub
+                </a>
+              </p>
+              <nav
+                className={styles.BlogNavigation}
+                aria-label="Blog navigation"
+              >
+                {prev && (
+                  <Link to={prev.fields.path} rel="prev">
+                    <FaArrowLeft aria-hidden="true" /> Older
+                    <p>{prev.frontmatter.title}</p>
+                  </Link>
+                )}
+                {next && (
+                  <Link to={next.fields.path} rel="next">
+                    Newer <FaArrowRight aria-hidden="true" />
+                    <p>{next.frontmatter.title}</p>
+                  </Link>
+                )}
+              </nav>
+            </footer>
+          </article>
+        </main>
+        <div className={styles.BlogSidebar}>
+          <h3>Tag Cloud</h3>
+          <TagCloud />
+        </div>
       </div>
     </Layout>
   );

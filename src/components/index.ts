@@ -1,6 +1,6 @@
 export {
-  BlogIndex,
-  BlogPost,
+  BlogIndexPage,
+  BlogPostPage,
   BlogPostExcerpt,
   BlogPostLink,
   RecentBlogPosts,

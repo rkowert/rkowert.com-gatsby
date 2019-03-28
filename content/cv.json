@@ -1,0 +1,966 @@
+{
+  "education": [
+    {
+      "year": "2014",
+      "degree": "Ph.D.",
+      "source": "Department of Psychology, The University of York",
+      "url": "http://www.york.ac.uk/psychology/"
+    },
+    {
+      "year": "2008",
+      "degree": "M.A.",
+      "source": "Department of Counseling Psychology, Santa Clara University",
+      "url": "http://www.scu.edu/cp/"
+    },
+    {
+      "year": "2005",
+      "degree": "B.A.",
+      "source": "Department of Psychology, The University of Texas at Dallas",
+      "url": "http://bbs.utdallas.edu/"
+    }
+  ],
+  "professionalAppointments": [
+    {
+      "date": "2016-2017",
+      "title": "Independent Research Consultant, International Social Games Association, Lead Researcher"
+    },
+    {
+      "date": "2012-2014",
+      "title": "University of Münster, Department of Communication, Associate Researcher"
+    }
+  ],
+  "publications": {
+    "books": [
+      {
+        "authors": "Kowert, R.",
+        "date": "2016",
+        "title": "A Parent's Guide to Video Games. The essential guide to understanding how video games impact your child’s physical, social, and psychological well-being",
+        "url": "https://www.amazon.com/Parents-Guide-Video-Games-understanding/dp/1537359835",
+        "publisher": "North Charleston, SC: CreateSpace Indepedent Publishing Platform"
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2015",
+        "title": "Video Games and Social Competence",
+        "url": "http://www.amazon.com/gp/product/1138804266/",
+        "publisher": "New York: Routledge"
+      }
+    ],
+    "editedVolumes": [
+      {
+        "authors": "Kowert, R., & Quandt, T. (Eds.)",
+        "date": "2017",
+        "title": "New perspectives on the social aspects of digital gaming: Multiplayer 2",
+        "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Quandt-Kowert/p/book/9781138643635",
+        "publisher": "New York: Routledge"
+      },
+      {
+        "authors": "Kowert, R., & Quandt, T. (Eds.)",
+        "date": "2016",
+        "title": "The Video Game Debate: Unravelling the Physical, Social, and Psychological Effects of Video Games",
+        "url": "http://www.amazon.com/gp/product/1138831638/",
+        "publisher": "New York: Routledge"
+      }
+    ],
+    "refereedJournalArticles": [
+      {
+        "authors": "Carras, M. C., Kalbarczyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
+        "date": "2018",
+        "title": "Walkers and credit card warriors: A qualitative study of self-regulation strategies and problematic gaming in veterans",
+        "publication": "Journal of Behavioral Addictions",
+        "edition": "7",
+        "pages": "56 – 56"
+      },
+      {
+        "authors": "Carras, M. C., Kalarczyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
+        "date": "2018",
+        "title": "“It evens my line”: A qualitative study of video game addiction as harm reduction among veterans with substance addiction and/or mental health problems",
+        "publication": "Journal of Behavioural Addictions",
+        "edition": "7",
+        "pages": "11 – 12"
+      },
+      {
+        "authors": "Kaye, L. K., Kowert, R., & Quinn, S.",
+        "date": "2017",
+        "title": "The role of social identity and online social capital on psychosocial outcomes in MMO players",
+        "url": "http://www.sciencedirect.com/science/article/pii/S074756321730273X",
+        "publication": "Computers in Human Behavior",
+        "edition": "74",
+        "pages": "215 - 233"
+      },
+      {
+        "authors": "Domahidi, E., Breuer, J., Kowert, R., Festl, R., & Quandt, T.",
+        "date": "2016",
+        "title": "A longitudinal analysis of gaming- and non-gaming-related friendships and social support among social online game players",
+        "url": "http://www.tandfonline.com/doi/full/10.1080/15213269.2016.1257393",
+        "publication": "Media Psychology"
+      },
+      {
+        "authors": "Grooten, J., & Kowert, R.",
+        "date": "2015",
+        "title": "Going Beyond the Game: Development of gamer identities within societal discourse and virtual spaces",
+        "url": "http://journals.sfu.ca/loading/index.php/loading/article/view/151",
+        "publication": "Loading...",
+        "edition": "9(14)",
+        "pages": "70 - 87"
+      },
+      {
+        "authors": "Bowman, N., Kowert, R., & Cohen, E.",
+        "dat": "2015",
+        "title": "When the ball stops, the fun stops too: The impact of social inclusion on video game enjoyment",
+        "url": "http://www.sciencedirect.com/science/article/pii/S0747563215004768",
+        "publication": "Computers in Human Behavior",
+        "edition": "53",
+        "pages": "131-139",
+        "doi": "10.1016/j.chb.2015.06.036"
+      },
+      {
+        "authors": "Breuer, J., Kowert, R., Festl., R., & Quandt, T.",
+        "date": "2015",
+        "title": "Sexist games = sexist gamers? A longitudinal study on the relationship between video game use and sexist attitudes",
+        "url": "http://www.ncbi.nlm.nih.gov/pubmed/25844719",
+        "publication": "Cyberpsychology, Behavior, and Social Networking",
+        "edition": "18(4)",
+        "pages": "197-202",
+        "doi": "10.1089/cyber.2014.0492"
+      },
+      {
+        "authors": "Kowert, R., Vogelgesang, J., Festl, R., & Quandt, T.",
+        "date": "2015",
+        "title": "Psychosocial causes and consequences of online video game play",
+        "url": "http://www.sciencedirect.com/science/article/pii/S074756321400692X",
+        "publication": "Computers in Human Behavior",
+        "edition": "45",
+        "pages": "51-58",
+        "doi": "10.1016/j.chb.2014.11.074"
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2014",
+        "title": "Playing for social comfort: Online video game play as a social accommodator for the insecurely attached",
+        "url": "http://www.sciencedirect.com/science/article/pii/S0747563214002829",
+        "publications": "Computers in Human Behavior",
+        "edition": "Advance online publication",
+        "doi": "10.1016/j.chb.2014.05.004"
+      },
+      {
+        "authors": "Kowert, R., Domahidi, E., Festl, R., & Quandt, T.",
+        "date": "2014",
+        "title": "Social gaming, lonely life? The impact of digital game play on adolescents' social circles",
+        "url": "http://www.sciencedirect.com/science/article/pii/S074756321400212X",
+        "publication": "Computers in Human Behavior",
+        "edition": "36",
+        "pages": "385-390",
+        "doi": "10.1016/j.chb.2014.04.003"
+      },
+      {
+        "authors": "Kowert, R., Domahidi, E., & Quandt, T.",
+        "date": "2014",
+        "title": "The Relationship between Online Video Game Involvement and Gaming-Related Friendships among Emotionally Sensitive Individuals",
+        "url": "http://online.liebertpub.com/doi/abs/10.1089/cyber.2013.0656",
+        "publication": "Cyberpsychology, Behavior, & Social Networking",
+        "edition": "17(7)",
+        "pages": "447-453",
+        "doi": "10.1089/cyber.2013.0656"
+      },
+      {
+        "authors": "Kowert, R., Festl, R., & Quandt, T.",
+        "date": "2014",
+        "title": "Unpopular, overweight, and socially inept: Reconsidering the stereotype of online gamers",
+        "url": "http://www.ncbi.nlm.nih.gov/pubmed/24053382",
+        "publication": "Cyberpsychology, Behavior, & Social Networking",
+        "edition": "17(3)",
+        "pages": "141-146",
+        "doi": "10.1089/cyber.2013.0118"
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2013",
+        "title": "(A)Social reputation: Exploring the relationship between online video game involvement and social competence",
+        "url": "http://www.sciencedirect.com/science/article/pii/S0747563213000927",
+        "publication": "Computers in Human Behavior",
+        "edition": "29(4)",
+        "pages": "1872–1878",
+        "doi": "10.1016/j.chb.2013.03.003"
+      },
+      {
+        "authors": "Oldmeadow, J.A., Quinn, S., & Kowert, R.",
+        "date": "2013",
+        "title": "Attachment style, social skills and Facebook usage amongst adults",
+        "url": "http://www.sciencedirect.com/science/article/pii/S0747563212002749",
+        "publication": "Computers in Human Behavior",
+        "edition": "29(3)",
+        "pages": "1142-1149",
+        "doi": "10.1016/j.chb.2012.10.006"
+      },
+      {
+        "authors": "Kowert, R., Griffiths, M., & Oldmeadow, J.A.",
+        "date": "2012",
+        "title": "Geek or Chic? Emerging Stereotypes of Online Gamers",
+        "url": "http://bst.sagepub.com/content/32/6/471.abstract",
+        "publication": "Bulletin of Science, Technology, and Society",
+        "edition": "32(6)",
+        "pages": "471–479",
+        "doi": "10.1177/0270467612469078"
+      }
+    ],
+    "bookChapters": [
+      {
+        "authors": "Kowert, R. & Kaye. L.",
+        "date": "2018",
+        "title": "Video games are not socially isolating",
+        "book": {
+          "authors": "C. J. Ferguson (Ed.)",
+          "title": "Video game influences on aggression, cognition, and attention",
+          "pages": "185–195",
+          "publisher": "New York, New York, USA: Springer"
+        }
+      },
+      {
+        "authors": "Colder Carras, M., Kowert, R., & Quandt, T.",
+        "date": "2018",
+        "title": "Psychosocial Effects of Gaming",
+        "book": {
+          "authors": "A. Attrill-Smith, C. Fullwood, M. Keep, & D. J. Kuss (Eds)",
+          "title": "Oxford Handbook of Cyberpsychology"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2017",
+        "title": "Final Fantasy: Setting the Standard for RPGs",
+        "book": {
+          "authors": "R. Mejia, J. Banks, & A. Adams (Eds.)",
+          "title": "100 Greatest Video Game Franchises",
+          "url": "https://rowman.com/ISBN/9781442278158/100-Greatest-Video-Game-Franchises",
+          "publisher": "Lanham, Maryland, USA: Rowman & Littlefield"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2017",
+        "title": "Kirby: The King of Consumption",
+        "book": {
+          "authors": "R. Mejia, J. Banks, & A. Adams (Eds.)",
+          "title": "100 Greatest Video Game Characters",
+          "url": "https://rowman.com/ISBN/9781442278127/100-Greatest-Video-Game-Characters",
+          "publisher": "Lanham, Maryland, USA: Rowman & Littlefield"
+        }
+      },
+      {
+        "authors": "Kowert, R., Breuer, J., & Quandt, T.",
+        "date": "2017",
+        "title": "Women are from FarmVille, Men are from ViceCity: The cycle of exclusion and sexism in video game content and culture",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "New Perspectives on the Social Aspects of Digital Gaming: Multiplayer 2",
+          "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Kowert-Quandt/p/book/9781138643635",
+          "publisher": "New York: Routledge"
+        }
+      },
+      {
+        "authors": "Quandt, T., & Kowert, R.",
+        "date": "2017",
+        "title": "Multiplayer and beyond: Witnessing the evolution of gaming",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "New Perspectives on the Social Aspects of Digital Gaming: Multiplayer 2",
+          "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Kowert-Quandt/p/book/9781138643635",
+          "publisher": "New York: Routledge"
+        }
+      },
+      {
+        "authors": "Ferguson, C. J., Bowman, N. D., & Kowert, R.",
+        "date": "2017",
+        "title": "Is the link between games and aggression more about the player, less about the game?",
+        "book": {
+          "authors": "P. Sturmey (Ed.)",
+          "title": "The Wiley handbook of violence and aggression. Volume 1: Definition, Conception, and Development",
+          "publisher": "New York: Wiley"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2016",
+        "title": "Social outcomes: Online game play, social currency, and social ability",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "The Video Game Debate: Unraveling the physical, social, and psychological effects of digital games",
+          "publisher": "New York: Routledge"
+        }
+      },
+      {
+        "authors": "Quandt, T., & Kowert, R.",
+        "date": "2016",
+        "title": "No black and white in video game land! Why we need to move beyond simple explanations in the video game debate",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "The Video Game Debate: Unraveling the physical, social, and psychological effects of digital games",
+          "publisher": "New York: Routledge"
+        }
+      },
+      {
+        "authors": "Kowert, R., Domahidi, E., & Quandt, T.",
+        "date": "2016",
+        "title": "Networking and Other Social Aspects of Technology Use: Past, Present, and Future Considerations",
+        "book": {
+          "authors": "M. Potenza, K. Faust, & D. Faust (Eds.)",
+          "title": "Oxford Handbook of Digital Technologies and Mental Health",
+          "publisher": "Oxford, UK: Oxford University Press"
+        }
+      },
+      {
+        "authors": "Bowman, N.D., Kowert, R., & Ferguson, C. J.",
+        "date": "2015",
+        "title": "The impact of video game play on human (and orc) creativity",
+        "book": {
+          "authors": "G. P. Green and J. C. Kaufman (Eds.)",
+          "title": "Video games and creativity",
+          "pages": "43–58",
+          "publisher": "San Diego, CA: Academic Press"
+        }
+      },
+      {
+        "authors": "Kowert, R. & Oldmeadow, J.A.",
+        "date": "2014",
+        "title": "Party Animal or Dinner for One: Are Online Gamers Socially inept?",
+        "book": {
+          "authors": "T. Quandt and S. Kroeger (Eds.)",
+          "title": "multi.player-Social Aspects of Digital Gaming",
+          "url": "http://www.amazon.com/Multiplayer-Routledge-European-Communication-Education/dp/0415828864",
+          "pages": "99-110",
+          "publisher": "London: Routledge"
+        }
+      }
+    ],
+    "conferenceProceedings": [
+      {
+        "authors": "Kowert, R. & Oldmeadow, J.A.",
+        "date": "2012",
+        "title": "The Stereotype of Online Gamers: New Characterization or Recycled Prototype?",
+        "url": "http://www.digra.org/dl/db/12168.23066.pdf",
+        "conference": {
+          "title": "Nordic DiGRA: Games in Culture and Society conference proceedings",
+          "location": "Tampere, Finland"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2010",
+        "title": "Geek or Chic: Perceptions of Online Gamers",
+        "url": "http://underthemask.wikidot.com/abstracts2010#anchor-kowert",
+        "conference": {
+          "title": "Under the Mask 2010 Conference proceedings",
+          "location": "Bedfordshire, England"
+        }
+      }
+    ],
+    "otherPublications": [
+      {
+        "authors": "Kowert, R., & Quinn, S.",
+        "date": "2017",
+        "title": "ISGA Player Demographics Report",
+        "url": "https://www.dropbox.com/s/p8ywje17wwa43yi/ISGA%20Executive%20Report.pdf?dl=0",
+        "publication": {
+          "location": "London, England",
+          "title": "ISGA"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2017-02",
+        "title": "What parents need to know about sexism, misogyny and harassment in online games",
+        "url": "http://www.fangirlthemag.com/2017/02/what-parents-need-to-know-about-sexism-misogyny-and-harassment-in-online-games/",
+        "publication": {
+          "title": "Fangirl the Magazine",
+          "url": "http://www.fangirlthemag.com/"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2016-12",
+        "title": "Smart Video Game Choices For Your Holiday Shopping List",
+        "url": "http://www.parent.co/smart-video-game-choices-for-your-holiday-shopping-list/?utm_source=sumome&utm_medium=facebook&utm_campaign=sumome_share_",
+        "publication": {
+          "title": "Parent.co"
+        }
+      },
+      {
+        "authors": "Martson, H. R., & Kowert, R.",
+        "date": "2014-11",
+        "title": "Understanding the Anglo-German use of digital technologies in the 21st century",
+        "url": "http://www.britishgerontology.org/Private/2712/Live/pdf/Generations%20Review%20November%202014.pdf",
+        "publication": {
+          "title": "Generations Review",
+          "edition": "24(3)",
+          "pages": "17-24"
+        }
+      },
+      {
+        "authors": "Cohen, E.L., & Kowert, R.",
+        "date": "2014-05-16",
+        "title": "Look Up: Exaggerates Damages of Social Media",
+        "url": "http://blogs.scientificamerican.com/guest-blog/2014/05/16/look-up-exaggerates-damages-of-social-media/",
+        "publication": {
+          "title": "Scientific American"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2014-02-27",
+        "title": "The Gamer Identity Crisis: Towards a Reclamation",
+        "url": "http://www.firstpersonscholar.com/the-gamer-identity-crisis/",
+        "publication": {
+          "title": "First Person Scholar"
+        }
+      }
+    ]
+  },
+  "awardsAndHonors": [
+    {
+      "date": "2017",
+      "award": "Named [_Austin Awesome Author_](https://austinfamily.com/awesome-austin-authors/) by [Austin Family Magazine](https://austinfamily.com/)"
+    },
+    {
+      "date": "2017",
+      "award": "[Indies Book of the Year Winner](https://awards.forewordreviews.com/books/a-parents-guide-to-video-games/) for _A Parent's Guide to Video Games_ (Science Category)"
+    }
+  ],
+  "grantsAndFellowships": [
+    {
+      "date": "2014",
+      "title": "German Academic Exchange Service (DAAD) travel bursary, The University of Münster"
+    },
+    {
+      "date": "2012",
+      "title": "Departmental Student Bursary, The University of York"
+    }
+  ],
+  "invitedTalks": [
+    {
+      "authors": "Kowert, R.",
+      "date": "2017-10",
+      "title": "Challenging our beliefs about parenting in a digital world",
+      "extra": "Keynote presented at BRAVE – Annual Women’s Conference",
+      "location": "Austin, Texas"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2015-10",
+      "title": "Online lives, offline consequences: Video games and sociability",
+      "extra": "Keynote presented at the Video game education and ethics summit of the [Clash of Realities Conference](http://www.clashofrealities.com/)",
+      "location": "Cologne, Germany"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2015-10",
+      "title": "Exploring the Viability of Online Video Games as Socially Compensatory and Rehabilitative Spaces",
+      "extra": "Keynote presented at the [Clash of Realities Conference](http://www.clashofrealities.com/)",
+      "location": "Cologne, Germany"
+    },
+    {
+      "authors": "Kowert, R., & Elson, M.",
+      "datE": "2014-08",
+      "title": "All that glitters: Gold standards for quantitative methods in digital games research",
+      "extra": "Keynote presented at the [Utrecht Summer School](http://www.utrechtsummerschool.nl)",
+      "location": "Utrecht, Netherlands"
+    }
+  ],
+  "conferenceParticipation": {
+    "conferencesOrganized": [
+      {
+        "title": "Multi.Player 2 conference",
+        "location": "The University of Münster",
+        "date": "2014-08"
+      }
+    ],
+    "panelsOrganized": [
+      {
+        "authors": "Bean, A. (chair), Kowert, R., Daniel, S., & Hays, S.",
+        "date": "2018-08",
+        "title": "The psychology of the Legend of Zelda",
+        "extra": "Panel presented at PAX West 2018",
+        "location": "Seattle, Washington, USA"
+      },
+      {
+        "authors": "Boccamazzo, R. (chair), Kowert, R., Bean, A., Hughes, C., & Madigan, J.",
+        "date": "2018-08",
+        "title": "WHO said what?!: Let’s talk facts about gaming disorder",
+        "extra": "Panel presented at PAX West 2018",
+        "location": "Seattle, Washington"
+      },
+      {
+        "authors": "Kulman, I.R. (chair), Kowert, R., Ferfguson, C., Messer, D. C., Messer, E.S., & Moyer, B. H.",
+        "date": "2018-08",
+        "title": "A clinician’s guide to video games, social media, and other technologies for kids and families",
+        "extra": "Panel presented at APA 2018",
+        "location": "San Francisco, California, USA"
+      },
+      {
+        "authors": "Kowert, R. (chair), Brown, A., Domahidi, E., Kuss, D., & Hussain, Z.",
+        "date": "2014-07",
+        "title": "Evaluating the Impact of Online Video Game Play on Inter- and Intra-Personal Sociability",
+        "extra": "Symposium presented at the 28th International Congress of Applied Psychology Conference",
+        "location": "Paris, France"
+      },
+      {
+        "authors": "Kowert, R., & Brown, A. (chairs), Bowman, N., Holopainen, J., & Pearce, C.",
+        "date": "2013-08",
+        "title": "Defragging the Methodology of Games Studies",
+        "extra": "Panel presented at DiGRA 2013: DeFragging Game Studies",
+        "location": "Atlanta, Georgia, USA"
+      }
+    ],
+    "papersPresented": [
+      {
+        "authors": "Colder Carras, M., Kalbarcyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
+        "date": "2018-04",
+        "title": "“It evens my line”: A qualitative study of video game addiction as harm reduction among veterans with substance addiction and/or mental health problems",
+        "conference": {
+          "title": "International Conference on Behavioral Addictions",
+          "location": "Cologne, Germany"
+        }
+      },
+      {
+        "authors": "Colder Carras, M., Kalbarcyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
+        "date": "2018-04",
+        "title": "Walkers and credit card warriors: A qualitative study of self-regulation strategies and problematic gaming in veterans",
+        "conference": {
+          "title": "A International Conference on Behavioral Addictions",
+          "location": "Cologne, Germany"
+        }
+      },
+      {
+        "authors": "Colder Carras, M., Kalbarcyk, A., Wells, K., Banks, J., Kowert, R., & Latkin, C.",
+        "date": "2017-10",
+        "title": "“Idle hands are the devil’s workshop”: A qualitative study of video game use by veterans with mental and behavioral health problems",
+        "conference": {
+          "title": "International Society for Research on Internet Interventions",
+          "locations": "Berlin, Germany"
+        }
+      },
+      {
+        "authors": "Colder Carras, M., Kalbarcyk, A., Wells, K., Banks, J., Kowert, R., & Latkin, C.",
+        "date": "2017-10",
+        "title": "“Idle hands make the devil’s work”: A qualitative study of video game use by individuals with mental and behavioural health problems",
+        "conference": {
+          "title": "International Society for Research on Internet Interventions",
+          "location": "Berlin, Germany"
+        }
+      },
+      {
+        "authors": "Butt, M.A, de Wildt, L., Kowert, R., & Sandovar, A.M.",
+        "date": "2017-07",
+        "title": "Homo includens: Surveying DiGRA diversity",
+        "extra": "_Paper accecpted for presentation at Gaming the systems: Towards a more inclusive DiGRA workshop_",
+        "conference": {
+          "title": "DiGRA 2017",
+          "location": "Melbourne, Australia"
+        }
+      },
+      {
+        "authors": "Kaye, L. K., Kowert, R., & Quinn, S.",
+        "date": "2016-06",
+        "title": "The role of social identity and online social capital on psychosocial outcomes in MMO players",
+        "conference": {
+          "title": "21st Annual CyberPsychology, CyberTherapy, & Social Networking Conference",
+          "location": "Dublin, Ireland"
+        }
+      },
+      {
+        "authors": "Breuer, J., Bowman, N.D., Kieslich, K., Elson, M., Kowert, R., Kneer, J., Quandt, T., Lange, A., & Lange, R.",
+        "date": "2016-06",
+        "title": "Grand Theft Morals: The role of cultural differences and moral views for the evaluation of violent and sexual content in video games",
+        "conference": {
+          "title": "ICA 2016 preconference: Just Games? Consider Games as More than Entertainment",
+          "location": "Tokyo, Japan"
+        }
+      },
+      {
+        "authors": "Bowman, N. D., Kowert, R., Breuer, J., Elson, M., Kieslich, K., Kneer, J., Quandt, T., Lange, A., & Lange, R.",
+        "date": "2015-11",
+        "title": "“It’s too dirty for me, so it’s too dirty for the kids”: A cross-comparison of German and US gamers’ differential reactions to an explicitly sexual or violent video game",
+        "conference": {
+          "title": "National Communication Association",
+          "location": "Las Vegas, USA"
+        }
+      },
+      {
+        "authors": "Breuer, J., Elson, M., Kieslich, K., Bowman, N., Kowert, R., Quandt, T., Lange, A., & Lange, R.",
+        "date": "2015-09",
+        "title": "Moral Kombat – Moral foundations and the evaluation of violent and sexual content in video games",
+        "conference": {
+          "title": "9th Conference of the Media Psychology Division",
+          "location": "Tübingen, Germany"
+        }
+      },
+      {
+        "authors": "Kowert, R., Breuer, J., Festl., R., & Quandt, T.",
+        "datE": "2015-05",
+        "title": "Women are from FarmVille, Men are from ViceCity: Exclusion and sexism in video game content and culture",
+        "conference": {
+          "title": "ICA 2015: Communication Across the Life Span",
+          "location": "San Juan, Puerto Rico"
+        }
+      },
+      {
+        "authors": "Bowman, N. D., Kowert, R., Cohen, E. L.",
+        "date": "2014-11",
+        "title": "When the ball stops, the fun stops too: The impact of social inclusion on video game enjoyment",
+        "conference": {
+          "title": "NCA 2014",
+          "location": "Chicago, USA"
+        }
+      },
+      {
+        "authors": "Kowert, R., Breuer, J., Festl, R., & Quandt, T.",
+        "date": "2014-08",
+        "title": "Sexism and the gender divide within the video game playing community",
+        "conference": {
+          "title": "multi.player 2 conference",
+          "location": "Münster, Germany"
+        }
+      },
+      {
+        "authors": "Kowert, R., Domahidi, E., Festl, R., & Quandt, T.",
+        "date": "2014-08",
+        "title": "Socially displacing or augmenting? Evaluating the impact of social game play on adolescent players",
+        "conference": {
+          "title": "multi.player 2 conference",
+          "location": "Münster, Germany"
+        }
+      },
+      {
+        "authors": "Kowert, R. (chair), Brown, A., Domahidi, E., Kuss, D., & Z. Hussain",
+        "date": "2014-07",
+        "title": "Evaluating the Impact of Online Video Game Play on Inter- and Intra-Personal Sociability",
+        "conference": {
+          "title": "Symposium presented at the 28th International Congress of Applied Psychology Conference",
+          "location": "Paris, France"
+        }
+      },
+      {
+        "authors": "Kowert, R., Vogelgesang, J., Festl, R., & Quandt, T.",
+        "date": "2014-05",
+        "title": "Psychosocial Causes and Consequences of Increased Online Video Game Involvement",
+        "conference": {
+          "title": "ICA 2014: Communication and the 'Good Life'",
+          "location": "Seattle, USA"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Domahidi, E.",
+        "date": "2014-05",
+        "title": "Examining the Relationship between Online video Game Involvement and Gaming-related Friendships among Emotionally Sensitive Individuals",
+        "conference": {
+          "title": "ICA 2014: Communication and the 'Good Life'",
+          "location": "Seattle, USA"
+        }
+      },
+      {
+        "authors": "Domahidi, E., & Kowert, R.",
+        "date": "2014-05",
+        "title": "Examining the Impact of Gaming-Related Friendships on Social Capital among Social Online Game Players",
+        "conference": {
+          "title": "ICA 2014: Communication and the 'Good Life'",
+          "location": "Seattle, USA"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Brown, A. (chairs), Bowman, N., Holopainen, J., & Pearce, C.",
+        "date": "2013-08",
+        "title": "Defragging the Methodology of Games Studies",
+        "conference": {
+          "title": "DiGRA 2013: DeFragging Game Studies",
+          "location": "Atlanta, Georgia"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2013-07",
+        "title": "Video Game Involvement and Social Skills: A Systematic Review of the Literature",
+        "conference": {
+          "title": "ICA 2013: Challenging Communication Research",
+          "location": "London, England"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2013-07",
+        "title": "Seeking Social Comfort: The Social and Emotional Motivations Underlying Online Video Game Involvement",
+        "conference": {
+          "title": "ICA 2013 preconference The Power of Play: Motivational Uses and Applications",
+          "location": "London, England"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2012-10",
+        "title": "(A)social Reputation: Exploring the Relationship Between Game Involvement and Social Competence",
+        "conference": {
+          "title": "ECREA 2012 Pre-Conference, Experiencing Digital Games: Use, Effects, & Culture of Gaming",
+          "location": "Istanbul, Turkey"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2011-07",
+        "title": "Party Animal or Dinner for One: Are Online Gamers Socially Inept?",
+        "conference": {
+          "title": "multi.player conference_",
+          "location": "The University of Hohenheim"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Oldmeadow, J.A.",
+        "date": "2010-06",
+        "title": "Geek or Chic: Perceptions of Online Gamers",
+        "conference": {
+          "title": "_Paper presented at Under the Mask 2010_",
+          "location": "Bedforshire, England"
+        }
+      }
+    ]
+  },
+  "teachingAndSupervisionExperience": [
+    {
+      "location": "The University of Erfurt",
+      "courses": [
+        {
+          "title": "Gaming in a Social World",
+          "date": "Summer, 2014"
+        },
+        {
+          "title": "Graduate Project Supervision",
+          "date": "Summer & Spring, 2014 – 2015"
+        }
+      ]
+    },
+    {
+      "location": "The University of Utrecht",
+      "courses": [
+        {
+          "title": "Empirical Research Methods and Design",
+          "date": "Summer, 2014"
+        }
+      ]
+    },
+    {
+      "location": "The University of York",
+      "courses": [
+        {
+          "title": "Undergraduate Project Supervision",
+          "date": "Autumn & Spring, 2010 – 2012"
+        },
+        {
+          "title": "Introduction to Social Psychology",
+          "date": "Spring 2010-2011"
+        },
+        {
+          "title": "Persuasion and Advertising",
+          "date": "Spring, 2010 – 2012"
+        },
+        {
+          "title": "Introduction to Communication Skills",
+          "date": "Autumn, 2011-2012"
+        },
+        {
+          "title": "Introduction to Neurochemistry",
+          "date": "Autumn, 2012"
+        }
+      ]
+    }
+  ],
+  "serviceToProfession": [
+    {
+      "title": "Co-chair of the Diversity Working Group for the [Digital Games Research Association (DiGRA)](http://www.digra.org/)",
+      "date": "2015 – present"
+    },
+    {
+      "title": "Advisory board member, [_The Computer Games Journal_](http://www.computergamesjournal.com/)",
+      "date": "2014 - present"
+    },
+    {
+      "title": "Scientific board member, [_Communication and Media Research Center_](http://ccmrc.eu/)",
+      "date": "2014 - present"
+    },
+    {
+      "title": "Board member (Secretary) for the [International Communication Association (ICA) Game Studies Division](http://game.icahdq.org/ohana/website/index.cfm?p=56927916)",
+      "date": "2014 - 2016"
+    },
+    {
+      "title": "Editorial board member, [_Journal of Gaming and Virtual Worlds_](http://www.intellectbooks.co.uk/journals/view-journal,id=164/)",
+      "date": "2012 – present"
+    },
+    {
+      "title": "Co-founder of DiGRA Students",
+      "date": "2012"
+    },
+    {
+      "title": "Board member (Student Representative, Open Seat) of the [Digital Games Research Association (DiGRA)](http://www.digra.org/)",
+      "date": "2011 – present"
+    }
+  ],
+  "reviewingExperience": [
+    {
+      "title": "Journal of Communication",
+      "date": "2015 - present"
+    },
+    {
+      "title": "Journal of Social Psychology",
+      "date": "2015 - present"
+    },
+    {
+      "title": "Media Psychology",
+      "date": "2015 - present"
+    },
+    {
+      "title": "Cyberpsychology, Behavior, and Social Networking",
+      "date": "2014 - present"
+    },
+    {
+      "title": "Cyberpsychology: Journal of Psychosocial Research on Cyberspace",
+      "date": "2014 - present"
+    },
+    {
+      "title": "Computers in Human Behavior",
+      "date": "2013 - present"
+    },
+    {
+      "title": "Sex Roles",
+      "date": "2013 – present"
+    },
+    {
+      "title": "Journal of Gaming and Virtual Worlds",
+      "date": "2012 - present"
+    }
+  ],
+  "departmentalAndUniversityService": [
+    {
+      "title": "Board Member (PhD and Strand Representative), Early Career Research Forum, The University of York",
+      "date": "2010 - 2012"
+    },
+    {
+      "title": "Welfare Tutor, Goodricke College, The University of York",
+      "date": "2010 – 2011"
+    }
+  ],
+  "selectedPressAndMedia": [
+    {
+      "author": "Hernandez, S. (Interviewer), Kowert, R. (Interviewee)",
+      "date": "2016-12-20",
+      "title": "A Parent's Guide to Video Games: How Games impact children",
+      "url": "http://kxan.com/2016/12/20/a-parents-guide-to-video-games-how-games-impact-children/",
+      "source": "_KXAN_"
+    },
+    {
+      "author": "Ross, A.",
+      "date": "2016-12-02",
+      "title": "A Parent's Guide to Video Games: Condensing 'The Video Game Debate'",
+      "url": "http://massivelyop.com/2016/12/02/massively-ops-guide-to-understanding-video-game-research-4/",
+      "source": "_Massively Overpowered_"
+    },
+    {
+      "author": "Brown, D. (Interviewer), Kowert, R. (Interviewee)",
+      "date": "2015-12-13",
+      "title": "Are Video Games Bad For The Players",
+      "url": "http://www.texasstandard.org/stories/are-video-games-bad-for-the-players/",
+      "source": "_Texas Standard (NPR)_"
+    },
+    {
+      "author": "Augustine, G. (Interviewer), Kowert, R. (Interviewee), & Krcmar, M. (Interviewee)",
+      "date": "2015-11-22",
+      "title": "The Good and Bad of Gaming",
+      "url": "http://www.iyi.org/resources//audio/11-22-15%20The%20Good%20and%20Bad%20of%20Gaming.MP3",
+      "source": "_Kids Count Radio Show_"
+    },
+    {
+      "author": "Campbell, C. (Interviewer), Kowert, R. (Interviewee)",
+      "date": "2015-10-30",
+      "title": "What is the truth about video games and the damage they may do.",
+      "url": "http://www.polygon.com/2015/10/30/9623200/video-games-violence-truth-debate",
+      "source": "_Polygon_"
+    },
+    {
+      "author": "Gallaga, O. (Interviewer), Kowert, R. (Interviewee)",
+      "date": "2015-1019",
+      "title": "Austin video-game researcher’s book opens up areas for debate",
+      "url": "http://www.mystatesman.com/news/technology/austin-video-game-researchers-book-opens-up-areas-/nn4mG/",
+      "source": "_Austin American Statesman_"
+    },
+    {
+      "author": "Singal, J.",
+      "date": "2015-10-05",
+      "title": "New Book Aims for a Smarter Conversation About Video Games and Behavior",
+      "url": "http://nymag.com/scienceofus/2015/10/making-the-video-game-conversation-smarter.html",
+      "source": "_New York Magazine, Science of Us._"
+    },
+    {
+      "author": "Ross, A.",
+      "date": "2015-09-30",
+      "title": "“Exploring the Video Game Debate”: Modern Online Game Research",
+      "url": "http://massivelyop.com/2015/09/30/exploring-modern-online-game-research-and-the-video-game-debate/",
+      "source": "_Massively Overpowered_"
+    },
+    {
+      "author": "Totilo, S. (Interviewer), Kowert, R. (Interviewee), & Breuer, J. (Interviewee)",
+      "date": "2015-04-17",
+      "title": "What To Make Of A Study About Gaming And Sexism",
+      "url": "http://kotaku.com/what-to-make-of-a-study-about-gaming-and-sexism-1698543308",
+      "source": "_Kotaku_"
+    },
+    {
+      "author": "Ross, A. (Interviewer) & Kowert, R. (Interviewee)",
+      "date": "2014-12-30",
+      "title": "MMOs and gaming psychology, part two: Interview with a researcher",
+      "url": "http://massively.joystiq.com/2014/12/30/mmos-and-gaming-psychology-part-two-interview-with-a-researche/",
+      "source": "_Massively._"
+    },
+    {
+      "author": "Filipowich, M.",
+      "date": "2014-11-21",
+      "title": "Featured Scholar: Rachel Kowert",
+      "url": "http://www.goodgameswriting.com/2014/11/rachel-kowert/",
+      "source": "_Good Games Writing_"
+    },
+    {
+      "author": "Klébis, D. (Interviewer) & Kowert, R. (Interviewee)",
+      "date": "2014-07-30",
+      "title": "To Real To The Virtual: Positive and negative aspects of role playing games",
+      "url": "http://pre.univesp.br/do-real-para-o-virtual#.VARPaPmSx8",
+      "source": "_Revista pré univesp._"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2014-01-18",
+      "title": "Geek Culture: Inside Gamer Stereotypes",
+      "url": "http://www.stitcher.com/podcast/popculturetonight/pop-culture-tonight-with-patrick-phillips/e/geek-culture-guest-rachel-kowert-how-do-you-perceive-37223028",
+      "source": "[Radio Broadcast]. In P. Phillips (Producer), _Pop Culture Tonight_. Phoenix, AZ: 1100 KFNX"
+    }
+  ],
+  "professionalMemberships": [
+    {
+      "title": "[National Communication Association (NCA; Game Studies Division)](https://www.natcom.org/) (Joined 2015)"
+    },
+    {
+      "title": "[International Communication Association (ICA; Game Studies Division)](http://game.icahdq.org/ohana/website/index.cfm?p=56927916) (Joined 2013)"
+    },
+    {
+      "title": "[European Communication Research and Education Association (ECREA)](http://www.ecrea.eu/) (Joined 2013)"
+    },
+    {
+      "title": "[Digital Games Research Association (DiGRA)](http://digra.org/) (Joined 2012)"
+    }
+  ],
+  "references": [
+    {
+      "reference": "Thorsten Quandt (thorsten.quandt@uni-muenster.de)<br />Department of Communication<br />Room E226<br />Bispinghof 9 – 14<br />D-48143 Münster <br />Germany"
+    },
+    {
+      "reference": "Mark Griffiths (mark.griffiths@ntu.ac.uk)<br />School of Social Sciences<br />Nottingham Trent University<br />Shakespeare Street<br />Nottingham NG1 4FQ <br />England"
+    },
+    {
+      "reference": "Christopher Ferguson (cjfergus@stetson.edu)<br />Department of Psychology<br />Stetson University<br />421 N. Woodland Boulevard<br />DeLand, FL 32723 <br />USA"
+    }
+  ]
+}

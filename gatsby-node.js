@@ -119,10 +119,10 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogIndexTemplate = path.resolve(
-    './src/components/Blog/BlogIndex/BlogIndex.tsx'
+    './src/components/Blog/BlogIndexPage/BlogIndexPage.tsx'
   );
   const blogPostTemplate = path.resolve(
-    './src/components/Blog/BlogPost/BlogPost.tsx'
+    './src/components/Blog/BlogPostPage/BlogPostPage.tsx'
   );
 
   // Get all blog posts via GQL

@@ -3,13 +3,10 @@ import { graphql, Link } from 'gatsby';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa/index.mjs';
 
 import { Layout, BlogPostExcerpt, SEO } from 'components';
-import {
-  formatPostDate,
-  formatReadingTime,
-  getBlogIndexPagePath,
-} from 'utils/helpers';
+import { getBlogIndexPagePath } from 'utils/helpers';
 import { BlogPost } from 'types';
-import * as styles from './BlogIndex.module.css';
+
+import * as styles from './BlogIndexPage.module.css';
 
 interface Props {
   data: {
@@ -29,7 +26,7 @@ interface Props {
   };
 }
 
-export default function BlogIndex({
+export default function BlogIndexPage({
   data: {
     allMarkdownRemark: { edges },
   },

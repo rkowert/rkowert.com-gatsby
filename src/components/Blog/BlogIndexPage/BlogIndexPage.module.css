@@ -10,11 +10,5 @@
       margin-left: auto;
       text-align: right;
     }
-
-    & svg {
-      /* vertical-align: middle; */
-      position: relative;
-      top: 0.125em;
-    }
   }
 }
