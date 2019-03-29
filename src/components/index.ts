@@ -13,6 +13,7 @@ export {
   BookReview,
   IndieboundBuyButton,
 } from './Books';
+export { default as CV } from './CV';
 export { default as SiteHeader } from './SiteHeader';
 export { Welcome } from './HomePage';
 export { default as KeepCalmAndGameOn } from './KeepCalmAndGameOn';

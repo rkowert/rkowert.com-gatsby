@@ -36,14 +36,20 @@
         "date": "2016",
         "title": "A Parent's Guide to Video Games. The essential guide to understanding how video games impact your child’s physical, social, and psychological well-being",
         "url": "https://www.amazon.com/Parents-Guide-Video-Games-understanding/dp/1537359835",
-        "publisher": "North Charleston, SC: CreateSpace Indepedent Publishing Platform"
+        "publisher": {
+          "location": "North Charleston, SC",
+          "title": "CreateSpace Indepedent Publishing Platform"
+        }
       },
       {
         "authors": "Kowert, R.",
         "date": "2015",
         "title": "Video Games and Social Competence",
         "url": "http://www.amazon.com/gp/product/1138804266/",
-        "publisher": "New York: Routledge"
+        "publisher": {
+          "location": "New York",
+          "title": "Routledge"
+        }
       }
     ],
     "editedVolumes": [
@@ -52,14 +58,20 @@
         "date": "2017",
         "title": "New perspectives on the social aspects of digital gaming: Multiplayer 2",
         "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Quandt-Kowert/p/book/9781138643635",
-        "publisher": "New York: Routledge"
+        "publisher": {
+          "location": "New York",
+          "title": "Routledge"
+        }
       },
       {
         "authors": "Kowert, R., & Quandt, T. (Eds.)",
         "date": "2016",
         "title": "The Video Game Debate: Unravelling the Physical, Social, and Psychological Effects of Video Games",
         "url": "http://www.amazon.com/gp/product/1138831638/",
-        "publisher": "New York: Routledge"
+        "publisher": {
+          "location": "New York",
+          "title": "Routledge"
+        }
       }
     ],
     "refereedJournalArticles": [
@@ -67,141 +79,171 @@
         "authors": "Carras, M. C., Kalbarczyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
         "date": "2018",
         "title": "Walkers and credit card warriors: A qualitative study of self-regulation strategies and problematic gaming in veterans",
-        "publication": "Journal of Behavioral Addictions",
-        "edition": "7",
-        "pages": "56 – 56"
+        "publication": {
+          "title": "Journal of Behavioral Addictions",
+          "edition": "7",
+          "pages": "56-56"
+        }
       },
       {
         "authors": "Carras, M. C., Kalarczyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
         "date": "2018",
         "title": "“It evens my line”: A qualitative study of video game addiction as harm reduction among veterans with substance addiction and/or mental health problems",
-        "publication": "Journal of Behavioural Addictions",
-        "edition": "7",
-        "pages": "11 – 12"
+        "publication": {
+          "title": "Journal of Behavioural Addictions",
+          "edition": "7",
+          "pages": "11-12"
+        }
       },
       {
         "authors": "Kaye, L. K., Kowert, R., & Quinn, S.",
         "date": "2017",
         "title": "The role of social identity and online social capital on psychosocial outcomes in MMO players",
         "url": "http://www.sciencedirect.com/science/article/pii/S074756321730273X",
-        "publication": "Computers in Human Behavior",
-        "edition": "74",
-        "pages": "215 - 233"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "74",
+          "pages": "215-233"
+        }
       },
       {
         "authors": "Domahidi, E., Breuer, J., Kowert, R., Festl, R., & Quandt, T.",
         "date": "2016",
         "title": "A longitudinal analysis of gaming- and non-gaming-related friendships and social support among social online game players",
         "url": "http://www.tandfonline.com/doi/full/10.1080/15213269.2016.1257393",
-        "publication": "Media Psychology"
+        "publication": {
+          "title": "Media Psychology"
+        }
       },
       {
         "authors": "Grooten, J., & Kowert, R.",
         "date": "2015",
         "title": "Going Beyond the Game: Development of gamer identities within societal discourse and virtual spaces",
         "url": "http://journals.sfu.ca/loading/index.php/loading/article/view/151",
-        "publication": "Loading...",
-        "edition": "9(14)",
-        "pages": "70 - 87"
+        "publication": {
+          "title": "Loading...",
+          "edition": "9(14)",
+          "pages": "70-87"
+        }
       },
       {
         "authors": "Bowman, N., Kowert, R., & Cohen, E.",
-        "dat": "2015",
+        "date": "2015",
         "title": "When the ball stops, the fun stops too: The impact of social inclusion on video game enjoyment",
         "url": "http://www.sciencedirect.com/science/article/pii/S0747563215004768",
-        "publication": "Computers in Human Behavior",
-        "edition": "53",
-        "pages": "131-139",
-        "doi": "10.1016/j.chb.2015.06.036"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "53",
+          "pages": "131-139",
+          "doi": "10.1016/j.chb.2015.06.036"
+        }
       },
       {
         "authors": "Breuer, J., Kowert, R., Festl., R., & Quandt, T.",
         "date": "2015",
         "title": "Sexist games = sexist gamers? A longitudinal study on the relationship between video game use and sexist attitudes",
         "url": "http://www.ncbi.nlm.nih.gov/pubmed/25844719",
-        "publication": "Cyberpsychology, Behavior, and Social Networking",
-        "edition": "18(4)",
-        "pages": "197-202",
-        "doi": "10.1089/cyber.2014.0492"
+        "publication": {
+          "title": "Cyberpsychology, Behavior, and Social Networking",
+          "edition": "18(4)",
+          "pages": "197-202",
+          "doi": "10.1089/cyber.2014.0492"
+        }
       },
       {
         "authors": "Kowert, R., Vogelgesang, J., Festl, R., & Quandt, T.",
         "date": "2015",
         "title": "Psychosocial causes and consequences of online video game play",
         "url": "http://www.sciencedirect.com/science/article/pii/S074756321400692X",
-        "publication": "Computers in Human Behavior",
-        "edition": "45",
-        "pages": "51-58",
-        "doi": "10.1016/j.chb.2014.11.074"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "45",
+          "pages": "51-58",
+          "doi": "10.1016/j.chb.2014.11.074"
+        }
       },
       {
         "authors": "Kowert, R., & Oldmeadow, J.A.",
         "date": "2014",
         "title": "Playing for social comfort: Online video game play as a social accommodator for the insecurely attached",
         "url": "http://www.sciencedirect.com/science/article/pii/S0747563214002829",
-        "publications": "Computers in Human Behavior",
-        "edition": "Advance online publication",
-        "doi": "10.1016/j.chb.2014.05.004"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "Advance online publication",
+          "doi": "10.1016/j.chb.2014.05.004"
+        }
       },
       {
         "authors": "Kowert, R., Domahidi, E., Festl, R., & Quandt, T.",
         "date": "2014",
         "title": "Social gaming, lonely life? The impact of digital game play on adolescents' social circles",
         "url": "http://www.sciencedirect.com/science/article/pii/S074756321400212X",
-        "publication": "Computers in Human Behavior",
-        "edition": "36",
-        "pages": "385-390",
-        "doi": "10.1016/j.chb.2014.04.003"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "36",
+          "pages": "385-390",
+          "doi": "10.1016/j.chb.2014.04.003"
+        }
       },
       {
         "authors": "Kowert, R., Domahidi, E., & Quandt, T.",
         "date": "2014",
         "title": "The Relationship between Online Video Game Involvement and Gaming-Related Friendships among Emotionally Sensitive Individuals",
         "url": "http://online.liebertpub.com/doi/abs/10.1089/cyber.2013.0656",
-        "publication": "Cyberpsychology, Behavior, & Social Networking",
-        "edition": "17(7)",
-        "pages": "447-453",
-        "doi": "10.1089/cyber.2013.0656"
+        "publication": {
+          "title": "Cyberpsychology, Behavior, & Social Networking",
+          "edition": "17(7)",
+          "pages": "447-453",
+          "doi": "10.1089/cyber.2013.0656"
+        }
       },
       {
         "authors": "Kowert, R., Festl, R., & Quandt, T.",
         "date": "2014",
         "title": "Unpopular, overweight, and socially inept: Reconsidering the stereotype of online gamers",
         "url": "http://www.ncbi.nlm.nih.gov/pubmed/24053382",
-        "publication": "Cyberpsychology, Behavior, & Social Networking",
-        "edition": "17(3)",
-        "pages": "141-146",
-        "doi": "10.1089/cyber.2013.0118"
+        "publication": {
+          "title": "Cyberpsychology, Behavior, & Social Networking",
+          "edition": "17(3)",
+          "pages": "141-146",
+          "doi": "10.1089/cyber.2013.0118"
+        }
       },
       {
         "authors": "Kowert, R., & Oldmeadow, J.A.",
         "date": "2013",
         "title": "(A)Social reputation: Exploring the relationship between online video game involvement and social competence",
         "url": "http://www.sciencedirect.com/science/article/pii/S0747563213000927",
-        "publication": "Computers in Human Behavior",
-        "edition": "29(4)",
-        "pages": "1872–1878",
-        "doi": "10.1016/j.chb.2013.03.003"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "29(4)",
+          "pages": "1872-1878",
+          "doi": "10.1016/j.chb.2013.03.003"
+        }
       },
       {
         "authors": "Oldmeadow, J.A., Quinn, S., & Kowert, R.",
         "date": "2013",
         "title": "Attachment style, social skills and Facebook usage amongst adults",
         "url": "http://www.sciencedirect.com/science/article/pii/S0747563212002749",
-        "publication": "Computers in Human Behavior",
-        "edition": "29(3)",
-        "pages": "1142-1149",
-        "doi": "10.1016/j.chb.2012.10.006"
+        "publication": {
+          "title": "Computers in Human Behavior",
+          "edition": "29(3)",
+          "pages": "1142-1149",
+          "doi": "10.1016/j.chb.2012.10.006"
+        }
       },
       {
         "authors": "Kowert, R., Griffiths, M., & Oldmeadow, J.A.",
         "date": "2012",
         "title": "Geek or Chic? Emerging Stereotypes of Online Gamers",
         "url": "http://bst.sagepub.com/content/32/6/471.abstract",
-        "publication": "Bulletin of Science, Technology, and Society",
-        "edition": "32(6)",
-        "pages": "471–479",
-        "doi": "10.1177/0270467612469078"
+        "publication": {
+          "title": "Bulletin of Science, Technology, and Society",
+          "edition": "32(6)",
+          "pages": "471-479",
+          "doi": "10.1177/0270467612469078"
+        }
       }
     ],
     "bookChapters": [
@@ -212,9 +254,12 @@
         "book": {
           "authors": "C. J. Ferguson (Ed.)",
           "title": "Video game influences on aggression, cognition, and attention",
-          "pages": "185–195",
-          "publisher": "New York, New York, USA: Springer"
-        }
+          "publisher": {
+            "location": "New York, New York, USA",
+            "title": "Springer"
+          }
+        },
+        "pages": "185-195"
       },
       {
         "authors": "Colder Carras, M., Kowert, R., & Quandt, T.",
@@ -233,7 +278,10 @@
           "authors": "R. Mejia, J. Banks, & A. Adams (Eds.)",
           "title": "100 Greatest Video Game Franchises",
           "url": "https://rowman.com/ISBN/9781442278158/100-Greatest-Video-Game-Franchises",
-          "publisher": "Lanham, Maryland, USA: Rowman & Littlefield"
+          "publisher": {
+            "location": "Lanham, Maryland, USA",
+            "title": "Rowman & Littlefield"
+          }
         }
       },
       {
@@ -244,7 +292,10 @@
           "authors": "R. Mejia, J. Banks, & A. Adams (Eds.)",
           "title": "100 Greatest Video Game Characters",
           "url": "https://rowman.com/ISBN/9781442278127/100-Greatest-Video-Game-Characters",
-          "publisher": "Lanham, Maryland, USA: Rowman & Littlefield"
+          "publisher": {
+            "location": "Lanham, Maryland, USA",
+            "title": "Rowman & Littlefield"
+          }
         }
       },
       {
@@ -255,7 +306,10 @@
           "authors": "R. Kowert & T. Quandt (Eds.)",
           "title": "New Perspectives on the Social Aspects of Digital Gaming: Multiplayer 2",
           "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Kowert-Quandt/p/book/9781138643635",
-          "publisher": "New York: Routledge"
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
         }
       },
       {
@@ -266,7 +320,10 @@
           "authors": "R. Kowert & T. Quandt (Eds.)",
           "title": "New Perspectives on the Social Aspects of Digital Gaming: Multiplayer 2",
           "url": "https://www.routledge.com/New-Perspectives-on-the-Social-Aspects-of-Digital-Gaming-Multiplayer-2/Kowert-Quandt/p/book/9781138643635",
-          "publisher": "New York: Routledge"
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
         }
       },
       {
@@ -276,7 +333,10 @@
         "book": {
           "authors": "P. Sturmey (Ed.)",
           "title": "The Wiley handbook of violence and aggression. Volume 1: Definition, Conception, and Development",
-          "publisher": "New York: Wiley"
+          "publisher": {
+            "location": "New York",
+            "title": "Wiley"
+          }
         }
       },
       {
@@ -286,7 +346,10 @@
         "book": {
           "authors": "R. Kowert & T. Quandt (Eds.)",
           "title": "The Video Game Debate: Unraveling the physical, social, and psychological effects of digital games",
-          "publisher": "New York: Routledge"
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
         }
       },
       {
@@ -296,7 +359,10 @@
         "book": {
           "authors": "R. Kowert & T. Quandt (Eds.)",
           "title": "The Video Game Debate: Unraveling the physical, social, and psychological effects of digital games",
-          "publisher": "New York: Routledge"
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
         }
       },
       {
@@ -306,7 +372,10 @@
         "book": {
           "authors": "M. Potenza, K. Faust, & D. Faust (Eds.)",
           "title": "Oxford Handbook of Digital Technologies and Mental Health",
-          "publisher": "Oxford, UK: Oxford University Press"
+          "publisher": {
+            "location": "Oxford, UK",
+            "title": "Oxford University Press"
+          }
         }
       },
       {
@@ -317,7 +386,10 @@
           "authors": "G. P. Green and J. C. Kaufman (Eds.)",
           "title": "Video games and creativity",
           "pages": "43–58",
-          "publisher": "San Diego, CA: Academic Press"
+          "publisher": {
+            "location": "San Diego, CA",
+            "title": "Academic Press"
+          }
         }
       },
       {
@@ -328,9 +400,12 @@
           "authors": "T. Quandt and S. Kroeger (Eds.)",
           "title": "multi.player-Social Aspects of Digital Gaming",
           "url": "http://www.amazon.com/Multiplayer-Routledge-European-Communication-Education/dp/0415828864",
-          "pages": "99-110",
-          "publisher": "London: Routledge"
-        }
+          "publisher": {
+            "location": "London",
+            "title": "Routledge"
+          }
+        },
+        "pages": "99-110"
       }
     ],
     "conferenceProceedings": [
