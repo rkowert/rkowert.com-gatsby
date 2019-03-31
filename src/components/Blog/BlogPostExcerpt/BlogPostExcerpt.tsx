@@ -1,36 +1,63 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { FaLongArrowAltRight } from 'react-icons/fa/index.mjs';
+import styled from 'styled-components';
 
 import { formatPostDate, formatReadingTime } from 'utils/helpers';
 import { BlogPost } from 'types';
-import * as styles from './BlogPostExcerpt.module.css';
+import { rhythm } from 'utils/typography';
 
 interface Props {
   post: BlogPost;
 }
 
-export default function BlogPostExcerpt({ post }: Props) {
+const BlogPostExcerpt = styled.div`
+  border-bottom: 2px solid ${props => props.theme.color.separator};
+  margin-bottom: ${rhythm(1)};
+`;
+
+const Title = styled.h3`
+  margin-bottom: 0;
+`;
+
+const Date = styled.p`
+  color: ${props => props.theme.color.text.subdued};
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+`;
+
+const Excerpt = styled.div`
+  & > p:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const ContinueReadingLink = styled(Link)`
+  & svg {
+    vertical-align: middle;
+  }
+`;
+
+export default function({ post }: Props) {
   return (
-    <div className={styles.BlogPostExcerpt} key={post.id}>
-      <h3 className={styles.Title}>
+    <BlogPostExcerpt key={post.id}>
+      <Title>
         <Link to={post.fields.path}>{post.frontmatter.title}</Link>
-      </h3>
-      <p className={styles.Date}>
+      </Title>
+      <Date>
         {formatPostDate(post.frontmatter.date)}
         {` • ${formatReadingTime(post.timeToRead)}`}
-      </p>
-      <div
-        className={styles.Excerpt}
+      </Date>
+      <Excerpt
         dangerouslySetInnerHTML={{
           __html: post.excerpt,
         }}
       />
       <p>
-        <Link to={post.fields.path} className={styles.ContinueReadingLink}>
+        <ContinueReadingLink to={post.fields.path}>
           Continue reading <FaLongArrowAltRight atia-hidden="true" />
-        </Link>
+        </ContinueReadingLink>
       </p>
-    </div>
+    </BlogPostExcerpt>
   );
 }

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import { FaLongArrowAltRight } from 'react-icons/fa/index.mjs';
+import styled from 'styled-components';
+import { rhythm } from 'utils/typography';
 
 import {
   BookExcerpt,
@@ -12,7 +14,78 @@ import {
   Welcome,
 } from 'components';
 
-import * as styles from './Home.module.css';
+/* 16rem + 4rem + 30rem + 4rem + 7.5rem = 61.5rem */
+const Hello = styled.section`
+  display: grid;
+  grid-template-areas: 'left right';
+  grid-template-columns: 16rem minmax(30rem, 1fr) minmax(6rem, 15rem);
+  grid-column-gap: ${rhythm(2)};
+
+  & > div {
+    grid-column: 1 / span 2;
+
+    @media (min-width: 48em) {
+      &:nth-child(2) {
+        grid-column: 2;
+      }
+
+      &:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+    }
+
+    @media (min-width: 60em) {
+      &,
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+  }
+`;
+
+const SocialMediaIconsContainer = styled.div`
+  display: none;
+
+  @media (min-width: 60em) {
+    display: block;
+  }
+`;
+
+const About = styled.section`
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    left: -100vw;
+    background: #ddd;
+    z-index: -1;
+  }
+`;
+
+const Books = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.06rem;
+
+  & h2 {
+    grid-column: 1 / span 2;
+    margin-bottom: 0;
+  }
+
+  & > div {
+    grid-column: 1 / span 2;
+
+    @media (min-width: 48em) {
+      grid-column: auto;
+    }
+  }
+`;
 
 export default function Home({
   data: {
@@ -27,13 +100,13 @@ export default function Home({
         title="Home"
         keywords={['rachel', 'kowert', 'psychology', 'gaming']}
       />
-      <main className={styles.Home}>
-        <section className={styles.Hello}>
+      <main>
+        <Hello>
           <div>
             <Welcome />
-            <div className={styles.SocialMediaIcons}>
+            <SocialMediaIconsContainer>
               <SocialMediaIcons />
-            </div>
+            </SocialMediaIconsContainer>
             {/* <LatestTweet /> */}
             {/* <LatestInstagram /> */}
           </div>
@@ -49,11 +122,11 @@ export default function Home({
           <div>
             <KeepCalmAndGameOn />
           </div>
-        </section>
-        <section className={styles.About}>
+        </Hello>
+        <About>
           <p>ABOUT GOES HERE</p>
-        </section>
-        <section className={styles.Books}>
+        </About>
+        <Books>
           <h2>Books</h2>
           {books.map(({ node }) => {
             const img = images.find(
@@ -69,7 +142,7 @@ export default function Home({
 
             return <BookExcerpt book={book} key={book.id} />;
           })}
-        </section>
+        </Books>
         <section className="Media" />
         <section className="Contact" />
       </main>

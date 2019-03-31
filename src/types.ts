@@ -45,6 +45,14 @@ export interface Book {
 }
 
 export namespace CV {
+  export interface Award {
+    frontmatter: {
+      date: string;
+    };
+    id: string;
+    html: string;
+  }
+
   export interface Book {
     authors: string;
     date: string;
@@ -92,12 +100,28 @@ export namespace CV {
     url?: string;
   }
 
+  export interface OtherPublication {
+    authors: string;
+    date: string;
+    publication: Publication;
+    title: string;
+    url?: string;
+  }
+
+  export interface OrganizedPanel {
+    authors: string;
+    date: string;
+    extra: string;
+    location: string;
+    title: string;
+  }
+
   export interface ProfessionalAppointment {
     date: string;
     title: string;
   }
 
-  interface Publication {
+  export interface Publication {
     doi?: string;
     edition?: string;
     pages?: string;
@@ -105,7 +129,7 @@ export namespace CV {
     url?: string;
   }
 
-  interface Publisher {
+  export interface Publisher {
     location: string;
     title: string;
   }

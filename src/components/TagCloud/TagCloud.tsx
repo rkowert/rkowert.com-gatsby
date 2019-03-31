@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import { slugize } from 'utils/helpers';
+import styled from 'styled-components';
 
-import * as styles from './TagCloud.module.css';
+import { slugize } from 'utils/helpers';
 
 const fontSizeConverter = (count, min, max, minSize, maxSize) => {
   if (max - min === 0) {
@@ -12,7 +12,13 @@ const fontSizeConverter = (count, min, max, minSize, maxSize) => {
   return ((count - min) * (maxSize - minSize)) / (max - min) + minSize;
 };
 
-export default function TagCloud() {
+const TagCloud = styled.div`
+  & a {
+    display: inline-block;
+  }
+`;
+
+export default function() {
   return (
     <StaticQuery
       query={graphql`
@@ -67,14 +73,14 @@ export default function TagCloud() {
         }));
 
         return (
-          <div className={styles.TagCloud}>
+          <TagCloud>
             {data.map(({ tag, fontSize }) => (
               <Link to={`/blog/tag/${tag.key}`}>
                 <span style={{ fontSize: `${fontSize}rem` }}>{tag.value}</span>
                 {'\u00A0'}
               </Link>
             ))}
-          </div>
+          </TagCloud>
         );
       }}
     />

@@ -3,8 +3,6 @@ import { graphql } from 'gatsby';
 
 import { Book, Layout, SEO } from 'components';
 
-import * as styles from './Books.module.css';
-
 export default function Books({
   data: {
     allMarkdownRemark: { edges: books },

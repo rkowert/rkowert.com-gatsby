@@ -4,6 +4,7 @@ import ConferenceProceeding from './ConferenceProceeding';
 import DatedEntry from './DatedEntry';
 import Education from './Education';
 import JournalArticle from './JournalArticle';
+import OtherPublication from './OtherPublication';
 
 export default {
   Book,
@@ -12,4 +13,5 @@ export default {
   DatedEntry,
   Education,
   JournalArticle,
+  OtherPublication,
 };

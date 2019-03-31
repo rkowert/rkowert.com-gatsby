@@ -67,7 +67,7 @@ theme.googleFonts = [
   },
   {
     name: 'Montserrat',
-    styles: ['400', '400i', '700', '800'],
+    styles: ['700'],
   },
 ];
 theme.headerFontFamily = ['Muli', 'sans-serif'];
@@ -83,5 +83,13 @@ theme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
 });
 
 const typography = new Typography(theme);
+const { rhythm } = typography;
 
-export default typography;
+const scale = (num: number) =>
+  Object.entries(typography.scale(num))
+    .map(
+      ([k, v]) => `${k.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}: ${v}`
+    )
+    .join('\n');
+
+export { rhythm, scale, typography as default };

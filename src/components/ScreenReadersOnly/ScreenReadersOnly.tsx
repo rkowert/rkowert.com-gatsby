@@ -1,9 +1,17 @@
-import * as React from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-import * as styles from './ScreenReadersOnly.module.css';
+const ScreenReadersOnly = styled.span`
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`;
 
-const ScreenReadersOnly = ({children}) => (
-  <span className={styles.ScreenReadersOnly}>{children}</span>
-);
-
-export default ScreenReadersOnly;
+export default function({ children }) {
+  return <ScreenReadersOnly>{children}</ScreenReadersOnly>;
+}

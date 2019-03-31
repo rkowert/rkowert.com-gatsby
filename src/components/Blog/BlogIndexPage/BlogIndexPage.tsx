@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa/index.mjs';
 
 import { Layout, BlogPostExcerpt, SEO } from 'components';
 import { getBlogIndexPagePath } from 'utils/helpers';
 import { BlogPost } from 'types';
-
-import * as styles from './BlogIndexPage.module.css';
 
 interface Props {
   data: {
@@ -25,6 +24,21 @@ interface Props {
     // nextPagePath: string;
   };
 }
+
+const BlogPagination = styled.nav`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  & a {
+    max-width: 40%;
+
+    &[rel='next'] {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+`;
 
 export default function BlogIndexPage({
   data: {
@@ -47,7 +61,7 @@ export default function BlogIndexPage({
       <SEO title={title} />
       <main>
         {posts}
-        <nav className={styles.BlogPagination} aria-label="Blog pagination">
+        <BlogPagination aria-label="Blog pagination">
           {!isFirst && (
             <Link to={prevPage} rel="prev">
               <FaArrowLeft aria-hidden="true" /> Previous Page
@@ -58,7 +72,7 @@ export default function BlogIndexPage({
               Next Page <FaArrowRight aria-hidden="true" />
             </Link>
           )}
-        </nav>
+        </BlogPagination>
       </main>
     </Layout>
   );

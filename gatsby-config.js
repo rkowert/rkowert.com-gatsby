@@ -41,6 +41,17 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-typescript-css-modules',
     'gatsby-plugin-eslint',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        svgoConfig: {
+          plugins: {
+            prefixIds: false,
+          },
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
@@ -56,6 +67,13 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'awards',
+        path: `${__dirname}/content/awards`,
       },
     },
     {
@@ -77,7 +95,7 @@ module.exports = {
       options: {
         name: 'site-content',
         path: `${__dirname}/content`,
-        ignore: ['./blog', './books/*'],
+        ignore: ['./awards/*', './blog', './books/*'],
       },
     },
     {

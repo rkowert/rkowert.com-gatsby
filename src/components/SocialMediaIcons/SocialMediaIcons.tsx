@@ -7,10 +7,9 @@ import {
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa/index.mjs';
+import styled from 'styled-components';
 
 import { ScreenReadersOnly } from 'components';
-
-import * as styles from './SocialMediaIcons.module.css';
 
 const GoogleScholarIcon = () => (
   <svg
@@ -28,6 +27,32 @@ const GoogleScholarIcon = () => (
     />
   </svg>
 );
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  & > a {
+    border-radius: 50%;
+    background: ${props => props.theme.socialMediaIcons.backgroundColor};
+    color: ${props => props.theme.socialMediaIcons.color};
+    padding: 0.4375rem;
+    margin: 0 0.375rem 0.375rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    & > svg {
+      width: 1.5rem;
+      height: 100%;
+    }
+
+    &:hover {
+      background: ${props => props.theme.socialMediaIcons.hoverBackgroundColor};
+      color: ${props => props.theme.color.link.normal};
+      text-decoration: none;
+    }
+  }
+`;
 
 export default () => (
   <StaticQuery
@@ -57,7 +82,7 @@ export default () => (
         youtube,
       } = data.site.siteMetadata.social;
       return (
-        <div className={styles.SocialMediaIcons}>
+        <SocialMediaIcons>
           <a href={`https://twitter.com/${twitter}`}>
             <ScreenReadersOnly>Twitter</ScreenReadersOnly>
             <FaTwitter aria-hidden="true" />
@@ -82,7 +107,7 @@ export default () => (
             <ScreenReadersOnly>youtube</ScreenReadersOnly>
             <FaYoutube aria-hidden="true" />
           </a>
-        </div>
+        </SocialMediaIcons>
       );
     }}
   />
