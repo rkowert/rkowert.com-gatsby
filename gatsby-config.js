@@ -39,7 +39,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typescript',
-    'gatsby-transformer-typescript-css-modules',
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     {
@@ -62,7 +61,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
