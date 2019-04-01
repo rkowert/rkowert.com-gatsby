@@ -62,12 +62,14 @@ const Menu = styled.ul`
   z-index: -1;
   max-width: 300px;
   margin: 0;
-  padding: 3.5rem 0 0;
+  padding: 4.03rem 0 0; /* 2.5rem + rhythm(1) */
   background: white;
   list-style-type: none;
   -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
   transform-origin: 100% 0;
-  transform: translateX(110%);
+  transform: translateX(
+    calc(100% + 3px + 10px)
+  ); /* 100% + box-shadow X-axis offset and blur */
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.5);
 

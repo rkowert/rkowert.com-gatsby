@@ -5,8 +5,6 @@ import bgImage from './images/keepcalm.png';
 import bulletImage from './images/kcago-bullet.png';
 import shipImage from './images/kcago-ship.png';
 
-import * as styles from './KeepCalmAndGameOn.module.css';
-
 const KeepCalmAndGameOn = styled.div`
   display: none;
   position: relative;

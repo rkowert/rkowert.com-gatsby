@@ -16,14 +16,18 @@ import {
 
 /* 16rem + 4rem + 30rem + 4rem + 7.5rem = 61.5rem */
 const Hello = styled.section`
-  display: grid;
-  grid-template-areas: 'left right';
-  grid-template-columns: 16rem minmax(30rem, 1fr) minmax(6rem, 15rem);
-  grid-column-gap: ${rhythm(2)};
+  @media (min-width: 48em) {
+    display: grid;
+    grid-column-gap: ${rhythm(2)};
+    grid-template-areas: 'left main right';
+    grid-template-columns: 16rem minmax(30rem, 1fr);
+  }
+
+  @media (min-width: 60em) {
+    grid-template-columns: 16rem minmax(30rem, 1fr) minmax(6rem, 15rem);
+  }
 
   & > div {
-    grid-column: 1 / span 2;
-
     @media (min-width: 48em) {
       &:nth-child(2) {
         grid-column: 2;

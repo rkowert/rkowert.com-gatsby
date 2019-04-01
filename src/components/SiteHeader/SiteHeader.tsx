@@ -2,7 +2,6 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import Headroom from 'react-headroom';
 import styled from 'styled-components';
-// import ReactSVG from 'react-svg';
 
 import { ScreenReadersOnly } from 'components';
 import { rhythm } from 'utils/typography';
@@ -97,7 +96,7 @@ const NavigationContainer = styled.div`
 `;
 
 export default ({ navLinks, siteTitle = '' }: Props) => (
-  <Headroom>
+  <Headroom disableInlineStyles>
     <Header role="header">
       <Logo>
         <LogoLink to="/">

@@ -19,7 +19,42 @@ const BodyStyle = createGlobalStyle`
     background-color: ${({ theme }: { theme: Theme }) =>
       theme.body.backgroundColor};
     color: ${({ theme }: { theme: Theme }) => theme.body.color};
+    overflow-x: hidden;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &.has-overlay {
+      overflow-y: hidden;
+      touch-action: none;
+
+      /* If nav menu is opened, then keep HeadRoom pinned */
+      .headroom--unfixed,
+      .headroom--unpinned {
+        position: fixed;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+  }
+  .headroom--scrolled {
+    transition: transform 200ms ease-in-out;
+  }
+  .headroom--unpinned {
+    position: fixed;
+    transform: translateY(calc(-100% - 13px)); /* 100% + height of Header box-shadow */
+  }
+  .headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
   }
 
   a {
@@ -46,6 +81,24 @@ const BodyStyle = createGlobalStyle`
     & > svg {
       vertical-align: middle;
     }
+  }
+`;
+
+const Overlay = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+
+  body.has-overlay & {
+    display: block;
   }
 `;
 
@@ -105,6 +158,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
         <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
           <>
             <BodyStyle />
+            <Overlay />
             <SiteHeader
               siteTitle={data.site.siteMetadata.title}
               navLinks={data.site.siteMetadata.navLinks}

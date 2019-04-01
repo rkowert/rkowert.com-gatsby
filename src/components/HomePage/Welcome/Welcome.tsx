@@ -1,13 +1,16 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import { math, stripUnit } from 'polished';
 
 import { ProfilePhoto } from 'components';
 import { rhythm } from 'utils/typography';
 
 /* @media (min-width: calc(1.53rem + 7.5rem + 1.53rem + 14rem + 1.53rem)) { */
+//26.09em
+const minWidth = stripUnit(math(`${rhythm(3)} + 7.5rem + 14rem`));
 const Welcome = styled.div`
-  @media (min-width: 26.09em) {
+  @media (min-width: ${minWidth}em) {
     display: grid;
     grid-template-columns: minmax(7.5rem, 14rem) minmax(14rem, 1fr);
     grid-template-rows: auto 1fr;
@@ -15,7 +18,7 @@ const Welcome = styled.div`
     margin-bottom: ${rhythm(2)};
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 48em) {
     display: block;
     margin-bottom: 0;
   }
@@ -32,7 +35,6 @@ const Title = styled.p`
   }
 `;
 
-// const ProfilePhotoContainer = styled(ProfilePhoto)`
 const ProfilePhotoContainer = styled(props => <ProfilePhoto {...props} />)`
   border-radius: 50%;
   grid-row: 1 / span 2;
