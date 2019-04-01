@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 import { rhythm } from 'utils/typography';
 
-import { Theme } from '../components/Layout/theme';
 import { CV as CVType } from 'types';
 import { CV, Layout, ProfilePhoto, SEO } from '../components';
 import noise from '../components/Layout/noise.png';
@@ -22,8 +21,7 @@ interface Props {
 const BodyStyle = createGlobalStyle`
   body {
     background-image: url(${noise});
-    background-color: ${({ theme }: { theme: Theme }) =>
-      theme.noise.backgroundColor};
+    background-color: ${({ theme }) => theme.noise.backgroundColor};
   }
 `;
 
@@ -49,8 +47,7 @@ const Sidebar = styled.div`
 `;
 
 const Main = styled.main`
-  background-color: ${({ theme }: { theme: Theme }) =>
-    theme.darkMode ? '#222' : 'white'};
+  background-color: ${({ theme }) => theme.cv.main.backgroundColor};
   box-shadow: -5px 0 24px 0 rgba(0, 0, 0, 0.25);
   padding: ${rhythm(1)} ${rhythm(2)};
 
@@ -63,8 +60,8 @@ const Section = styled.section`
   & h2 {
     background-image: linear-gradient(
       to bottom,
-      ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[0].from},
-      ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[0].to}
+      ${({ theme }) => theme.rainbowHeaders[0].from},
+      ${({ theme }) => theme.rainbowHeaders[0].to}
     );
     border: none;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15),
@@ -76,8 +73,7 @@ const Section = styled.section`
 
     &::before,
     &::after {
-      border-top: 0.5rem solid
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[0].to};
+      border-top: 0.5rem solid ${({ theme }) => theme.rainbowHeaders[0].to};
       content: '';
       display: block;
       height: 0;
@@ -111,14 +107,13 @@ const Section = styled.section`
     & h2 {
       background-image: linear-gradient(
         to bottom,
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[1].from},
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[1].to}
+        ${({ theme }) => theme.rainbowHeaders[1].from},
+        ${({ theme }) => theme.rainbowHeaders[1].to}
       );
 
       &::after,
       &::before {
-        border-top-color: ${({ theme }: { theme: Theme }) =>
-          theme.color.rainbowHeaders[1].to};
+        border-top-color: ${({ theme }) => theme.rainbowHeaders[1].to};
       }
     }
   }
@@ -126,14 +121,13 @@ const Section = styled.section`
     & h2 {
       background-image: linear-gradient(
         to bottom,
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[2].from},
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[2].to}
+        ${({ theme }) => theme.rainbowHeaders[2].from},
+        ${({ theme }) => theme.rainbowHeaders[2].to}
       );
 
       &::after,
       &::before {
-        border-top-color: ${({ theme }: { theme: Theme }) =>
-          theme.color.rainbowHeaders[2].to};
+        border-top-color: ${({ theme }) => theme.rainbowHeaders[2].to};
       }
     }
   }
@@ -141,14 +135,13 @@ const Section = styled.section`
     & h2 {
       background-image: linear-gradient(
         to bottom,
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[3].from},
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[3].to}
+        ${({ theme }) => theme.rainbowHeaders[3].from},
+        ${({ theme }) => theme.rainbowHeaders[3].to}
       );
 
       &::after,
       &::before {
-        border-top-color: ${({ theme }: { theme: Theme }) =>
-          theme.color.rainbowHeaders[3].to};
+        border-top-color: ${({ theme }) => theme.rainbowHeaders[3].to};
       }
     }
   }
@@ -156,14 +149,13 @@ const Section = styled.section`
     & h2 {
       background-image: linear-gradient(
         to bottom,
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[4].from},
-        ${({ theme }: { theme: Theme }) => theme.color.rainbowHeaders[4].to}
+        ${({ theme }) => theme.rainbowHeaders[4].from},
+        ${({ theme }) => theme.rainbowHeaders[4].to}
       );
 
       &::after,
       &::before {
-        border-top-color: ${({ theme }: { theme: Theme }) =>
-          theme.color.rainbowHeaders[4].to};
+        border-top-color: ${({ theme }) => theme.rainbowHeaders[4].to};
       }
     }
   }

@@ -7,10 +7,9 @@ import { ProfilePhoto } from 'components';
 import { rhythm } from 'utils/typography';
 
 /* @media (min-width: calc(1.53rem + 7.5rem + 1.53rem + 14rem + 1.53rem)) { */
-//26.09em
-const minWidth = stripUnit(math(`${rhythm(3)} + 7.5rem + 14rem`));
+const minGridWidth = `${stripUnit(math(`${rhythm(3)} + 7.5rem + 14rem`))}em`;
 const Welcome = styled.div`
-  @media (min-width: ${minWidth}em) {
+  @media (min-width: ${minGridWidth}) {
     display: grid;
     grid-template-columns: minmax(7.5rem, 14rem) minmax(14rem, 1fr);
     grid-template-rows: auto 1fr;
@@ -60,7 +59,7 @@ const ProfilePhotoContainer = styled(props => <ProfilePhoto {...props} />)`
     height: 100%;
   }
 
-  @media (min-width: 26.09em) {
+  @media (min-width: ${minGridWidth}) {
     margin: 0;
   }
 

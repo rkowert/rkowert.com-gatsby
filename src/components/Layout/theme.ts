@@ -1,51 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-export interface Theme {
-  darkMode: boolean;
-  body: {
-    backgroundColor: string;
-    color: string;
-  };
-  color: {
-    rainbowHeaders: {
-      from: string;
-      to: string;
-    }[];
-    link: {
-      normal: string;
-      hover: string;
-    };
-    separator: string;
-    text: {
-      subdued: string;
-    };
-  };
-  header: {
-    backgroundColor: string;
-    boxShadowColor: string;
-    logoFill: string;
-    logoFill2: string;
-    logoHoverFill?: string;
-    logoHoverFill2?: string;
-  };
-  media: {
-    expandedNav: string;
-  };
-  nav: {
-    color: string;
-  };
-  noise: {
-    backgroundColor: string;
-  };
-  socialMediaIcons: {
-    backgroundColor: string;
-    color: string;
-    hoverBackgroundColor: string;
-  };
-}
-
-const lightTheme: Theme = {
-  darkMode: false,
+const lightTheme: DefaultTheme = {
   body: {
     backgroundColor: 'white',
     color: 'rgba(0, 0, 0, 0.8)',
@@ -55,16 +10,14 @@ const lightTheme: Theme = {
       normal: '#a353c4',
       hover: '#bf61e6',
     },
-    rainbowHeaders: [
-      { from: '#fbb450', to: '#f89406' }, // 1 yellow
-      { from: '#74c474', to: '#46a546' }, // 2 green
-      { from: '#d9698c', to: '#c3325f' }, // 3 magenta
-      { from: '#30c0fb', to: '#049cdb' }, // 4 blue
-      { from: '#a178cd', to: '#7a43b6' }, // 5 purple
-    ],
     separator: '#e6e7e8',
     text: {
       subdued: '#a7a9ab',
+    },
+  },
+  cv: {
+    main: {
+      backgroundColor: 'white',
     },
   },
   header: {
@@ -84,6 +37,13 @@ const lightTheme: Theme = {
   noise: {
     backgroundColor: '#eee',
   },
+  rainbowHeaders: [
+    { from: '#fbb450', to: '#f89406' }, // 1 yellow
+    { from: '#74c474', to: '#46a546' }, // 2 green
+    { from: '#d9698c', to: '#c3325f' }, // 3 magenta
+    { from: '#30c0fb', to: '#049cdb' }, // 4 blue
+    { from: '#a178cd', to: '#7a43b6' }, // 5 purple
+  ],
   socialMediaIcons: {
     backgroundColor: '#d1d2d4',
     color: 'white',
@@ -91,12 +51,16 @@ const lightTheme: Theme = {
   },
 };
 
-const darkTheme: Theme = {
+const darkTheme: DefaultTheme = {
   ...lightTheme,
-  darkMode: true,
   body: {
     backgroundColor: '#222',
     color: 'rgba(255, 255, 255, 0.5)',
+  },
+  cv: {
+    main: {
+      backgroundColor: '#222',
+    },
   },
   header: {
     ...lightTheme.header,

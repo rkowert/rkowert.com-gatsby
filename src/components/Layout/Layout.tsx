@@ -7,7 +7,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { SiteHeader, SocialMediaIcons } from 'components';
 import { rhythm } from 'utils/typography';
 
-import { darkTheme, lightTheme, Theme } from './theme';
+import { darkTheme, lightTheme } from './theme';
 
 interface Props {
   children: React.ReactNode;
@@ -16,9 +16,8 @@ interface Props {
 
 const BodyStyle = createGlobalStyle`
   body {
-    background-color: ${({ theme }: { theme: Theme }) =>
-      theme.body.backgroundColor};
-    color: ${({ theme }: { theme: Theme }) => theme.body.color};
+    background-color: ${({ theme }) => theme.body.backgroundColor};
+    color: ${({ theme }) => theme.body.color};
     overflow-x: hidden;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
@@ -58,12 +57,12 @@ const BodyStyle = createGlobalStyle`
   }
 
   a {
-    color: ${({ theme }: { theme: Theme }) => theme.color.link.normal};
+    color: ${({ theme }) => theme.color.link.normal};
     text-decoration: none;
 
     &:focus,
     &:hover {
-      color: ${({ theme }: { theme: Theme }) => theme.color.link.hover};
+      color: ${({ theme }) => theme.color.link.hover};
     }
 
     &:focus {
@@ -75,7 +74,7 @@ const BodyStyle = createGlobalStyle`
     }
 
     &:visited {
-      color: ${({ theme }: { theme: Theme }) => theme.color.link.normal};
+      color: ${({ theme }) => theme.color.link.normal};
     }
 
     & > svg {

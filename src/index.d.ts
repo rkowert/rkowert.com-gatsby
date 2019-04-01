@@ -1,3 +1,56 @@
+import 'styled-components';
+
+// and extend them!
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    body: {
+      backgroundColor: string;
+      color: string;
+    };
+    color: {
+      link: {
+        normal: string;
+        hover: string;
+      };
+      separator: string;
+      text: {
+        subdued: string;
+      };
+    };
+    cv: {
+      main: {
+        backgroundColor: string;
+      };
+    };
+    header: {
+      backgroundColor: string;
+      boxShadowColor: string;
+      logoFill: string;
+      logoFill2: string;
+      logoHoverFill?: string;
+      logoHoverFill2?: string;
+    };
+    media: {
+      expandedNav: string;
+    };
+    nav: {
+      color: string;
+    };
+    noise: {
+      backgroundColor: string;
+    };
+    rainbowHeaders: {
+      from: string;
+      to: string;
+    }[];
+    socialMediaIcons: {
+      backgroundColor: string;
+      color: string;
+      hoverBackgroundColor: string;
+    };
+  }
+}
+
 declare module '*.png' {
   const content: string;
   export default content;

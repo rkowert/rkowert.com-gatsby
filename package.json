@@ -30,7 +30,6 @@
   "browserslist": "last 2 versions",
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
-    "array-shuffle": "^1.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint-plugin-prettier": "^3.0.1",
     "gatsby": "^2.1.31",
@@ -62,19 +61,14 @@
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
-    "react-svg": "^8.0.2",
     "react-switch": "^4.1.0",
-    "react-tagcloud": "^1.4.0",
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
-    "stylelint-config-prettier": "^5.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.6.0",
     "ts-node": "^8.0.3",
+    "typescript": "^3.4.1",
     "typography": "^0.16.19",
     "typography-theme-us-web-design-standards": "^0.16.19",
-    "use-dark-mode": "^2.3.1",
-    "wizard": "^2.0.0"
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@types/inquirer": "^6.0.0",
@@ -86,6 +80,7 @@
     "@types/typography": "^0.16.2",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
+    "depcheck": "^0.7.2",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -96,8 +91,10 @@
     "gatsby-plugin-eslint": "^2.0.4",
     "prettier": "^1.16.4",
     "stylelint": "^9.10.1",
+    "stylelint-config-prettier": "^5.0.0",
     "stylelint-config-standard": "^18.2.0",
-    "typescript": "^3.3.3333"
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.6.0"
   },
   "eslintConfig": {
     "extends": [
