@@ -185,21 +185,35 @@ exports.createPages = async ({ actions, graphql }) => {
 // Replacing '/' would result in empty string which is invalid
 const removeTrailingSlash = str => (str === '/' ? str : str.replace(/\/$/, ''));
 
+/* eslint-disable no-console */
+const DEBUG_PAGE_PATHS = true;
+
 // Implement the Gatsby API “onCreatePage”. This is called after every page is created.
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
   const newPage = { ...page };
-  // console.log(`Component path: ${page.componentPath}`);
+  if (DEBUG_PAGE_PATHS) {
+    console.log(
+      `-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nComponent path: ${
+        page.componentPath
+      }`
+    );
+  }
 
   // Ignore index.tsx files
   if (/index\.tsx$/.test(page.componentPath)) {
-    // console.log('Ingoring index file');
+    if (DEBUG_PAGE_PATHS) {
+      console.log('  Ingoring index file');
+    }
     deletePage(page);
     return;
   }
 
   // "Move" '/Home' to '/'
   if (page.path === '/Home/Home/') {
+    if (DEBUG_PAGE_PATHS) {
+      console.log('  Moving "/Home" to "/"');
+    }
     deletePage(page);
     // Create a new page but with '/' as path
     createPage({
@@ -209,16 +223,35 @@ exports.onCreatePage = ({ page, actions }) => {
     return;
   }
 
-  const matches = page.path.match(/\/(?:([^/]+)\/)?([^/]+)\/$/);
+  // camelCase -> kebab-case
+  newPage.path = newPage.path.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+  if (DEBUG_PAGE_PATHS) {
+    console.log(`  Converting camelCase to kebab-case: ${newPage.path}`);
+  }
+
+  const matches = newPage.path.match(/\/(?:([^/]+)\/)?([^/]+)\/$/);
   if (matches && matches[1] && matches[2] && matches[1] === matches[2]) {
     // Replace "/Page/Page/" with "/page", i.e., accomodate our opinionated file layout
     newPage.path = `/${matches[1].toLowerCase()}`;
+    if (DEBUG_PAGE_PATHS) {
+      console.log(`  Found folder index! New path: ${newPage.path}`);
+    }
   } else {
     // Remove trailing slash unless page is "/"
-    newPage.path = removeTrailingSlash(page.path.toLowerCase());
+    newPage.path = removeTrailingSlash(newPage.path.toLowerCase());
+    if (DEBUG_PAGE_PATHS) {
+      console.log('  Removing trailing slash');
+    }
   }
 
   if (newPage.path !== page.path) {
+    if (DEBUG_PAGE_PATHS) {
+      console.log(
+        `  Path has changed!\n    Old path: ${page.path}\n    New path: ${
+          newPage.path
+        }`
+      );
+    }
     // Replace new page with old page
     deletePage(page);
     createPage(newPage);

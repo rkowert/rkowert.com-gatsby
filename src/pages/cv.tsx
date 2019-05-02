@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
+
+import { CV, Layout, PermalinkHeader, ProfilePhoto, SEO } from 'components';
+import { CV as CVType } from 'types';
 import { rhythm } from 'utils/typography';
 
-import { CV as CVType } from 'types';
-import { CV, Layout, ProfilePhoto, SEO } from '../components';
 import noise from '../components/Layout/noise.png';
 import cv from '../../content/cv.json';
 
@@ -50,6 +51,7 @@ const Main = styled.main`
   background-color: ${({ theme }) => theme.cv.main.backgroundColor};
   box-shadow: -5px 0 24px 0 rgba(0, 0, 0, 0.25);
   padding: ${rhythm(1)} ${rhythm(2)};
+  transition: background-color 0.3s ease-in-out;
 
   @media (min-width: 48em) {
     margin-right: -${rhythm(2)};
@@ -167,6 +169,10 @@ const Section = styled.section`
     &:hover {
       border-bottom-style: solid;
     }
+
+    &.anchor {
+      border-bottom: none;
+    }
   }
 
   & h3 {
@@ -223,7 +229,9 @@ export default function CVPage(props: Props) {
           <h1>Curriculum Vitae</h1>
 
           <Section>
-            <h2 id="Education">Education</h2>
+            <h2>
+              <PermalinkHeader label="Education" />
+            </h2>
             {cv.education.map((education, i) => {
               return (
                 <CV.DatedEntry
@@ -238,7 +246,9 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="ProfessionalAppointments">Professional Appointments</h2>
+            <h2>
+              <PermalinkHeader label="Professional Appointments" />
+            </h2>
             {cv.professionalAppointments.map(({ date, title }, i) => (
               <CV.DatedEntry date={date} key={title} reset={i === 0}>
                 {title}
@@ -247,15 +257,21 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="Publications">Publications</h2>
-            <h3 id="Books">Books</h3>
+            <h2>
+              <PermalinkHeader label="Publications" />
+            </h2>
+            <h3>
+              <PermalinkHeader label="Books" />
+            </h3>
             {cv.publications.books.map((book, i) => (
               <CV.DatedEntry date={book.date} key={book.title} reset={i === 0}>
                 <CV.Book book={book} />
               </CV.DatedEntry>
             ))}
 
-            <h3 id="EditedVolumes">Edited Volumes</h3>
+            <h3>
+              <PermalinkHeader label="Edited Volumes" />
+            </h3>
             {cv.publications.editedVolumes.map((editedVolume, i) => (
               <CV.DatedEntry
                 date={editedVolume.date}
@@ -266,7 +282,9 @@ export default function CVPage(props: Props) {
               </CV.DatedEntry>
             ))}
 
-            <h3 id="RefereedJournalArticles">Refereed Journal Articles</h3>
+            <h3>
+              <PermalinkHeader label="Refereed Journal Articles" />
+            </h3>
             {cv.publications.refereedJournalArticles.map((article, i) => (
               <CV.DatedEntry
                 date={article.date}
@@ -277,7 +295,9 @@ export default function CVPage(props: Props) {
               </CV.DatedEntry>
             ))}
 
-            <h3 id="BookChapters">Book Chapters</h3>
+            <h3>
+              <PermalinkHeader label="Book Chapters" />
+            </h3>
             {cv.publications.bookChapters.map((chapter, i) => (
               <CV.DatedEntry
                 date={chapter.date}
@@ -288,7 +308,9 @@ export default function CVPage(props: Props) {
               </CV.DatedEntry>
             ))}
 
-            <h3 id="ConferenceProceedings">Conference Proceedings</h3>
+            <h3>
+              <PermalinkHeader label="Conference Proceedings" />
+            </h3>
             {cv.publications.conferenceProceedings.map((proceeding, i) => (
               <CV.DatedEntry
                 date={proceeding.date}
@@ -299,7 +321,9 @@ export default function CVPage(props: Props) {
               </CV.DatedEntry>
             ))}
 
-            <h3 id="OtherPublications">Other Publications</h3>
+            <h3>
+              <PermalinkHeader label="Other Publications" />
+            </h3>
             {cv.publications.otherPublications.map((publication, i) => (
               <CV.DatedEntry
                 date={publication.date}
@@ -312,7 +336,9 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="AwardsAndHonors">Awards and Honors</h2>
+            <h2>
+              <PermalinkHeader label="Awards and Honors" />
+            </h2>
             {awards.map(({ node: award }, i) => (
               <CV.DatedEntry
                 date={award.frontmatter.date}
@@ -329,18 +355,30 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="GrantsAndFellowships">Grants and Fellowships</h2>
+            <h2>
+              <PermalinkHeader label="Grants and Fellowships" />
+            </h2>
             {cv.grantsAndFellowships.map((entry, i) => (
-              <CV.DatedEntry date={entry.date} reset={i === 0}>
+              <CV.DatedEntry
+                date={entry.date}
+                reset={i === 0}
+                key={`${entry.date}-${entry.title}`}
+              >
                 {entry.title}
               </CV.DatedEntry>
             ))}
           </Section>
 
           <Section>
-            <h2 id="InvitedTalks">Invited Talks</h2>
+            <h2>
+              <PermalinkHeader label="Invited Talks" />
+            </h2>
             {cv.invitedTalks.map((talk, i) => (
-              <CV.DatedEntry date={talk.date} reset={i === 0}>
+              <CV.DatedEntry
+                date={talk.date}
+                reset={i === 0}
+                key={`${talk.date}-${talk.title}`}
+              >
                 {talk.authors.replace(/\.$/, '')}. ({talk.date}). {talk.title}.{' '}
                 <i dangerouslySetInnerHTML={{ __html: talk.extra }} />.{' '}
                 {talk.location}.
@@ -349,28 +387,48 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="ConferenceParticipation">Conference Participation</h2>
+            <h2>
+              <PermalinkHeader label="Conference Participation" />
+            </h2>
 
-            <h3 id="ConferencesOrganized">Conferences Organized</h3>
+            <h3>
+              <PermalinkHeader label="Conferences Organized" />
+            </h3>
             {cv.conferenceParticipation.conferencesOrganized.map((entry, i) => (
-              <CV.DatedEntry date={entry.date} reset={i === 0}>
+              <CV.DatedEntry
+                date={entry.date}
+                reset={i === 0}
+                key={`${entry.date}-${entry.title}`}
+              >
                 {entry.title}, {entry.location}, {entry.date}
               </CV.DatedEntry>
             ))}
 
-            <h3 id="PanelsOrganized">Panels Organized</h3>
+            <h3>
+              <PermalinkHeader label="Panels Organized" />
+            </h3>
             {cv.conferenceParticipation.panelsOrganized.map((panel, i) => (
-              <CV.DatedEntry date={panel.date} reset={i === 0}>
+              <CV.DatedEntry
+                date={panel.date}
+                reset={i === 0}
+                key={`${panel.date}-${panel.title}`}
+              >
                 {panel.authors.replace(/\.$/, '')}. ({panel.date}).{' '}
                 {panel.title}. <i>{panel.extra}</i>. {panel.location}.
               </CV.DatedEntry>
             ))}
 
-            <h3 id="PapersPresented">Papers Presented</h3>
+            <h3>
+              <PermalinkHeader label="Papers Presented" />
+            </h3>
             {cv.conferenceParticipation.papersPresented.map((paper, i) => {
               const extra = paper.extra ? <i>{paper.extra}.</i> : '';
               return (
-                <CV.DatedEntry date={paper.date} reset={i === 0}>
+                <CV.DatedEntry
+                  date={paper.date}
+                  reset={i === 0}
+                  key={`${paper.date}-${paper.title}`}
+                >
                   {paper.authors.replace(/\.$/, '')}. ({paper.date}).{' '}
                   {paper.title}.{extra} <i>{paper.conference.title}</i>.{' '}
                   {paper.conference.location}.
@@ -380,15 +438,15 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="TeachingAndSupervisionExperience">
-              Teaching and Supervision Experience
+            <h2>
+              <PermalinkHeader label="Teaching and Supervision Experience" />
             </h2>
             {cv.teachingAndSupervisionExperience.map(position => (
-              <div>
+              <div key={position.location}>
                 <b>{position.location}</b>
                 <ul>
                   {position.courses.map(course => (
-                    <li>
+                    <li key={`${course.date}-${course.title}`}>
                       {course.title} ({course.date})
                     </li>
                   ))}
@@ -398,23 +456,28 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="ServiceToProfession">Service to Profession</h2>
+            <h2>
+              <PermalinkHeader label="Service to Profession" />
+            </h2>
             <ul>
               {cv.serviceToProfession.map(service => (
                 <li
                   dangerouslySetInnerHTML={{
                     __html: `${service.title}, ${service.date}`,
                   }}
+                  key={`${service.date}-${service.title}`}
                 />
               ))}
             </ul>
           </Section>
 
           <Section>
-            <h2 id="ReviewingExperience">Reviewing Experience</h2>
+            <h2>
+              <PermalinkHeader label="Reviewing Experience" />
+            </h2>
             <ul>
               {cv.reviewingExperience.map(entry => (
-                <li>
+                <li key={`${entry.date}-${entry.title}`}>
                   <i>{entry.title}</i>, {entry.date}
                 </li>
               ))}
@@ -422,12 +485,12 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="DepartmentalAndUniversityService">
-              Departmental and University Service
+            <h2>
+              <PermalinkHeader label="Departmental and University Service" />
             </h2>
             <ul>
               {cv.departmentalAndUniversityService.map(entry => (
-                <li>
+                <li key={`${entry.date}-${entry.title}`}>
                   {entry.title}, {entry.date}
                 </li>
               ))}
@@ -435,7 +498,9 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="SelectedPressAndMedia">Selected Press and Media</h2>
+            <h2>
+              <PermalinkHeader label="Selected Press and Media" />
+            </h2>
             {cv.selectedPressAndMedia.map((entry, i) => {
               const title = entry.url ? (
                 <a href={entry.url}>{entry.title}</a>
@@ -450,7 +515,11 @@ export default function CVPage(props: Props) {
                 <i>{entry.source}</i>
               );
               return (
-                <CV.DatedEntry date={entry.date} reset={i === 0}>
+                <CV.DatedEntry
+                  date={entry.date}
+                  reset={i === 0}
+                  key={`${entry.date}-${entry.title}`}
+                >
                   {entry.authors.replace(/\.$/, '')}. ({entry.date}). {title}.{' '}
                   {source}.
                 </CV.DatedEntry>
@@ -459,10 +528,12 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="ProfessionalMemberships">Professional Memberships</h2>
+            <h2>
+              <PermalinkHeader label="Professional Memberships" />
+            </h2>
             <ul>
               {cv.professionalMemberships.map(entry => (
-                <li>
+                <li key={`${entry.date}-${entry.title}`}>
                   <a href={entry.url}>{entry.title}</a> (Joined {entry.date})
                 </li>
               ))}
@@ -470,9 +541,14 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <h2 id="References">References</h2>
-            {cv.references.map(reference => (
-              <p dangerouslySetInnerHTML={{ __html: reference.reference }} />
+            <h2>
+              <PermalinkHeader label="References" />
+            </h2>
+            {cv.references.map((reference, i) => (
+              <p
+                dangerouslySetInnerHTML={{ __html: reference.reference }}
+                key={`reference-${i}`}
+              />
             ))}
           </Section>
         </Main>

@@ -18,6 +18,8 @@ export { default as SiteHeader } from './SiteHeader';
 export { Welcome } from './HomePage';
 export { default as KeepCalmAndGameOn } from './KeepCalmAndGameOn';
 export { default as Layout } from './Layout';
+export { default as KupoKode } from './KupoKode';
+export { default as PermalinkHeader } from './PermalinkHeader';
 export { default as ProfilePhoto } from './ProfilePhoto';
 export { default as ScreenReadersOnly } from './ScreenReadersOnly';
 export { default as SEO } from './SEO';

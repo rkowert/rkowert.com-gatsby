@@ -43,15 +43,18 @@ const ProfilePhotoContainer = styled(props => <ProfilePhoto {...props} />)`
 
   & img {
     border-radius: 50%;
-    border: 1px solid ${props => props.theme.body.backgroundColor};
+    border: 1px solid ${({ theme }) => theme.body.backgroundColor};
   }
 
   &::after {
     content: '';
     display: block;
     border-radius: 50%;
-    box-shadow: inset 5px 5px 5px 0px white, inset -5px -5px 5px 0px white,
-      inset 5px -5px 5px 0px white, inset -5px 5px 5px 0px white;
+    box-shadow: inset 5px 5px 5px 0px
+        ${({ theme }) => theme.body.backgroundColor},
+      inset -5px -5px 5px 0px ${({ theme }) => theme.body.backgroundColor},
+      inset 5px -5px 5px 0px ${({ theme }) => theme.body.backgroundColor},
+      inset -5px 5px 5px 0px ${({ theme }) => theme.body.backgroundColor};
     position: absolute;
     top: 0;
     left: 0;

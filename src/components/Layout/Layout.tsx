@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import { SiteHeader, SocialMediaIcons } from 'components';
+import { KupoKode, SiteHeader, SocialMediaIcons } from 'components';
 import { rhythm } from 'utils/typography';
 
 import { darkTheme, lightTheme } from './theme';
@@ -38,19 +38,23 @@ const BodyStyle = createGlobalStyle`
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 9999;
   }
+
   .headroom--unfixed {
     position: relative;
     transform: translateY(0);
   }
+
   .headroom--scrolled {
     transition: transform 200ms ease-in-out;
   }
+
   .headroom--unpinned {
     position: fixed;
     transform: translateY(calc(-100% - 13px)); /* 100% + height of Header box-shadow */
   }
+
   .headroom--pinned {
     position: fixed;
     transform: translateY(0%);
@@ -59,6 +63,11 @@ const BodyStyle = createGlobalStyle`
   a {
     color: ${({ theme }) => theme.color.link.normal};
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:visited {
+      color: ${({ theme }) => theme.color.link.normal};
+    }
 
     &:focus,
     &:hover {
@@ -69,17 +78,13 @@ const BodyStyle = createGlobalStyle`
       text-decoration: underline;
     }
 
-    &:hover {
-      transition: color 0.3s ease-in-out;
-    }
-
-    &:visited {
-      color: ${({ theme }) => theme.color.link.normal};
-    }
-
     & > svg {
       vertical-align: middle;
     }
+  }
+
+  h2 {
+    border-bottom: 2px solid ${({ theme }) => theme.color.separator};
   }
 `;
 
@@ -158,6 +163,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
           <>
             <BodyStyle />
             <Overlay />
+            <KupoKode />
             <SiteHeader
               siteTitle={data.site.siteMetadata.title}
               navLinks={data.site.siteMetadata.navLinks}

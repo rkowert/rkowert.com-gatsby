@@ -57,6 +57,10 @@ const darkTheme: DefaultTheme = {
     backgroundColor: '#222',
     color: 'rgba(255, 255, 255, 0.5)',
   },
+  color: {
+    ...lightTheme.color,
+    separator: '#444',
+  },
   cv: {
     main: {
       backgroundColor: '#222',

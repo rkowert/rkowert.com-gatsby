@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { FaLongArrowAltRight } from 'react-icons/fa/index.mjs';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 import { AmazonBuyButton, BookReview, IndieboundBuyButton } from 'components';
 import { Book as BookType } from 'types';

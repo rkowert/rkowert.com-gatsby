@@ -1,17 +1,34 @@
 # TODO
 
-- Test prod build
+- Pages
+  - 404 page
+  - Home page
+    - About section
+    - Media section
+    - Contact section
+  - Tag pages
+  - Category pages?
+  - Pragmatic Princess page
+  - About page
+  - Research page
+  - Resources pages
+    - Ludodemia
+    - articles datatable
+    - positions datatable
+- BlogPost / BlogPostExcerpt
+  - Add tags
+  - Add categories
+- Add CV to nav?
 - Update LICENSE
 - Consolidate images to a single folder
   - src/assets/images
   - src/images
-  - static
-- 404 page
-- Home page
-  - About section
-  - Media section
-  - Contact section
-- Add CV to nav?
 - gatsby-plugin-manifest
 - sitemap
 - gatsby-plugin-offline?
+- Test prod build
+- Scripts
+  - new
+    - populate list of categories to allow user to select one, or to input a new one
+    - autocomplete for adding tags
+    - add support for other entries (e.g., CV entries)

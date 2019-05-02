@@ -6,7 +6,7 @@ import {
   FaResearchgate,
   FaTwitter,
   FaYoutube,
-} from 'react-icons/fa/index.mjs';
+} from 'react-icons/fa';
 import styled from 'styled-components';
 
 import { ScreenReadersOnly } from 'components';

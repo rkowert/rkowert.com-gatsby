@@ -77,7 +77,6 @@ theme.bodyFontFamily = ['Muli', 'sans-serif'];
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 theme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   h2: {
-    borderBottom: '2px solid #e6e7e8',
     fontFamily: 'Montserrat',
   },
 });

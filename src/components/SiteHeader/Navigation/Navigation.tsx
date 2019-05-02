@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Switch from 'react-switch';
-import { FaMoon, FaSun } from 'react-icons/fa/index.mjs';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 

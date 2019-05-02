@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa/index.mjs';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import { Layout, BlogPostExcerpt, SEO } from 'components';
 import { getBlogIndexPagePath } from 'utils/helpers';

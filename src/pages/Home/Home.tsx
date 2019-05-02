@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
-import { FaLongArrowAltRight } from 'react-icons/fa/index.mjs';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import { rhythm } from 'utils/typography';
 
@@ -139,7 +139,7 @@ export default function Home({
             );
             const book = {
               ...node,
-              coverImage: img ? img['node'] : null,
+              coverImage: img ? img.node : null,
               path: node.fields.path,
               slug: node.fields.slug,
             };

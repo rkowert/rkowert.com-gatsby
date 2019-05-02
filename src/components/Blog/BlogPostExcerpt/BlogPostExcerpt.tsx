@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import { FaLongArrowAltRight } from 'react-icons/fa/index.mjs';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
 import { formatPostDate, formatReadingTime } from 'utils/helpers';

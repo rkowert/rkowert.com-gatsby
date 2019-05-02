@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa/index.mjs';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
 import { Layout, SEO } from 'components';
