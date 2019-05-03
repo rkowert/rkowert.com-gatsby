@@ -1,11 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import {Link} from 'gatsby';
+import Paper from '@material-ui/core/Paper';
 import {
-  GroupingState,
   IntegratedFiltering,
-  IntegratedGrouping,
-  IntegratedPaging,
   IntegratedSorting,
-  PagingState,
   RowDetailState,
   SearchState,
   SortingState,
@@ -13,22 +11,18 @@ import {
 import {
   ColumnChooser,
   Grid,
-  PagingPanel,
   SearchPanel,
   TableColumnVisibility,
   TableHeaderRow,
-  TableGroupRow,
   TableRowDetail,
   Toolbar,
   VirtualTable,
 } from '@devexpress/dx-react-grid-material-ui';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 
 import { Layout, SEO } from 'components';
-import { rhythm } from 'utils/typography';
-import useScript from 'utils/hooks';
 
 const SHEET_KEY = '1sNdqBAtiJXFPqSwGax41Al0fhk3O_hJEB3_jMCkTLjw';
 const API_KEY = 'AIzaSyBiaP9kmdGAWtzVnRw8zFsObqMcz2yP83A';
@@ -55,10 +49,6 @@ interface Row {
 const formatData = (data: string, format?: string) => {
   if (format === 'url') {
     if (data && !/^\?$/.test(data)) {
-      // if(data.length > 42) {
-      //   truncated = data.substr(0, 29) + '&hellip;' + data.substr(data.length - 12);
-      // }
-      // return '<a href="' + data + '" target="_blank">' + truncated + '</a>';
       return (
         <a href={data} target="_blank">
           {data}
@@ -84,11 +74,6 @@ const RowDetailCell = styled.td`
   font-size: 0.8125rem;
 `;
 
-const SpacerCell = styled.td`
-  border-bottom: 0;
-  padding-left: 5rem;
-`;
-
 const RowDetail = ({ row }) => (
   <table>
     <tbody>
@@ -97,7 +82,6 @@ const RowDetail = ({ row }) => (
         <RowDetailCell>
           {formatData(row.submissionGuidelinesUrl, 'url')}
         </RowDetailCell>
-        {/* <SpacerCell>&nbsp;</SpacerCell> */}
         <RowDetailCellHeader>Word Limit (brief limit):</RowDetailCellHeader>
         <RowDetailCell>
           {formatData(row.wordLimit)} ({formatData(row.briefWordLimit)})
@@ -108,7 +92,6 @@ const RowDetail = ({ row }) => (
         <RowDetailCell>
           {formatData(row.journalReviewerUrl, 'url')}
         </RowDetailCell>
-        {/* <SpacerCell>&nbsp;</SpacerCell> */}
         <RowDetailCellHeader />
         <RowDetailCell />
       </tr>
@@ -175,6 +158,7 @@ export default function GamesResearchJournals() {
 
   const gridMarkup = rows ? (
     <MuiThemeProvider theme={muiTheme}>
+    <Paper>
       <Grid
         rows={rows}
         columns={[
@@ -242,6 +226,7 @@ export default function GamesResearchJournals() {
         <ColumnChooser />
         <SearchPanel />
       </Grid>
+      </Paper>
     </MuiThemeProvider>
   ) : null;
 
@@ -257,11 +242,7 @@ export default function GamesResearchJournals() {
           The following table contains a comprehensive listing of academic
           journals and publications known to publish research related to digital
           games. If you would like to suggest a new journal or any corrections
-          to existing info in the table please{' '}
-          <a href="http://discourse.digrastudents.org/t/journal-research-map">
-            use this thread
-          </a>{' '}
-          on the DigraStudents.org forums.
+          to existing info in the table please <Link to="/contact">contact me</Link>.
         </p>
         <p>
           Click several columns while holding <kbd>Shift</kbd> to sort data by

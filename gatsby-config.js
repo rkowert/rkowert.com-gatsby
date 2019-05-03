@@ -14,12 +14,16 @@ module.exports = {
         link: '/about',
       },
       {
+        name: 'CV',
+        link: 'cv',
+      },
+      {
         name: 'books',
         link: '/books',
       },
       {
-        name: 'media',
-        link: '/media',
+        name: 'resources',
+        link: '/resources',
       },
       {
         name: 'contact',

@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import {Link} from 'gatsby';
+import Paper from '@material-ui/core/Paper';
 import {
   GroupingState,
   IntegratedFiltering,
@@ -106,6 +108,7 @@ export default function Ludodemia() {
 
   const gridMarkup = rows ? (
     <MuiThemeProvider theme={muiTheme}>
+    <Paper>
       <Grid
         rows={rows}
         columns={[
@@ -152,6 +155,7 @@ export default function Ludodemia() {
         <Toolbar />
         <SearchPanel />
       </Grid>
+      </Paper>
     </MuiThemeProvider>
   ) : null;
 
