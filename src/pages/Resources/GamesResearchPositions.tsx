@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import {Link} from 'gatsby';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
+import { Link } from 'gatsby';
 import {
   IntegratedFiltering,
   IntegratedSorting,
@@ -16,17 +15,15 @@ import {
   Toolbar,
   VirtualTable,
 } from '@devexpress/dx-react-grid-material-ui';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import styled from 'styled-components';
-import useDarkMode from 'use-dark-mode';
 
 import { Layout, SEO } from 'components';
+import { GamesResearchRow } from 'types';
+import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1eEfAlQIc2H3eesYjiEOiOddKZ3KPRIl-zMHAZFV-abo';
-const API_KEY = 'AIzaSyBiaP9kmdGAWtzVnRw8zFsObqMcz2yP83A';
-const JSON_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_KEY}/values/Sheet1?key=${API_KEY}`;
 
-interface Row {
+interface GamesResearchPositionRow {
   continent: string;
   country: string;
   university: string;
@@ -89,59 +86,22 @@ const RowDetail = ({ row }) => (
 );
 
 export default function GamesResearchPositions() {
-  const darkMode = useDarkMode();
-  const [rows, setRows] = useState<Row[]>(null);
-
-  const muiTheme = useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          type: darkMode.value ? 'dark' : 'light',
-        },
-        typography: {
-          useNextVariants: true,
-        },
-      }),
-    [darkMode]
-  );
-
-  useEffect(() => {
-    // if (!window.fetch) {...}
-    fetch(JSON_URL)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Network response was not ok.');
-      })
-      .then(responseJson => {
-        console.log(JSON.stringify(responseJson));
-        if (!responseJson.values) {
-          throw new Error('Network response was missing values.');
-        }
-
-        // Skip the heder row
-        const rows: Row[] = responseJson.values.slice(1).map(
-          (row: string[]): Row => ({
-            continent: row[0] || '',
-            country: row[1] || '',
-            university: row[2] || '',
-            department: row[3] || '',
-            program: row[5] || '',
-            group: row[4] || '',
-            contact: row[6] || '',
-            link: row[7] || '',
-            focus: row[8] || '',
-          })
-        );
-        setRows(rows);
-      })
-      .catch(error => console.error(error));
-  }, []);
-
-  const gridMarkup = rows ? (
-    <MuiThemeProvider theme={muiTheme}>
-    <Paper>
+  const gridMarkup = useGamesResearchSheet<
+    GamesResearchRow<GamesResearchPositionRow>
+  >({
+    sheetKey: SHEET_KEY,
+    mapper: (row: string[]): GamesResearchPositionRow => ({
+      continent: row[0] || '',
+      country: row[1] || '',
+      university: row[2] || '',
+      department: row[3] || '',
+      program: row[5] || '',
+      group: row[4] || '',
+      contact: row[6] || '',
+      link: row[7] || '',
+      focus: row[8] || '',
+    }),
+    renderGrid: rows => (
       <Grid
         rows={rows}
         columns={[
@@ -177,9 +137,8 @@ export default function GamesResearchPositions() {
         <Toolbar />
         <SearchPanel />
       </Grid>
-      </Paper>
-    </MuiThemeProvider>
-  ) : null;
+    ),
+  });
 
   return (
     <Layout>

@@ -4,6 +4,8 @@ export {
   BlogPostExcerpt,
   BlogPostLink,
   RecentBlogPosts,
+  TagCloud,
+  TagList,
 } from './Blog';
 export {
   AmazonBuyButton,
@@ -24,4 +26,3 @@ export { default as ProfilePhoto } from './ProfilePhoto';
 export { default as ScreenReadersOnly } from './ScreenReadersOnly';
 export { default as SEO } from './SEO';
 export { default as SocialMediaIcons } from './SocialMediaIcons';
-export { default as TagCloud } from './TagCloud';

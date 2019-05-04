@@ -75,7 +75,7 @@ export default function() {
         return (
           <TagCloud>
             {data.map(({ tag, fontSize }) => (
-              <Link to={`/blog/tag/${tag.key}`}>
+              <Link to={`/blog/tag/${tag.key}`} key={tag.key}>
                 <span style={{ fontSize: `${fontSize}rem` }}>{tag.value}</span>
                 {'\u00A0'}
               </Link>

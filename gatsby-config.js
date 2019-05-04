@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         name: 'CV',
-        link: 'cv',
+        link: '/cv',
       },
       {
         name: 'books',

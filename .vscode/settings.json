@@ -1,0 +1,10 @@
+{
+  "css.validate": false,
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

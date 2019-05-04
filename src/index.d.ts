@@ -47,6 +47,13 @@ declare module 'styled-components' {
       color: string;
       hoverBackgroundColor: string;
     };
+    tagList: {
+      tag: {
+        backgroundColor: string;
+        color: string;
+        hoverBackgroundColor: string;
+      };
+    };
   }
 }
 

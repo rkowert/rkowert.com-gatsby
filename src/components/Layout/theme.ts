@@ -49,6 +49,13 @@ const lightTheme: DefaultTheme = {
     color: 'white',
     hoverBackgroundColor: '#d1d2d5',
   },
+  tagList: {
+    tag: {
+      backgroundColor: '#a353c4',
+      color: 'white',
+      hoverBackgroundColor: '#bf61e6',
+    },
+  },
 };
 
 const darkTheme: DefaultTheme = {
@@ -83,6 +90,14 @@ const darkTheme: DefaultTheme = {
     backgroundColor: '#333',
     color: '#999',
     hoverBackgroundColor: '#3c3c3c',
+  },
+  tagList: {
+    tag: {
+      ...lightTheme.tagList.tag,
+      // backgroundColor: '#333',
+      // color: '#999',
+      // hoverBackgroundColor: '#555',
+    },
   },
 };
 

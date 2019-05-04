@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import {Link} from 'gatsby';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
+import { Link } from 'gatsby';
 import {
   IntegratedFiltering,
   IntegratedSorting,
@@ -18,17 +17,15 @@ import {
   Toolbar,
   VirtualTable,
 } from '@devexpress/dx-react-grid-material-ui';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import styled from 'styled-components';
-import useDarkMode from 'use-dark-mode';
 
 import { Layout, SEO } from 'components';
+import { GamesResearchRow } from 'types';
+import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1sNdqBAtiJXFPqSwGax41Al0fhk3O_hJEB3_jMCkTLjw';
-const API_KEY = 'AIzaSyBiaP9kmdGAWtzVnRw8zFsObqMcz2yP83A';
-const JSON_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_KEY}/values/Sheet1?key=${API_KEY}`;
 
-interface Row {
+interface GamesResearchJournalRow {
   title: string;
   url: string;
   discipline: string;
@@ -100,65 +97,28 @@ const RowDetail = ({ row }) => (
 );
 
 export default function GamesResearchJournals() {
-  const darkMode = useDarkMode();
-  const [rows, setRows] = useState<Row[]>(null);
-
-  const muiTheme = useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          type: darkMode.value ? 'dark' : 'light',
-        },
-        typography: {
-          useNextVariants: true,
-        },
-      }),
-    [darkMode]
-  );
-
-  useEffect(() => {
-    // if (!window.fetch) {...}
-    fetch(JSON_URL)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Network response was not ok.');
-      })
-      .then(responseJson => {
-        console.log(JSON.stringify(responseJson));
-        if (!responseJson.values) {
-          throw new Error('Network response was missing values.');
-        }
-
-        // Skip the heder row
-        const rows: Row[] = responseJson.values.slice(1).map(
-          (row: string[]): Row => ({
-            title: row[0] || '',
-            url: row[1] || '',
-            discipline: row[2] || '',
-            publisher: row[6] || '',
-            publisherUrl: row[7] || '',
-            frequency: row[8] || '',
-            issn: row[12] || '',
-            eissn: row[13] || '',
-            h5Index: row[3] || '',
-            h5Median: row[4] || '',
-            impactFactor: row[5] || '',
-            wordLimit: row[10] || '',
-            briefWordLimit: row[11] || '',
-            journalReviewerUrl: row[9] || '',
-            submissionGuidelinesUrl: row[14] || '',
-          })
-        );
-        setRows(rows);
-      })
-      .catch(error => console.error(error));
-  }, []);
-
-  const gridMarkup = rows ? (
-    <MuiThemeProvider theme={muiTheme}>
-    <Paper>
+  const gridMarkup = useGamesResearchSheet<
+    GamesResearchRow<GamesResearchJournalRow>
+  >({
+    sheetKey: SHEET_KEY,
+    mapper: (row: string[]): GamesResearchJournalRow => ({
+      title: row[0] || '',
+      url: row[1] || '',
+      discipline: row[2] || '',
+      publisher: row[6] || '',
+      publisherUrl: row[7] || '',
+      frequency: row[8] || '',
+      issn: row[12] || '',
+      eissn: row[13] || '',
+      h5Index: row[3] || '',
+      h5Median: row[4] || '',
+      impactFactor: row[5] || '',
+      wordLimit: row[10] || '',
+      briefWordLimit: row[11] || '',
+      journalReviewerUrl: row[9] || '',
+      submissionGuidelinesUrl: row[14] || '',
+    }),
+    renderGrid: rows => (
       <Grid
         rows={rows}
         columns={[
@@ -226,9 +186,8 @@ export default function GamesResearchJournals() {
         <ColumnChooser />
         <SearchPanel />
       </Grid>
-      </Paper>
-    </MuiThemeProvider>
-  ) : null;
+    ),
+  });
 
   return (
     <Layout>
@@ -242,7 +201,8 @@ export default function GamesResearchJournals() {
           The following table contains a comprehensive listing of academic
           journals and publications known to publish research related to digital
           games. If you would like to suggest a new journal or any corrections
-          to existing info in the table please <Link to="/contact">contact me</Link>.
+          to existing info in the table please{' '}
+          <Link to="/contact">contact me</Link>.
         </p>
         <p>
           Click several columns while holding <kbd>Shift</kbd> to sort data by

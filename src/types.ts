@@ -1,5 +1,3 @@
-import { Tracing } from 'trace_events';
-
 export interface BlogPost {
   excerpt: string;
   fields: {
@@ -9,6 +7,7 @@ export interface BlogPost {
   frontmatter: {
     cover?: string;
     date: string;
+    tags?: string[];
     title: string;
   };
   html: string;
@@ -134,3 +133,5 @@ export namespace CV {
     title: string;
   }
 }
+
+export type GamesResearchRow<T> = { [K in keyof T]: T[K] };

@@ -1,8 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import useDarkMode from 'use-dark-mode';
-import styled, { createGlobalStyle } from 'styled-components';
 
 import { KupoKode, SiteHeader, SocialMediaIcons } from 'components';
 import { rhythm } from 'utils/typography';
@@ -109,10 +108,10 @@ const Overlay = styled.div`
 const PageContent = styled.div`
   margin: ${rhythm(1)} auto 0;
   max-width: 90rem;
-  padding: 0 ${rhythm(1)};
+  padding: 0 ${rhythm(1)} ${rhythm(1)};
 
   @media (min-width: 48em) {
-    padding: 0 ${rhythm(2)};
+    padding: 0 ${rhythm(2)} ${rhythm(1)};
   }
 `;
 

@@ -3,12 +3,10 @@ import { graphql, Link } from 'gatsby';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
-import { Layout, SEO } from 'components';
+import { Layout, SEO, TagCloud, TagList } from 'components';
 import { BlogPost as BlogPostType } from 'types';
 import { formatPostDate, formatReadingTime } from 'utils/helpers';
 import { rhythm } from 'utils/typography';
-
-import TagCloud from 'components/TagCloud';
 
 interface Props {
   data: {
@@ -72,6 +70,8 @@ export default function({ data, pageContext }: Props) {
     `https://rkowert.com${post.fields.path}`
   )}`;
 
+  console.error(post.frontmatter.tags);
+
   return (
     <Layout>
       <SEO
@@ -84,7 +84,6 @@ export default function({ data, pageContext }: Props) {
         //     : '/icons/icon-256x256.png'
         // }
       />
-      {/* TODO Replace <main> with <Container /> */}
       <BlogPostPage>
         <main>
           <article>
@@ -94,6 +93,7 @@ export default function({ data, pageContext }: Props) {
                 {formatPostDate(post.frontmatter.date)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
+              <TagList tags={post.frontmatter.tags} />
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <footer>
@@ -142,6 +142,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        tags
         title
       }
       html
