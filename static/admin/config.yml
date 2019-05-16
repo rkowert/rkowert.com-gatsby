@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: 'static/images/uploads' # Media files will be stored in the repo under static/images/uploads
+collections:
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Blog' # Used in the UI
+    description: >
+      A blog post.
+    folder: 'content/blog' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}/index' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      # - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'book'
+    label: 'Books'
+    label_singular: 'Book'
+    description: 'A book.'
+    folder: 'content/books'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Sub-title', name: 'subtitle', widget: 'string' }
+      - { label: 'Cover', name: 'cover', widget: 'image' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'ISBN-10', name: 'isbn10', widget: 'string' }
+      - { label: 'ISBN-13', name: 'isbn13', widget: 'string' }
+      - label: 'Product IDs'
+        name: 'productId'
+        widget: 'object'
+        fields:
+          - { label: 'Amazon', name: 'amazon', widget: 'string' }
+          - { label: 'IndieBound', name: 'indiebound', widget: 'string' }
+      - label: 'Reviews'
+        name: 'reviews'
+        widget: 'object'
+        fields:
+          - { label: 'Author', name: 'author', widget: 'string', hint: 'E.g., Dr. Rachel Kowert' }
+          - { label: 'Author's Title', name: 'authorTitle', widget: 'string', hint: 'E.g., Department of Psychology, McConnell University' }
+          - { label: 'Review Text', name: 'text', widget: 'text' }
