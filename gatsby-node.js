@@ -186,7 +186,7 @@ exports.createPages = async ({ actions, graphql }) => {
 const removeTrailingSlash = str => (str === '/' ? str : str.replace(/\/$/, ''));
 
 /* eslint-disable no-console */
-const DEBUG_PAGE_PATHS = true;
+const DEBUG_PAGE_PATHS = false;
 
 // Implement the Gatsby API “onCreatePage”. This is called after every page is created.
 exports.onCreatePage = ({ page, actions }) => {
