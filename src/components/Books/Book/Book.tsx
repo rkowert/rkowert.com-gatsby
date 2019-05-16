@@ -12,8 +12,8 @@ interface Props {
 
 const Book = styled.div`
   display: grid;
-  grid-template-columns: 1fr minmax(7.5rem, 15rem);
-  grid-gap: ${rhythm(1)};
+  grid-template-columns: minmax(auto, 50rem) minmax(7.5rem, 15rem);
+  grid-gap: ${rhythm(2)};
   margin-bottom: ${rhythm(1)};
 
   & h2 {

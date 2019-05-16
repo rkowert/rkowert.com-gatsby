@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
-import { Layout, SEO, TagCloud, TagList } from 'components';
+import { BlogPage, Layout, SEO, TagList } from 'components';
 import { BlogPost as BlogPostType } from 'types';
 import { formatPostDate, formatReadingTime } from 'utils/helpers';
 import { rhythm } from 'utils/typography';
@@ -17,14 +17,6 @@ interface Props {
     prev?: BlogPostType;
   };
 }
-
-const BlogPostPage = styled.div`
-  @media (min-width: 48em) {
-    display: grid;
-    grid-template-columns: 1fr minmax(12rem, 16rem);
-    grid-gap: ${rhythm(2)};
-  }
-`;
 
 const Title = styled.h1`
   margin-bottom: ${rhythm(1 / 2)};
@@ -49,13 +41,6 @@ const BlogNavigation = styled.nav`
   }
 `;
 
-const BlogSidebar = styled.div`
-  & h3 {
-    border-bottom: 2px solid ${props => props.theme.color.separator};
-    margin-bottom: ${rhythm(1 / 2)};
-  }
-`;
-
 const GITHUB_USERNAME = 'rkowert';
 const GITHUB_REPO_NAME = 'rkowert.com';
 
@@ -70,8 +55,6 @@ export default function({ data, pageContext }: Props) {
     `https://rkowert.com${post.fields.path}`
   )}`;
 
-  console.error(post.frontmatter.tags);
-
   return (
     <Layout>
       <SEO
@@ -84,7 +67,7 @@ export default function({ data, pageContext }: Props) {
         //     : '/icons/icon-256x256.png'
         // }
       />
-      <BlogPostPage>
+      <BlogPage>
         <main>
           <article>
             <header>
@@ -123,11 +106,7 @@ export default function({ data, pageContext }: Props) {
             </footer>
           </article>
         </main>
-        <BlogSidebar>
-          <h3>Tag Cloud</h3>
-          <TagCloud />
-        </BlogSidebar>
-      </BlogPostPage>
+      </BlogPage>
     </Layout>
   );
 }

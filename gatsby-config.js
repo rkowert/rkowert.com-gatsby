@@ -27,16 +27,18 @@ module.exports = {
       },
       {
         name: 'contact',
-        link: '/contact',
+        link: 'mailto:rkowert@gmail.com',
+        target: '_blank',
       },
     ],
     siteUrl: 'https://rkowert.com',
     social: {
       gscholar: 'DKS1kSQAAAAJ',
+      facebook: 'drrachelkowert',
       instagram: 'drrachelkowert',
       linkedin: 'rachelkowert',
       researchGate: 'Rachel_Kowert',
-      twitter: 'linacaruso',
+      twitter: 'drkowert',
       youtube: 'UC2wWdpJ8CQaulB44RLZ4gWw',
     },
     title: 'Dr. Rachel Kowert',
@@ -60,6 +62,7 @@ module.exports = {
       options: {
         alias: {
           components: 'src/components',
+          images: 'src/images',
           utils: 'src/utils',
         },
       },
@@ -107,6 +110,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-categories',
+    //   options: {
+    //     templatePath: `${__dirname}/src/templates/category.js`,
+    //   },
+    // },
+    {
+      resolve: 'gatsby-plugin-tags',
+      options: {
+        prefix: 'blog/tag/',
+        templatePath: `${__dirname}/src/components/Blog/TagPage/TagPage.tsx`,
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -132,26 +148,30 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Dr. Rachel Kowert',
+        /* eslint-disable @typescript-eslint/camelcase */
+        short_name: 'Dr. Kowert',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#a353c4',
+        theme_color: '#a353c4',
+        /* eslint-enable @typescript-eslint/camelcase */
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logos/logo-1500.png', // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/assets/images/logos/logo-1500.png',
-      },
-    },
+    // No longer needed. gatsby-plugin-manifest provides favicon support
+    // {
+    //   resolve: 'gatsby-plugin-favicon',
+    //   options: {
+    //     logo: './src/images/logos/logo-1500.png',
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
   ],
 };

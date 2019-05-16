@@ -10,6 +10,7 @@ import { ScreenReadersOnly } from 'components';
 interface NavLinks {
   name: string;
   link: string;
+  target?: string;
 }
 
 interface Props {
@@ -182,7 +183,13 @@ export default ({ navLinks }: Props) => {
       <Menu>
         {navLinks.map(link => (
           <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
+            {link.target ? (
+              <a href={link.link} target={link.target}>
+                {link.name}
+              </a>
+            ) : (
+              <Link to={link.link}>{link.name}</Link>
+            )}
           </li>
         ))}
         <li>

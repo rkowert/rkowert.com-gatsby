@@ -9,7 +9,8 @@ productId:
   amazon: 1138831638
   indiebound: 9781138831636
 reviews:
-  - author: Prof. Dr. Richard A. Bartle, University of Essex
+  - author: Prof. Dr. Richard A. Bartle
+    authorTitle: University of Essex
     text: 'This is a terrific introduction to the new wave of social science research on games and gamers, putting objectivity ahead of subjectivity, and open-mindedness ahead of dogma. For over a decade, there has been a widening gulf between research on the effects of video games and the experience of game-players themselves. Finally, with this book, we see media studies that aren’t themselves born of media effects – and it’s both revolutionary and revelatory.'
 ---
 

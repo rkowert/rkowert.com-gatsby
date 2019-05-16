@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import {
+  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaResearchgate,
@@ -61,6 +62,7 @@ export default () => (
         site {
           siteMetadata {
             social {
+              facebook
               gscholar
               instagram
               linkedin
@@ -74,6 +76,7 @@ export default () => (
     `}
     render={data => {
       const {
+        facebook,
         gscholar,
         instagram,
         linkedin,
@@ -86,6 +89,10 @@ export default () => (
           <a href={`https://twitter.com/${twitter}`}>
             <ScreenReadersOnly>Twitter</ScreenReadersOnly>
             <FaTwitter aria-hidden="true" />
+          </a>
+          <a href={`https://facebook.com/${facebook}`}>
+            <ScreenReadersOnly>Facebook</ScreenReadersOnly>
+            <FaFacebook aria-hidden="true" />
           </a>
           <a href={`https://instagram.com/${instagram}`}>
             <ScreenReadersOnly>Instagram</ScreenReadersOnly>

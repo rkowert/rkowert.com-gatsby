@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { rhythm } from 'utils/typography';
 
 import {
+  About,
   BookExcerpt,
   KeepCalmAndGameOn,
   Layout,
@@ -15,16 +16,16 @@ import {
 } from 'components';
 
 /* 16rem + 4rem + 30rem + 4rem + 7.5rem = 61.5rem */
-const Hello = styled.section`
+const HelloSection = styled.section`
   @media (min-width: 48em) {
     display: grid;
     grid-column-gap: ${rhythm(2)};
     grid-template-areas: 'left main right';
-    grid-template-columns: 16rem minmax(30rem, 1fr);
+    grid-template-columns: 16rem minmax(30rem, 50rem);
   }
 
   @media (min-width: 60em) {
-    grid-template-columns: 16rem minmax(30rem, 1fr) minmax(6rem, 15rem);
+    grid-template-columns: 16rem minmax(30rem, 50rem) minmax(6rem, 15rem);
   }
 
   & > div {
@@ -58,24 +59,31 @@ const SocialMediaIconsContainer = styled.div`
   }
 `;
 
-const About = styled.section`
+const AboutSection = styled.section`
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: ${rhythm(2)} 0;
   position: relative;
 
   &::before {
+    background: #ddd;
     content: '';
     position: absolute;
     width: 200vw;
     height: 100%;
     left: -100vw;
-    background: #ddd;
+    top: 0;
     z-index: -1;
   }
 `;
 
-const Books = styled.section`
+const BooksSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3.06rem;
+  padding: ${rhythm(2)} 0;
+  margin: 0 auto;
+  max-width: 60rem;
 
   & h2 {
     grid-column: 1 / span 2;
@@ -105,7 +113,7 @@ export default function Home({
         keywords={['rachel', 'kowert', 'psychology', 'gaming']}
       />
       <main>
-        <Hello>
+        <HelloSection>
           <div>
             <Welcome />
             <SocialMediaIconsContainer>
@@ -126,11 +134,12 @@ export default function Home({
           <div>
             <KeepCalmAndGameOn />
           </div>
-        </Hello>
-        <About>
-          <p>ABOUT GOES HERE</p>
-        </About>
-        <Books>
+        </HelloSection>
+        <AboutSection>
+          <h2 id="about">About Me</h2>
+          <About />
+        </AboutSection>
+        <BooksSection>
           <h2>Books</h2>
           {books.map(({ node }) => {
             const img = images.find(
@@ -146,7 +155,7 @@ export default function Home({
 
             return <BookExcerpt book={book} key={book.id} />;
           })}
-        </Books>
+        </BooksSection>
         <section className="Media" />
         <section className="Contact" />
       </main>

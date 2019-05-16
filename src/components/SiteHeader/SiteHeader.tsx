@@ -4,11 +4,11 @@ import Headroom from 'react-headroom';
 import styled from 'styled-components';
 
 import { ScreenReadersOnly } from 'components';
+import { ReactComponent as LogoImage } from 'images/logos/logo.svg';
+import { ReactComponent as LogoTextImage } from 'images/logos/logo-text.svg';
 import { rhythm } from 'utils/typography';
 
 import Navigation from './Navigation';
-import { ReactComponent as LogoImage } from '../../assets/images/logos/logo.svg';
-import { ReactComponent as LogoTextImage } from '../../assets/images/logos/logo-text.svg';
 
 interface NavLinks {
   name: string;
@@ -20,7 +20,6 @@ interface Props {
   siteTitle?: string;
 }
 
-//box-shadow: 0 3px 8px 0 ${props => props.theme.header.boxShadowColor};
 const Header = styled.header`
   align-items: center;
   background: ${props => props.theme.header.backgroundColor};

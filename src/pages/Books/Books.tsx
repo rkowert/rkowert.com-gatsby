@@ -1,7 +1,13 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import { Book, Layout, SEO } from 'components';
+
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 65rem; /* 50rem + 15rem */
+`;
 
 export default function Books({
   data: {
@@ -15,7 +21,7 @@ export default function Books({
         title="Books"
         keywords={['rachel', 'kowert', 'psychology', 'gaming']}
       />
-      <main>
+      <Main>
         <h1>Books</h1>
         {books.map(({ node }) => {
           const img = images.find(
@@ -24,12 +30,12 @@ export default function Books({
           );
           const book = {
             ...node,
-            coverImage: img ? img['node'] : null,
+            coverImage: img ? img.node : null,
           };
 
-          return <Book book={book} key={book.id} id={book.fields.slug} />;
+          return <Book book={book} key={book.id} />;
         })}
-      </main>
+      </Main>
     </Layout>
   );
 }

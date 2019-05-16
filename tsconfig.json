@@ -6,6 +6,7 @@
     "paths": {
       "components": ["components/index.ts"],
       "components/*": ["components/*"],
+      "images/*": ["images/*"],
       "utils/*": ["utils/*"]
     },
     "jsx": "react",

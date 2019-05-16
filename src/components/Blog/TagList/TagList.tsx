@@ -14,7 +14,7 @@ const TagList = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  margin: 0 ${rhythm(1 / 2)} 0 0;
+  margin: 0 0 0 ${rhythm(1 / 2)};
 `;
 
 const TagLink = styled(Link)`
@@ -40,6 +40,7 @@ interface Props {
 export default function({ tags }: Props) {
   return (
     <TagList>
+      <span>Tagged with:</span>
       {tags.map(tag => {
         const tagKey = slugize(tag);
         return (

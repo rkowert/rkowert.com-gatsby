@@ -9,7 +9,8 @@ productId:
   amazon: 1138804266
   indiebound: 9781138804265
 reviews:
-  - author: Prof. Dr. Christopher J. Ferguson, Stetson University
+  - author: Prof. Dr. Christopher J. Ferguson
+    authorTitle: Stetson University
     text: 'Our focus on video games has often been on moral issues, such as gaming and addiction. To date we know little about how games interact with players’ social space. Dr. Kowert’s book is an important investigation of how gaming impacts the socialization of players. This seminal work provides critical insights into this new medium and how it influences the way we interact on-line and in real-life.'
 ---
 

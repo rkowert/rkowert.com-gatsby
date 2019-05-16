@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-import { Layout, BlogPostExcerpt, SEO } from 'components';
+import { BlogPage, BlogPostExcerpt, Layout, SEO } from 'components';
 import { getBlogIndexPagePath } from 'utils/helpers';
 import { BlogPost } from 'types';
 
@@ -40,7 +40,7 @@ const BlogPagination = styled.nav`
   }
 `;
 
-export default function BlogIndexPage({
+export default function({
   data: {
     allMarkdownRemark: { edges },
   },
@@ -54,26 +54,28 @@ export default function BlogIndexPage({
   const posts = edges.map(edge => (
     <BlogPostExcerpt key={edge.node.id} post={edge.node} />
   ));
-  const title = `Blog${isFirst ? '' : ` - Page ${currentPage}`}`;
+  const title = `${isFirst ? '' : `Page ${currentPage} | `}Blog`;
 
   return (
     <Layout>
       <SEO title={title} />
-      <main>
-        {posts}
-        <BlogPagination aria-label="Blog pagination">
-          {!isFirst && (
-            <Link to={prevPage} rel="prev">
-              <FaArrowLeft aria-hidden="true" /> Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={nextPage} rel="next">
-              Next Page <FaArrowRight aria-hidden="true" />
-            </Link>
-          )}
-        </BlogPagination>
-      </main>
+      <BlogPage>
+        <main>
+          {posts}
+          <BlogPagination aria-label="Blog pagination">
+            {!isFirst && (
+              <Link to={prevPage} rel="prev">
+                <FaArrowLeft aria-hidden="true" /> Previous Page
+              </Link>
+            )}
+            {!isLast && (
+              <Link to={nextPage} rel="next">
+                Next Page <FaArrowRight aria-hidden="true" />
+              </Link>
+            )}
+          </BlogPagination>
+        </main>
+      </BlogPage>
     </Layout>
   );
 }

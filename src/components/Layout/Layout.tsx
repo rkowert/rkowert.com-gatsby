@@ -106,7 +106,7 @@ const Overlay = styled.div`
 `;
 
 const PageContent = styled.div`
-  margin: ${rhythm(1)} auto 0;
+  margin: ${rhythm(2)} auto 0;
   max-width: 90rem;
   padding: 0 ${rhythm(1)} ${rhythm(1)};
 
@@ -152,6 +152,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
               navLinks {
                 name
                 link
+                target
               }
             }
           }
@@ -159,7 +160,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
       `}
       render={data => (
         <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
-          <>
+          <React.Fragment>
             <BodyStyle />
             <Overlay />
             <KupoKode />
@@ -174,7 +175,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
                 © {new Date().getFullYear()}, {data.site.siteMetadata.author}
               </Copyright>
             </Footer>
-          </>
+          </React.Fragment>
         </ThemeProvider>
       )}
     />

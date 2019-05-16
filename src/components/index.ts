@@ -1,4 +1,5 @@
 export {
+  BlogPage,
   BlogIndexPage,
   BlogPostPage,
   BlogPostExcerpt,
@@ -6,6 +7,7 @@ export {
   RecentBlogPosts,
   TagCloud,
   TagList,
+  TagPage,
 } from './Blog';
 export {
   AmazonBuyButton,
@@ -17,7 +19,7 @@ export {
 } from './Books';
 export { default as CV } from './CV';
 export { default as SiteHeader } from './SiteHeader';
-export { Welcome } from './HomePage';
+export { About, Welcome } from './HomePage';
 export { default as KeepCalmAndGameOn } from './KeepCalmAndGameOn';
 export { default as Layout } from './Layout';
 export { default as KupoKode } from './KupoKode';

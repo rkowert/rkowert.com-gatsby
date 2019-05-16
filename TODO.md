@@ -5,23 +5,14 @@
   - Home page
     - About section
     - Media section
-    - Contact section
-  - Tag pages
   - Category pages?
   - Pragmatic Princess page
-  - About page
   - Research page
-- BlogPost / BlogPostExcerpt
-  - Add tags
+- BlogPost
   - Add categories
-- Update LICENSE
-- Consolidate images to a single folder
-  - src/assets/images
-  - src/images
-- gatsby-plugin-manifest
-- sitemap
-- gatsby-plugin-offline?
-- Test prod build
+- BlogPostExcerpt
+  - Add tags?
+  - Add categories?
 - Scripts
   - new
     - populate list of categories to allow user to select one, or to input a new one
