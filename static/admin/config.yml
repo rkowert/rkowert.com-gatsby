@@ -43,5 +43,5 @@ collections:
         widget: 'object'
         fields:
           - { label: 'Author', name: 'author', widget: 'string', hint: 'E.g., Dr. Rachel Kowert' }
-          - { label: 'Author's Title', name: 'authorTitle', widget: 'string', hint: 'E.g., Department of Psychology, McConnell University' }
+          - { label: 'Author\'s Title', name: 'authorTitle', widget: 'string', hint: 'E.g., Department of Psychology, McConnell University' }
           - { label: 'Review Text', name: 'text', widget: 'text' }
