@@ -10,9 +10,17 @@
   - Research page
 - BlogPost
   - Add categories
+  - Check all posts for 'layout' frontmatter field.
+    - Any missing layouts?
+    - Rename "post" to "blogpost"
+  - Any unexpected frontmatter?
 - BlogPostExcerpt
   - Add tags?
   - Add categories?
+- CV
+  - Convert source to format compatible with Netlify CMS
+- Images uploaded through Netlify CMS
+  - https://github.com/gatsbyjs/gatsby/issues/5990
 - Scripts
   - new
     - populate list of categories to allow user to select one, or to input a new one
