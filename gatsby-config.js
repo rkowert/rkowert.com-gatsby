@@ -100,7 +100,7 @@ module.exports = {
       options: {
         name: 'site-content',
         path: `${__dirname}/content`,
-        ignore: ['./awards/*', './blog', './books/*'],
+        ignore: ['./awards/*', './blog/*', './books/*'],
       },
     },
     {

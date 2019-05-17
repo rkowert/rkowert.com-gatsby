@@ -1,0 +1,21 @@
+---
+layout: post
+title: 'Online Gaming Friendships among Emotionally Sensitive Individuals'
+date: 2014-03-28 20:40:59
+category: Publications
+tags:
+  - publication
+  - OVG
+  - friendships
+  - SOFOGA
+---
+
+With the advent of new social technologies, researchers have become increasingly interested in the functionality of mediated social spaces as environments where individuals can meet new people and gather with old friends. Due to their accessibility and the range of social affordances provided by these spaces (i.e., visual anonymity, asynchronicity), mediated social environments (i.e., chat rooms, online forums, online games) are believed to be particularly valuable for socially vulnerable populations including the lonely, depressed, socially anxious, and socially unskilled. Of particular interest has been the potential for these spaces to provide tangible social benefits to shy individuals. While researchers have found shyness to hold significant relationships with social uses of the Internet, it remains unknown whether the increased involvement within these spaces is contributing to tangible social benefits, such as increased social support or an expansion of one's social circles.
+
+This question is addressed in my most recent publication in _Cyberpsychology, Behavior, and Social Networking_ entitled ["The Relationship between Online Video Game Involvement and Gaming-Related Friendships among Emotionally Sensitive Individuals"](http://online.liebertpub.com/doi/abs/10.1089/cyber.2013.0656). The study outlined in this article examines the relationships between emotional sensitivity (one behavioral manifestation of shyness) and gaming-related friendships within online gaming environments. Online video games were chosen as the mediated-social environment of interest due to their unique integration of a social space within an interactive playful environment. The unique combination of a social, and predominantly playful, space has created a distinctive, and highly accommodating, social environment that provides a range of social accommodators associated with all mediated social outlets (i.e., visual anonymity, asynchronicity), as well as a shared activity, which helps to facilitate the development and maintenance of social relationships as well as further socially accommodate its users. While no known research has explored the social utility of online games in relation to other mediated social outlets (such as social networking or chat rooms), researchers have linked shy individuals, and those displaying the behavioral components of shyness, with increased online video game use (see [Kim et al., 2008](http://www.sciencedirect.com/science/article/pii/S0924933807014459)).
+
+The results of the study indicate that individuals who are highly emotionally sensitive, indicating a higher degree of shyness, are using online gaming spaces differently than their less emotionally sensitive counterparts and experiencing tangible differences in their friendship networks. Taken together, these findings suggest that mediated social spaces, particularly online games, hold the potential to be socially advantageous for emotionally sensitive individuals by allowing them to overcome their traditional social difficulties, generate new friendships, and strengthen old ones. For emotionally sensitive players, online gaming spaces do seem to be new “third places” where individuals can meet new people and gather with old friends.
+
+This study is [available online ahead of print](http://online.liebertpub.com/doi/abs/10.1089/cyber.2013.0656) in _Cyberpsychology, Behavior, and Social Networking_ and will also appear in an upcoming print addition later this year. Special thanks to my co-authors [Emese Domahidi](http://www.uni-muenster.de/Kowi/en/personen/emese-domahidi.html) and [Thorsten Quandt](https://www.uni-muenster.de/Kowi/en/personen/thorsten-quandt.html).
+
+If you are interested, several commentaries on this article are available from [massively.com](http://massively.joystiq.com/2014/11/07/for-science-the-relationship-between-shyness-and-online-game-fr/) and [The Conversation](http://theconversation.com/gamer-disclaimer-virtual-worlds-can-be-as-fulfilling-as-real-life-29571).

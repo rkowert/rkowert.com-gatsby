@@ -25,6 +25,10 @@ const TagLink = styled(Link)`
   padding: 0 ${rhythm(1 / 3)};
   transition: background-color 0.6s ease-in-out;
 
+  &:visited {
+    color: ${({ theme }) => theme.tagList.tag.color};
+  }
+
   &:hover,
   &:focus,
   &:active {
