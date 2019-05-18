@@ -39,7 +39,7 @@ module.exports = {
       linkedin: 'rachelkowert',
       researchGate: 'Rachel_Kowert',
       twitter: 'drkowert',
-      youtube: 'UC2wWdpJ8CQaulB44RLZ4gWw',
+      // youtube: 'UC2wWdpJ8CQaulB44RLZ4gWw',
     },
     title: 'Dr. Rachel Kowert',
   },

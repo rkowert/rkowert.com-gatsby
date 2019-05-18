@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaResearchgate,
   FaTwitter,
-  FaYoutube,
+  // FaYoutube,
 } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -68,7 +68,7 @@ export default () => (
               linkedin
               researchGate
               twitter
-              youtube
+              # youtube
             }
           }
         }
@@ -82,7 +82,7 @@ export default () => (
         linkedin,
         researchGate,
         twitter,
-        youtube,
+        // youtube,
       } = data.site.siteMetadata.social;
       return (
         <SocialMediaIcons>
@@ -110,10 +110,10 @@ export default () => (
             <ScreenReadersOnly>gscholar</ScreenReadersOnly>
             <GoogleScholarIcon aria-hidden="true" />
           </a>
-          <a href={`https://www.youtube.com/channel/${youtube}`}>
+          {/* <a href={`https://www.youtube.com/channel/${youtube}`}>
             <ScreenReadersOnly>youtube</ScreenReadersOnly>
             <FaYoutube aria-hidden="true" />
-          </a>
+          </a> */}
         </SocialMediaIcons>
       );
     }}
