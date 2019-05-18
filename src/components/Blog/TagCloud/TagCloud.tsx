@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-
-import { slugize } from 'utils/helpers';
+import slug from 'slug';
 
 const fontSizeConverter = (count, min, max, minSize, maxSize) => {
   if (max - min === 0) {
@@ -15,6 +14,7 @@ const fontSizeConverter = (count, min, max, minSize, maxSize) => {
 const TagCloud = styled.div`
   & a {
     display: inline-block;
+    line-height: 1;
   }
 `;
 
@@ -52,7 +52,7 @@ export default function() {
           .map(tag => ({
             value: tag,
             count: tags[tag],
-            key: slugize(tag),
+            key: slug(tag).toLowerCase(),
           }));
 
         const counts = tagCloudData.map(tag => tag.count);

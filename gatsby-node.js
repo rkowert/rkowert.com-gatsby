@@ -231,7 +231,7 @@ exports.onCreatePage = ({ page, actions }) => {
     console.log(`  Converting camelCase to kebab-case: ${newPage.path}`);
   }
 
-  const matches = newPage.path.match(/\/(?:([^/]+)\/)?([^/]+)\/$/);
+  const matches = newPage.path.match(/^\/(?:([^/]+)\/)?([^/]+)\/$/);
   if (matches && matches[1] && matches[2] && matches[1] === matches[2]) {
     // Replace "/Page/Page/" with "/page", i.e., accomodate our opinionated file layout
     newPage.path = `/${matches[1].toLowerCase()}`;

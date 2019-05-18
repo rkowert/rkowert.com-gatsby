@@ -6,7 +6,7 @@ category: Publications
 tags:
   - publication
   - OVG
-  - friendships
+  - friendship
   - adolescents
   - SOFOGA
 ---

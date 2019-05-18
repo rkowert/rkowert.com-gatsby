@@ -13,7 +13,7 @@ export default function({ className }: Props) {
         query {
           profilePhoto: file(relativePath: { eq: "profile-photo.jpg" }) {
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 300, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }

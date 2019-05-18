@@ -6,8 +6,8 @@ category: news
 tags:
   - interview
   - television
-  - AParentsGuide
-  - pulication
+  - A Parent's Guide
+  - publication
   - gaming
   - books
 ---
