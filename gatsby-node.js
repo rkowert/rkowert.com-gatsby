@@ -191,11 +191,11 @@ const removeTrailingSlash = str => (str === '/' ? str : str.replace(/\/$/, ''));
 const DEBUG_PAGE_PATHS = false;
 
 // Implement the Gatsby API “onCreatePage”. This is called after every page is created.
-exports.onCreatePage = ({ page, actions }) => {
+exports.onCreatePage = ({ page, actions, reporter }) => {
   const { createPage, deletePage } = actions;
   const newPage = { ...page };
   if (DEBUG_PAGE_PATHS) {
-    console.log(
+    reporter.info(
       `-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nComponent path: ${
         page.componentPath
       }`
@@ -205,7 +205,7 @@ exports.onCreatePage = ({ page, actions }) => {
   // Ignore index.tsx files
   if (/index\.tsx$/.test(page.componentPath)) {
     if (DEBUG_PAGE_PATHS) {
-      console.log('  Ingoring index file');
+      reporter.info('  Ingoring index file');
     }
     deletePage(page);
     return;
@@ -214,7 +214,7 @@ exports.onCreatePage = ({ page, actions }) => {
   // "Move" '/Home' to '/'
   if (page.path === '/Home/Home/') {
     if (DEBUG_PAGE_PATHS) {
-      console.log('  Moving "/Home" to "/"');
+      reporter.info('  Moving "/Home" to "/"');
     }
     deletePage(page);
     // Create a new page but with '/' as path
@@ -228,7 +228,7 @@ exports.onCreatePage = ({ page, actions }) => {
   // camelCase -> kebab-case
   newPage.path = newPage.path.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
   if (DEBUG_PAGE_PATHS) {
-    console.log(`  Converting camelCase to kebab-case: ${newPage.path}`);
+    reporter.info(`  Converting camelCase to kebab-case: ${newPage.path}`);
   }
 
   const matches = newPage.path.match(/^\/(?:([^/]+)\/)?([^/]+)\/$/);
@@ -236,19 +236,19 @@ exports.onCreatePage = ({ page, actions }) => {
     // Replace "/Page/Page/" with "/page", i.e., accomodate our opinionated file layout
     newPage.path = `/${matches[1].toLowerCase()}`;
     if (DEBUG_PAGE_PATHS) {
-      console.log(`  Found folder index! New path: ${newPage.path}`);
+      reporter.info(`  Found folder index! New path: ${newPage.path}`);
     }
   } else {
     // Remove trailing slash unless page is "/"
     newPage.path = removeTrailingSlash(newPage.path.toLowerCase());
     if (DEBUG_PAGE_PATHS) {
-      console.log('  Removing trailing slash');
+      reporter.info('  Removing trailing slash');
     }
   }
 
   if (newPage.path !== page.path) {
     if (DEBUG_PAGE_PATHS) {
-      console.log(
+      reporter.info(
         `  Path has changed!\n    Old path: ${page.path}\n    New path: ${
           newPage.path
         }`
