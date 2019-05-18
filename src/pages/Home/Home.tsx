@@ -7,7 +7,6 @@ import { rhythm } from 'utils/typography';
 import {
   About,
   BookExcerpt,
-  KeepCalmAndGameOn,
   Layout,
   RecentBlogPosts,
   SEO,
@@ -15,38 +14,27 @@ import {
   Welcome,
 } from 'components';
 
-/* 16rem + 4rem + 30rem + 4rem + 7.5rem = 61.5rem */
+/* 16rem + 4rem + 30rem = 50rem */
 const HelloSection = styled.section`
+  margin: 0 auto;
+  max-width: 70rem;
+
   @media (min-width: 48em) {
     display: grid;
     grid-column-gap: ${rhythm(2)};
-    grid-template-areas: 'left main right';
+    grid-template-areas: 'left main';
     grid-template-columns: 16rem minmax(30rem, 50rem);
+
+    & > div:nth-child(2) {
+      grid-column: 2;
+    }
   }
 
   @media (min-width: 60em) {
-    grid-template-columns: 16rem minmax(30rem, 50rem) minmax(6rem, 15rem);
-  }
-
-  & > div {
-    @media (min-width: 48em) {
-      &:nth-child(2) {
-        grid-column: 2;
-      }
-
-      &:nth-child(3) {
-        grid-column: 1;
-        grid-row: 2;
-      }
-    }
-
-    @media (min-width: 60em) {
-      &,
-      &:nth-child(2),
-      &:nth-child(3) {
-        grid-column: auto;
-        grid-row: auto;
-      }
+    & > div,
+    & > div:nth-child(2) {
+      grid-column: auto;
+      grid-row: auto;
     }
   }
 `;
@@ -130,9 +118,6 @@ export default function Home({
                 See more posts <FaLongArrowAltRight atia-hidden="true" />
               </Link>
             </p>
-          </div>
-          <div>
-            <KeepCalmAndGameOn />
           </div>
         </HelloSection>
         <AboutSection>

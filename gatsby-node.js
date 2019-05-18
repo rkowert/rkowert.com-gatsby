@@ -101,12 +101,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'MarkdownRemark' || node.internal.type === 'Mdx') {
     createNodeField({
       node,
       name: 'slug',
       value: getSlugFromNode({ node, getNode }),
     });
+  }
+  if (node.internal.type === 'MarkdownRemark') {
     createNodeField({
       node,
       name: 'path',

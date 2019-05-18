@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import styled from 'styled-components';
 
 import { Layout, SEO } from 'components';
@@ -14,10 +15,12 @@ export default function() {
     <StaticQuery
       query={graphql`
         query {
-          allMarkdownRemark(filter: { fields: { slug: { eq: "about" } } }) {
+          allMdx(filter: { fields: { slug: { eq: "about" } } }) {
             edges {
               node {
-                html
+                code {
+                  body
+                }
               }
             }
           }
@@ -31,11 +34,7 @@ export default function() {
           />
           <Main>
             <h1>About Me</h1>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data.allMarkdownRemark.edges[0].node.html,
-              }}
-            />
+            <MDXRenderer>{data.allMdx.edges[0].node.code.body}</MDXRenderer>
           </Main>
         </Layout>
       )}
