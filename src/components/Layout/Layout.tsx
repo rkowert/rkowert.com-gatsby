@@ -119,17 +119,24 @@ const Footer = styled.footer`
   align-items: center;
   background: white;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin: 0 auto;
   max-width: 90rem;
   padding: ${rhythm(1)};
 
   @media (min-width: 48em) {
+    flex-direction: row;
     padding: ${rhythm(1)} ${rhythm(2)};
   }
 `;
 
 const Copyright = styled.p`
-  margin: 0 0 0 auto;
+  margin: ${rhythm(1)} auto;
+
+  @media (min-width: 48em) {
+    margin: 0 0 0 auto;
+  }
 `;
 
 const Layout = ({ children, transparentFooter = false }: Props) => {

@@ -14,28 +14,16 @@ import {
   Welcome,
 } from 'components';
 
-/* 16rem + 4rem + 30rem = 50rem */
+/* 3.06rem + 16rem + 3.06rem + 30rem + 3.06rem = 57.18rem */
 const HelloSection = styled.section`
   margin: 0 auto;
   max-width: 70rem;
 
-  @media (min-width: 48em) {
+  @media (min-width: 57.18em) {
     display: grid;
     grid-column-gap: ${rhythm(2)};
     grid-template-areas: 'left main';
     grid-template-columns: 16rem minmax(30rem, 50rem);
-
-    & > div:nth-child(2) {
-      grid-column: 2;
-    }
-  }
-
-  @media (min-width: 60em) {
-    & > div,
-    & > div:nth-child(2) {
-      grid-column: auto;
-      grid-row: auto;
-    }
   }
 `;
 

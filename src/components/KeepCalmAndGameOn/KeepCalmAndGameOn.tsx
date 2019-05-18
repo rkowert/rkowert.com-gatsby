@@ -6,7 +6,7 @@ import bulletImage from './images/kcago-bullet.png';
 import shipImage from './images/kcago-ship.png';
 
 const KeepCalmAndGameOn = styled.div`
-  display: none;
+  /* display: none; */
   position: relative;
 
   @media (min-width: 48em) {

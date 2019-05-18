@@ -3,7 +3,29 @@ import { graphql, StaticQuery } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import styled from 'styled-components';
 
-const About = styled.div``;
+import { rhythm } from 'utils/typography';
+
+const About = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: 50rem;
+
+  & > div {
+    margin: ${rhythm(1)} auto 0;
+    max-width: 15rem;
+    order: 99;
+  }
+
+  @media (min-width: 48rem) {
+    display: block;
+
+    & > div {
+      float: right;
+      margin: 0 0 ${rhythm(2)} ${rhythm(2)};
+    }
+  }
+`;
 
 export default function() {
   return (
