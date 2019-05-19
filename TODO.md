@@ -8,7 +8,6 @@
 - [ ] View all pages from phone
 - [ ] View all pages with dark mode enabled
 - [ ] Google Lighthouse score
-- [ ] Does noise.png background remain after navigating away from CV? (like it does on localhost)
 
 ## Nice to Have
 

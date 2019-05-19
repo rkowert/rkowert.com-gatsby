@@ -216,6 +216,7 @@ export default ({ navLinks }: Props) => {
                 <FaSun />
               </DarkModeToggleIcon>
             }
+            aria-checked={darkMode.value}
             aria-label="Toggle dark mode"
           />
         </li>

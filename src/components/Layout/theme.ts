@@ -12,7 +12,7 @@ const lightTheme: DefaultTheme = {
     },
     separator: '#e6e7e8',
     text: {
-      subdued: '#a7a9ab',
+      subdued: '#727779',
     },
   },
   cv: {

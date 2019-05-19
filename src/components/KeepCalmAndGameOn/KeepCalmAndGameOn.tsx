@@ -90,7 +90,7 @@ const KcagoBullet = keyframes`
 const Ship = styled.img`
   position: absolute;
   width: 18.67816092%;
-  height: 7.707129094%;
+  height: 7.0977011496%; /*7.707129094%;*/
   bottom: 5.202312139%;
   left: 7.471264368%;
   z-index: 90;
@@ -115,8 +115,8 @@ export default function() {
   return (
     <KeepCalmAndGameOn>
       <img className="kcago-bg" src={bgImage} alt="Keep Calm and Game On" />
-      <Ship src={shipImage} />
-      <Bullet src={bulletImage} />
+      <Ship src={shipImage} alt="Space ship" />
+      <Bullet src={bulletImage} alt="Space ship projectile" />
     </KeepCalmAndGameOn>
   );
 }

@@ -96,7 +96,7 @@ const NavigationContainer = styled.div`
 
 export default ({ navLinks, siteTitle = '' }: Props) => (
   <Headroom disableInlineStyles>
-    <Header role="header">
+    <Header role="banner">
       <Logo>
         <LogoLink to="/">
           <StyledLogoImage />
