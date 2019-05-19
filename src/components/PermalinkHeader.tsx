@@ -3,6 +3,7 @@ import { slugize } from 'utils/helpers';
 
 interface Props {
   label: string;
+  level: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 // Octicon link
@@ -22,22 +23,59 @@ const svgIcon = (
   </svg>
 );
 
-export default function({ label }: Props) {
+export default function({ label, level }: Props) {
   const id = slugize(label);
   const url = `#${id}`;
 
   // The .anchor className used below has styling provided by gatsby-remark-autolink-headers
-  return (
-    <>
-      <a
-        href={url}
-        id={id}
-        className="anchor"
-        aria-label={`${label} permalink`}
-      >
-        {svgIcon}
-      </a>
-      {label}
-    </>
+  const anchor = (
+    <a href={url} className="anchor" aria-label={`${label} permalink`}>
+      {svgIcon}
+    </a>
   );
+
+  switch (level) {
+    case 1:
+      return (
+        <h1 id={id}>
+          {anchor}
+          {label}
+        </h1>
+      );
+    case 2:
+      return (
+        <h2 id={id}>
+          {anchor}
+          {label}
+        </h2>
+      );
+    case 3:
+      return (
+        <h3 id={id}>
+          {anchor}
+          {label}
+        </h3>
+      );
+    case 4:
+      return (
+        <h4 id={id}>
+          {anchor}
+          {label}
+        </h4>
+      );
+    case 5:
+      return (
+        <h5 id={id}>
+          {anchor}
+          {label}
+        </h5>
+      );
+    case 6:
+      return (
+        <h6 id={id}>
+          {anchor}
+          {label}
+        </h6>
+      );
+  }
 }
