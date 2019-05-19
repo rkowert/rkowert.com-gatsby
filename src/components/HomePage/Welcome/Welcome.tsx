@@ -44,6 +44,7 @@ const ProfilePhotoContainer = styled(props => <ProfilePhoto {...props} />)`
   & img {
     border-radius: 50%;
     border: 1px solid ${({ theme }) => theme.body.backgroundColor};
+    transition: border 0.3s ease-in-out;
   }
 
   &::after {
@@ -60,6 +61,7 @@ const ProfilePhotoContainer = styled(props => <ProfilePhoto {...props} />)`
     left: 0;
     width: 100%;
     height: 100%;
+    transition: box-shadow 0.3s ease-in-out;
   }
 
   @media (min-width: ${minGridWidth}) {
