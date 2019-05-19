@@ -90,7 +90,7 @@ const KcagoBullet = keyframes`
 const Ship = styled.img`
   position: absolute;
   width: 18.67816092%;
-  height: 7.0977011496%; /*7.707129094%;*/
+  height: 7.707129094%;
   bottom: 5.202312139%;
   left: 7.471264368%;
   z-index: 90;
