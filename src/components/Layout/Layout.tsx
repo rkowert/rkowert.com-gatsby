@@ -10,7 +10,6 @@ import { darkTheme, lightTheme } from './theme';
 
 interface Props {
   children: React.ReactNode;
-  transparentFooter?: boolean;
 }
 
 const BodyStyle = createGlobalStyle`
@@ -117,7 +116,6 @@ const PageContent = styled.div`
 
 const Footer = styled.footer`
   align-items: center;
-  background: white;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -139,12 +137,10 @@ const Copyright = styled.p`
   }
 `;
 
-const Layout = ({ children, transparentFooter = false }: Props) => {
+const Layout = ({ children }: Props) => {
   const darkMode = useDarkMode(false, {
     onChange: () => {},
   });
-
-  const footerStyles = transparentFooter ? { background: 'transparent' } : {};
 
   return (
     <StaticQuery
@@ -176,7 +172,7 @@ const Layout = ({ children, transparentFooter = false }: Props) => {
               navLinks={data.site.siteMetadata.navLinks}
             />
             <PageContent>{children}</PageContent>
-            <Footer style={footerStyles}>
+            <Footer>
               <SocialMediaIcons />
               <Copyright>
                 © {new Date().getFullYear()}, {data.site.siteMetadata.author}

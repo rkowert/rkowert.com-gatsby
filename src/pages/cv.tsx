@@ -163,8 +163,8 @@ const Section = styled.section`
   }
 
   & a {
-    color: #333;
     border-bottom: 1px dotted #555;
+    color: ${({ theme }) => theme.body.color};
 
     &:hover {
       border-bottom-style: solid;
@@ -201,7 +201,7 @@ export default function CVPage(props: Props) {
     },
   } = props;
   return (
-    <Layout transparentFooter>
+    <Layout>
       <BodyStyle />
       <SEO title="CV" />
       <Container>
@@ -221,7 +221,7 @@ export default function CVPage(props: Props) {
                 angelle@jkscommunications.com
               </a>
               <br />
-              (615) 928-2462
+              <a href="tel:+16159282462">(615) 928-2462</a>
             </p>
           </div>
         </Sidebar>
@@ -405,7 +405,10 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <PermalinkHeader label="Teaching and Supervision Experience" level={2} />
+            <PermalinkHeader
+              label="Teaching and Supervision Experience"
+              level={2}
+            />
             {cv.teachingAndSupervisionExperience.map(position => (
               <div key={position.location}>
                 <b>{position.location}</b>
@@ -446,7 +449,10 @@ export default function CVPage(props: Props) {
           </Section>
 
           <Section>
-            <PermalinkHeader label="Departmental and University Service" level={2} />
+            <PermalinkHeader
+              label="Departmental and University Service"
+              level={2}
+            />
             <ul>
               {cv.departmentalAndUniversityService.map(entry => (
                 <li key={`${entry.date}-${entry.title}`}>
