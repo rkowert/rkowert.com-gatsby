@@ -118,6 +118,10 @@ export namespace CV {
   export interface ProfessionalAppointment {
     date: string;
     title: string;
+    organization: {
+      title: string;
+      url?: string;
+    };
   }
 
   export interface Publication {

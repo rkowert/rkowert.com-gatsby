@@ -39,13 +39,17 @@ declare module 'styled-components' {
       backgroundColor: string;
     };
     rainbowHeaders: {
-      from: string;
-      to: string;
+      color?: string;
+      from?: string;
+      to?: string;
     }[];
     socialMediaIcons: {
       backgroundColor: string;
       color: string;
       hoverBackgroundColor: string;
+    };
+    stripedSections: {
+      backgroundColor: string;
     };
     tagList: {
       tag: {

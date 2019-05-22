@@ -27,11 +27,9 @@ const BodyStyle = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  padding: 0 ${rhythm(1)};
-
   @media (min-width: 48em) {
     display: grid;
-    column-gap: ${rhythm(2)};
+    column-gap: ${rhythm(4)};
     grid-template-columns: 16rem minmax(20rem, 1fr);
     padding: 0;
   }
@@ -50,11 +48,13 @@ const Sidebar = styled.div`
 const Main = styled.main`
   background-color: ${({ theme }) => theme.cv.main.backgroundColor};
   box-shadow: -5px 0 24px 0 rgba(0, 0, 0, 0.25);
-  padding: ${rhythm(1)} ${rhythm(2)};
+  margin: 0 -${rhythm(1)};
+  padding: ${rhythm(1)} ${rhythm(1)};
   transition: background-color 0.3s ease-in-out;
 
   @media (min-width: 48em) {
     margin-right: -${rhythm(2)};
+    padding: ${rhythm(1)} ${rhythm(2)};
   }
 `;
 
@@ -68,10 +68,10 @@ const Section = styled.section`
     border: none;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15),
       0px 10px 8px -6px rgba(0, 0, 0, 0.25);
-    margin: ${rhythm(1)} -${rhythm(3)} ${rhythm(1)};
+    margin: ${rhythm(1)} -${rhythm(2)};
     position: relative;
     padding-left: ${rhythm(2)};
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    text-shadow: 0 1px 1px rgb(255, 240, 219);
 
     &::before,
     &::after {
@@ -87,12 +87,9 @@ const Section = styled.section`
 
     @media (min-width: 48em) {
       box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15),
-        20px 3px 5px 0 rgba(0, 0, 0, 0.25);
-      margin-right: -${rhythm(4)};
-
-      &::after {
-        display: none;
-      }
+        8px 15px 5px -13px rgba(0, 0, 0, 0.25);
+      margin-left: -${rhythm(3)};
+      margin-right: -${rhythm(3)};
     }
 
     &::before {
@@ -105,6 +102,13 @@ const Section = styled.section`
     }
   }
 
+  &:nth-of-type(5n + 1) {
+    & h2 {
+      color: ${({ theme }) =>
+        theme.rainbowHeaders[0].color || theme.body.color};
+    }
+  }
+
   &:nth-of-type(5n + 2) {
     & h2 {
       background-image: linear-gradient(
@@ -112,6 +116,9 @@ const Section = styled.section`
         ${({ theme }) => theme.rainbowHeaders[1].from},
         ${({ theme }) => theme.rainbowHeaders[1].to}
       );
+      color: ${({ theme }) =>
+        theme.rainbowHeaders[1].color || theme.body.color};
+      text-shadow: 0 1px 1px rgb(214, 243, 220);
 
       &::after,
       &::before {
@@ -126,6 +133,9 @@ const Section = styled.section`
         ${({ theme }) => theme.rainbowHeaders[2].from},
         ${({ theme }) => theme.rainbowHeaders[2].to}
       );
+      color: ${({ theme }) =>
+        theme.rainbowHeaders[2].color || theme.body.color};
+      text-shadow: 0 1px 1px rgb(206, 131, 154);
 
       &::after,
       &::before {
@@ -140,6 +150,9 @@ const Section = styled.section`
         ${({ theme }) => theme.rainbowHeaders[3].from},
         ${({ theme }) => theme.rainbowHeaders[3].to}
       );
+      color: ${({ theme }) =>
+        theme.rainbowHeaders[3].color || theme.body.color};
+      text-shadow: 0 1px 1px rgb(149, 217, 245);
 
       &::after,
       &::before {
@@ -154,6 +167,9 @@ const Section = styled.section`
         ${({ theme }) => theme.rainbowHeaders[4].from},
         ${({ theme }) => theme.rainbowHeaders[4].to}
       );
+      color: ${({ theme }) =>
+        theme.rainbowHeaders[4].color || theme.body.color};
+      text-shadow: 0 1px 1px rgb(182, 128, 241);
 
       &::after,
       &::before {
@@ -168,10 +184,6 @@ const Section = styled.section`
 
     &:hover {
       border-bottom-style: solid;
-    }
-
-    &.anchor {
-      border-bottom: none;
     }
   }
 
@@ -245,9 +257,13 @@ export default function CVPage(props: Props) {
 
           <Section>
             <PermalinkHeader label="Professional Appointments" level={2} />
-            {cv.professionalAppointments.map(({ date, title }, i) => (
-              <CV.DatedEntry date={date} key={title} reset={i === 0}>
-                {title}
+            {cv.professionalAppointments.map((appointment, i) => (
+              <CV.DatedEntry
+                date={appointment.date}
+                key={`${appointment.date}-${appointment.title}`}
+                reset={i === 0}
+              >
+                <CV.ProfessionalAppointment appointment={appointment} />
               </CV.DatedEntry>
             ))}
           </Section>

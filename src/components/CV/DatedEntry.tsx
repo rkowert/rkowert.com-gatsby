@@ -11,12 +11,24 @@ interface Props {
 
 const Row = styled.div`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   margin-bottom: ${rhythm(1)};
+
+  @media (min-width: 64em) {
+    flex-wrap: nowrap;
+  }
 `;
 
 const DateCell = styled.div`
-  min-width: 7rem;
+  font-weight: bold;
+  margin-bottom: ${rhythm(1 / 2)};
+  min-width: 100%;
+
+  @media (min-width: 64em) {
+    font-weight: normal;
+    margin-bottom: 0;
+    min-width: 7rem;
+  }
 `;
 
 let lastYear = '';

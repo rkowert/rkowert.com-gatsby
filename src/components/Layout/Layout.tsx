@@ -79,6 +79,10 @@ const BodyStyle = createGlobalStyle`
     & > svg {
       vertical-align: middle;
     }
+
+    &.anchor > svg {
+      fill: ${({ theme }) => theme.body.color};
+    }
   }
 
   h2 {

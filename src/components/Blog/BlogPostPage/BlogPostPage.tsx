@@ -22,6 +22,10 @@ const Title = styled.h1`
   margin-bottom: ${rhythm(1 / 2)};
 `;
 
+const PostMeta = styled.p`
+  margin-bottom: ${rhythm(1 / 2)};
+`;
+
 const BlogNavigation = styled.nav`
   display: flex;
   flex-flow: row nowrap;
@@ -72,10 +76,10 @@ export default function({ data, pageContext }: Props) {
           <article>
             <header>
               <Title>{post.frontmatter.title}</Title>
-              <p>
+              <PostMeta>
                 {formatPostDate(post.frontmatter.date)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
-              </p>
+              </PostMeta>
               <TagList tags={post.frontmatter.tags} />
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />

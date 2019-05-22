@@ -21,12 +21,27 @@
   ],
   "professionalAppointments": [
     {
-      "date": "2016-2017",
-      "title": "Independent Research Consultant, International Social Games Association, Lead Researcher"
+      "date": "2019-present",
+      "title": "Research Director",
+      "organization": {
+        "title": "Take This",
+        "url": "https://www.takethis.org/"
+      }
+    },
+    {
+      "date": "2016-2019",
+      "title": "Independent Research Consultant",
+      "organization": {
+        "title": "International Social Games Association",
+        "url": "http://www.i-sga.org/"
+      }
     },
     {
       "date": "2012-2014",
-      "title": "University of Münster, Department of Communication, Associate Researcher"
+      "title": "Associate Researcher",
+      "organization": {
+        "title": "Department of Communication, University of Münster"
+      }
     }
   ],
   "publications": {

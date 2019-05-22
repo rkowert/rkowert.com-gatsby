@@ -5,6 +5,7 @@ import DatedEntry from './DatedEntry';
 import Education from './Education';
 import JournalArticle from './JournalArticle';
 import OtherPublication from './OtherPublication';
+import ProfessionalAppointment from './ProfessionalAppointment';
 
 export default {
   Book,
@@ -14,4 +15,5 @@ export default {
   Education,
   JournalArticle,
   OtherPublication,
+  ProfessionalAppointment,
 };

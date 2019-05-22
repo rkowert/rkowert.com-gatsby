@@ -42,7 +42,7 @@ const AboutSection = styled.section`
   position: relative;
 
   &::before {
-    background: #ddd;
+    background: ${props => props.theme.stripedSections.backgroundColor};
     content: '';
     position: absolute;
     width: 200vw;

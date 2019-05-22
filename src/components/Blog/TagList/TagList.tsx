@@ -5,16 +5,25 @@ import styled from 'styled-components';
 import { slugize } from 'utils/helpers';
 import { rhythm } from 'utils/typography';
 
+const Label = styled.span`
+  display: block;
+  margin-bottom: ${rhythm(1 / 4)};
+`;
+
 const TagList = styled.ul`
   display: flex;
-  justify-items: space-between;
+  flex-flow: row wrap;
   list-style-type: none;
   margin: 0 0 ${rhythm(1)};
 `;
 
 const Tag = styled.li`
   display: inline-block;
-  margin: 0 0 0 ${rhythm(1 / 2)};
+  margin: 0 ${rhythm(1 / 4)} ${rhythm(1 / 2)} 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 const TagLink = styled(Link)`
@@ -43,16 +52,18 @@ interface Props {
 
 export default function({ tags }: Props) {
   return (
-    <TagList>
-      <span>Tagged with:</span>
-      {tags.map(tag => {
-        const tagKey = slugize(tag);
-        return (
-          <Tag key={tagKey}>
-            <TagLink to={`/blog/tag/${tagKey}`}>{tag}</TagLink>
-          </Tag>
-        );
-      })}
-    </TagList>
+    <React.Fragment>
+      <Label>Tagged with:</Label>
+      <TagList>
+        {tags.map(tag => {
+          const tagKey = slugize(tag);
+          return (
+            <Tag key={tagKey}>
+              <TagLink to={`/blog/tag/${tagKey}`}>{tag}</TagLink>
+            </Tag>
+          );
+        })}
+      </TagList>
+    </React.Fragment>
   );
 }

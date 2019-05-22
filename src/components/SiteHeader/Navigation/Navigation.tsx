@@ -64,7 +64,7 @@ const Menu = styled.ul`
   max-width: 300px;
   margin: 0;
   padding: 4.03rem 0 0; /* 2.5rem + rhythm(1) */
-  background: white;
+  background: ${props => props.theme.header.backgroundColor};
   list-style-type: none;
   -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
   transform-origin: 100% 0;
@@ -146,7 +146,7 @@ const Trigger = styled.input`
     }
 
     /*
-     * Ohyeah and the last one should go the other direction
+     * Oh yeah, and the last one should go the other direction
     */
     &:last-child {
       opacity: 1;

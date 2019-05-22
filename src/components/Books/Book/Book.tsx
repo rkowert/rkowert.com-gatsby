@@ -11,19 +11,34 @@ interface Props {
 }
 
 const Book = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: minmax(auto, 50rem) minmax(7.5rem, 15rem);
-  grid-gap: ${rhythm(2)};
+  grid-gap: ${rhythm(2)}; */
   margin-bottom: ${rhythm(1)};
 
   & h2 {
-    grid-column: 1 / span 2;
-    margin-bottom: 0;
+    /* grid-column: 1 / span 2; */
+    /* margin-bottom: 0; */
+  }
+`;
+
+const CoverAndBuy = styled.div`
+  margin: 0 0 ${rhythm(1)};
+
+  @media (min-width: 36em) {
+    float: right;
+    margin: 0 0 ${rhythm(1)} ${rhythm(1)};
   }
 `;
 
 const BookCover = styled.div`
-  margin-bottom: ${rhythm(1 / 2)};
+  margin: 0 auto ${rhythm(1 / 2)};
+  max-width: 20em;
+
+  @media (min-width: 36em) {
+    margin-bottom: 0 0 ${rhythm(1 / 2)};
+    max-width: auto;
+  }
 `;
 
 const BuyButtons = styled.p`
@@ -61,6 +76,21 @@ export default function({ book }: Props) {
     <Book>
       <Title>{title}</Title>
       <div>
+        <CoverAndBuy>
+          {coverImage && (
+            <BookCover>
+              <Img fluid={coverImage.fluid} alt={`Cover of book, ${title}`} />
+            </BookCover>
+          )}
+          <BuyButtons>
+            {productId && productId.indiebound && (
+              <IndieboundBuyButton productId={productId.indiebound} />
+            )}
+            {productId && productId.amazon && (
+              <AmazonBuyButton productId={productId.amazon} />
+            )}
+          </BuyButtons>
+        </CoverAndBuy>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {reviews.length > 0 &&
           reviews.map(review => (
@@ -71,21 +101,6 @@ export default function({ book }: Props) {
             __html: book.html,
           }}
         />
-      </div>
-      <div>
-        {coverImage && (
-          <BookCover>
-            <Img fluid={coverImage.fluid} alt={`Cover of book, ${title}`} />
-          </BookCover>
-        )}
-        <BuyButtons>
-          {productId && productId.indiebound && (
-            <IndieboundBuyButton productId={productId.indiebound} />
-          )}
-          {productId && productId.amazon && (
-            <AmazonBuyButton productId={productId.amazon} />
-          )}
-        </BuyButtons>
       </div>
     </Book>
   );
