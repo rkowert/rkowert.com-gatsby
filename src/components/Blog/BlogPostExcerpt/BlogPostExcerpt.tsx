@@ -50,7 +50,13 @@ export default function({ post }: Props) {
       </Date>
       <Excerpt
         dangerouslySetInnerHTML={{
-          __html: post.excerpt,
+          __html: post.excerpt
+            // Replace headings with bolded text
+            .replace(/(<\/?)h[1-6](.*?>)/g, '$1b>')
+            // Removee page anchors
+            .replace(/<a.*?class="anchor".*?>.*?<\/a>/g, '')
+            // Remove links
+            .replace(/<a.*?>(.*?)<\/a>/g, '$1'),
         }}
       />
       <p>

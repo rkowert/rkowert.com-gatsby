@@ -7,6 +7,7 @@ import { rhythm } from 'utils/typography';
 import {
   About,
   BookExcerpt,
+  KeepCalmAndGameOn,
   Layout,
   RecentBlogPosts,
   SEO,
@@ -36,6 +37,8 @@ const SocialMediaIconsContainer = styled.div`
 `;
 
 const AboutSection = styled.section`
+  display: flex;
+  flex-flow: column nowrap;
   margin: 0 auto;
   max-width: 50rem;
   padding: ${rhythm(2)} 0;
@@ -50,6 +53,28 @@ const AboutSection = styled.section`
     left: -100vw;
     top: 0;
     z-index: -1;
+  }
+
+  &::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  & > div {
+    margin: ${rhythm(1)} auto 0;
+    max-width: 15rem;
+    order: 99;
+  }
+
+  @media (min-width: 48rem) {
+    display: block;
+
+    & > div {
+      float: right;
+      margin: 0 0 ${rhythm(2)} ${rhythm(2)};
+    }
   }
 `;
 
@@ -110,7 +135,36 @@ export default function Home({
         </HelloSection>
         <AboutSection>
           <h2 id="about">About Me</h2>
-          <About />
+          <KeepCalmAndGameOn />
+          <p>
+            I am currently the Research Director for{' '}
+            <a href="http://www.takethis.org/">Take This</a>, a non-profit
+            organization that provides mental health information and resources
+            to the gaming community and industry. I am also the Chief Scientific
+            Officer of{' '}
+            <a href="https://www.kitsuneanalytics.com/">Kitsune Analytics</a>.
+          </p>
+          <h3>Current Projects</h3>
+          <ul>
+            <li>
+              Examining the links between unintentional learning, knowledge
+              transfer, and psychological well-being within digital games
+            </li>
+            <li>
+              Assessing Internet Gaming Disorder as a primary or secondary
+              diagnosis
+            </li>
+            <li>
+              Identifying initiates to better understand and mitigate dark
+              participation within gaming cultures
+            </li>
+            <li>Reconceptualizing “video game involvement”</li>
+            <li>
+              Evaluating the potential for video game play to mitigate symptoms
+              of PTSD among veterans
+            </li>
+          </ul>
+          {/* <About /> */}
         </AboutSection>
         <BooksSection>
           <h2>Books</h2>

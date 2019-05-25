@@ -84,7 +84,7 @@ export default function({ data, pageContext }: Props) {
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <footer>
-              <p>
+              {/* <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
                   Discuss on Twitter
                 </a>
@@ -92,7 +92,7 @@ export default function({ data, pageContext }: Props) {
                 <a href={editUrl} target="_blank" rel="noopener noreferrer">
                   Edit on GitHub
                 </a>
-              </p>
+              </p> */}
               <BlogNavigation aria-label="Blog navigation">
                 {prev && (
                   <Link to={prev.fields.path} rel="prev">
