@@ -188,6 +188,13 @@ module.exports = {
         icon: 'src/images/logos/logo-1500.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-39570170-1',
+        respectDNT: true,
+      }
+    }
     // No longer needed. gatsby-plugin-manifest provides favicon support
     // {
     //   resolve: 'gatsby-plugin-favicon',
