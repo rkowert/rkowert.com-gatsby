@@ -189,12 +189,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-39570170-1',
         respectDNT: true,
-      }
-    }
+      },
+    },
     // No longer needed. gatsby-plugin-manifest provides favicon support
     // {
     //   resolve: 'gatsby-plugin-favicon',
