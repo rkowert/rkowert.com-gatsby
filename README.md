@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://rkowert.com">
-    <img alt="Logo for Dr. Rachel Kowert" src="https://rkowert.com/static/logo.png" width="60" />
+    <img alt="Logo for Dr. Rachel Kowert" src="https://rkowert.com/logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
