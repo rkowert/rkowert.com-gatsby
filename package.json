@@ -79,7 +79,7 @@
     "react-icons": "^3.5.0",
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
-    "styled-components": "^4.2.0",
+    "styled-components": "^4.3.1",
     "ts-node": "^8.0.3",
     "typescript": "^3.5.0-rc",
     "typography": "^0.16.19",
