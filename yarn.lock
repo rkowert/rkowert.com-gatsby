@@ -11987,10 +11987,10 @@ react-aria-menubutton@^6.0.0:
     prop-types "^15.6.0"
     teeny-tap "^0.2.0"
 
-react-data-table-component@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/react-data-table-component/-/react-data-table-component-1.4.6.tgz#0991e9683ecbb474f2ed63829715d03f7652e6e5"
-  integrity sha512-ct68sSoKPxV/7C5IRZETzfhJJZqJ55jP3CxLMOH9No5lH3RoTWcNX8GO7KHodcEQMptbRFcpVGcO+yGbXB40yw==
+react-data-table-component@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/react-data-table-component/-/react-data-table-component-1.5.3.tgz#7c05599bbbc38e98bac1dbc9418aa847df8cf651"
+  integrity sha512-LP4CqUahaOdy82myUUr+PYMssVgY3dSoUwdQB1tEcoqD7WA1/N290Ph4wiOpd0qMGoO3elWJTh95iP0zVBr+og==
   dependencies:
     lodash "^4.17.11"
     memoize-one "^5.0.0"
