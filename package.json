@@ -94,7 +94,7 @@
     "@types/react-tagcloud": "^1.1.4",
     "@types/styled-components": "^4.1.12",
     "@types/typography": "^0.16.2",
-    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.4.2",
     "depcheck": "^0.8.0",
     "eslint": "^5.15.1",
