@@ -9419,10 +9419,10 @@ mem@^4.0.0:
     mimic-fn "^2.0.0"
     p-is-promise "^2.0.0"
 
-memoize-one@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.0.2.tgz#6aba5276856d72fb44ead3efab86432f94ba203d"
-  integrity sha512-o7lldN4fs/axqctc03NF+PMhd2veRrWeJ2n2GjEzUPBD4F9rmNg4A+bQCACIzwjHJEXuYv4aFFMaH35KZfHUrw==
+memoize-one@^5.0.0, memoize-one@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.0.4.tgz#005928aced5c43d890a4dfab18ca908b0ec92cbc"
+  integrity sha512-P0z5IeAH6qHHGkJIXWw0xC2HNEgkx/9uWWBQw64FJj3/ol14VYdfVGWWr0fXfjhhv3TKVIqUq65os6O4GUNksA==
 
 memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
   version "0.4.1"
@@ -11987,13 +11987,13 @@ react-aria-menubutton@^6.0.0:
     prop-types "^15.6.0"
     teeny-tap "^0.2.0"
 
-react-data-table-component@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/react-data-table-component/-/react-data-table-component-1.4.6.tgz#0991e9683ecbb474f2ed63829715d03f7652e6e5"
-  integrity sha512-ct68sSoKPxV/7C5IRZETzfhJJZqJ55jP3CxLMOH9No5lH3RoTWcNX8GO7KHodcEQMptbRFcpVGcO+yGbXB40yw==
+react-data-table-component@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/react-data-table-component/-/react-data-table-component-1.7.1.tgz#6ebae836784bcdb154119acc90600e411305841c"
+  integrity sha512-LKSYh2NmsigMVoMtOvziEE7fo+y8uIArrx8euO/C/tm6xrgxRIwTCd7ZVVQsR0rcc3biUTMUwHeBXtsLnwn3Gg==
   dependencies:
     lodash "^4.17.11"
-    memoize-one "^5.0.0"
+    memoize-one "^5.0.4"
     shortid "^2.2.14"
 
 react-datetime@^2.16.3:
