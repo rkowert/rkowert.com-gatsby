@@ -49,7 +49,7 @@
     "gatsby-plugin-netlify-cms": "^4.0.1",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.9",
-    "gatsby-plugin-sharp": "^2.0.29",
+    "gatsby-plugin-sharp": "^2.2.3",
     "gatsby-plugin-sitemap": "^2.1.0",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-svgr": "^2.0.2",
