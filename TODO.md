@@ -1,14 +1,8 @@
 # TODO
 
-- 404 page. Happy with the default?
-
-## Pre-Launch Checks
-
-- [ ] View all pages from phone
-- [ ] View all pages with dark mode enabled
-
 ## Nice to Have
 
+- gatsby-plugin-nprogress
 - Home
   - Media section with selected videos
 - CV
@@ -17,3 +11,10 @@
   - https://github.com/gatsbyjs/gatsby/issues/5990
 - BlogPost
   - Maybe rename layout: "post" to "blogpost"
+- [ ] Schema.org makup for Google SEO
+  - https://developers.google.com/search/docs/data-types/breadcrumb
+  - https://developers.google.com/search/docs/data-types/logo
+  - https://developers.google.com/search/docs/data-types/social-profile
+  - https://developers.google.com/search/docs/data-types/carousel (of books?)
+  - https://developers.google.com/search/docs/data-types/book
+  - https://developers.google.com/search/docs/data-types/article
