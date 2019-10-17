@@ -20,5 +20,6 @@
     "mdx": {
       "parser": "markdown"
     }
-  }
+  },
+  "workbench.colorCustomizations": {}
 }
