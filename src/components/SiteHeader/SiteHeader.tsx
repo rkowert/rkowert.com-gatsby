@@ -30,7 +30,7 @@ const Header = styled.header`
 `;
 
 const Logo = styled.h1`
-  flex: 1;
+  flex-grow: 0;
   margin: 0;
   padding: 0;
 
