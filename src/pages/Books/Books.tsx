@@ -28,6 +28,7 @@ export default function Books({
             ({ node: { fluid: image } }) =>
               image.originalName === node.frontmatter.cover
           );
+          // const mdReviews = book.reviews.map((_, index) => book.fields.frontmattermd.reviews[index]);
           const book = {
             ...node,
             coverImage: img ? img.node : null,
@@ -51,6 +52,13 @@ export const pageQuery = graphql`
           id
           html
           fields {
+            # frontmattermd {
+            #   reviews {
+            #     authorTitle {
+            #       html
+            #     }
+            #   }
+            # }
             path
             slug
           }
