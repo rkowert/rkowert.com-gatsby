@@ -69,6 +69,16 @@
     ],
     "editedVolumes": [
       {
+        "authors": "Kowert, R.",
+        "date": "2019",
+        "title": "Video games and well-being: Press Start.",
+        "url": "https://www.palgrave.com/gp/book/9783030327699",
+        "publisher": {
+          "location": "New York",
+          "title": "Palgrave"
+        }
+      },
+      {
         "authors": "Kowert, R., & Quandt, T. (Eds.)",
         "date": "2017",
         "title": "New perspectives on the social aspects of digital gaming: Multiplayer 2",
@@ -548,6 +558,11 @@
   ],
   "conferenceParticipation": {
     "conferencesOrganized": [
+      {
+        "title": "The International Games Summit on Mental Health Awareness",
+        "location": "Toronto",
+        "date": "October 2019"
+      },
       {
         "title": "Multi.Player 2 conference",
         "location": "The University of Münster",
