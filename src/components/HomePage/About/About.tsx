@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 
 import { rhythm } from 'utils/typography';
@@ -35,9 +35,7 @@ export default function() {
           allMdx(filter: { fields: { slug: { eq: "about" } } }) {
             edges {
               node {
-                code {
-                  body
-                }
+                body
               }
             }
           }
@@ -45,7 +43,7 @@ export default function() {
       `}
       render={data => (
         <About>
-          <MDXRenderer>{data.allMdx.edges[0].node.code.body}</MDXRenderer>
+          <MDXRenderer>{data.allMdx.edges[0].node.body}</MDXRenderer>
         </About>
       )}
     />
