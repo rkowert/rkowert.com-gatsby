@@ -6975,12 +6975,12 @@ gatsby-plugin-svgr@^2.0.2:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-svgr/-/gatsby-plugin-svgr-2.0.2.tgz#22e08fb67ec63b68aca6ac3e89962af20214e2a5"
   integrity sha512-54REIMe79qFBAwpcnWHBkvEE9CKoEVkefF9rDXai0k642r91SZ4UeWFuAmsegPG+sPVub7tHfHu/2LVXK1I9kg==
 
-gatsby-plugin-tags@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tags/-/gatsby-plugin-tags-2.3.6.tgz#051c3b23d9a9c05b66fc8074108af341af5aebc6"
-  integrity sha512-5sE2HKSRMt9kT7m15cJgvSbLVXJO46wjmt+/h4zGKLmAU021tP9ifEZVgrnFgutekluNeUPCazzSXfoCqw+rMA==
+gatsby-plugin-tags@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tags/-/gatsby-plugin-tags-2.3.7.tgz#1dc55b9a71c9a59a444897e2ccf33e3b72019fd2"
+  integrity sha512-L/M0938G90FBPgMrMDaxI1phNxyu10OLQU94Tfoj7RL4h9USbLxY2yAHjfW4bPRN+XsSMc5nHxVKVyj7JHd00A==
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.15"
     slug "^1.1.0"
 
 gatsby-plugin-typescript@^2.1.15:
