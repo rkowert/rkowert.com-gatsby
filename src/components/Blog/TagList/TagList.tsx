@@ -51,7 +51,7 @@ interface Props {
 }
 
 export default function({ tags }: Props) {
-  return (
+  return tags ? (
     <React.Fragment>
       <Label>Tagged with:</Label>
       <TagList>
@@ -65,5 +65,5 @@ export default function({ tags }: Props) {
         })}
       </TagList>
     </React.Fragment>
-  );
+  ) : null;
 }

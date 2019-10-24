@@ -38,12 +38,13 @@ export default function() {
       `}
       render={({ allMarkdownRemark: { edges } }) => {
         const tags = edges.reduce((tags, { node }) => {
-          node.frontmatter.tags.forEach(tag => {
-            if (tags[tag] == null) {
-              tags[tag] = 0;
-            }
-            tags[tag] += 1;
-          });
+          node.frontmatter.tags &&
+            node.frontmatter.tags.forEach(tag => {
+              if (tags[tag] == null) {
+                tags[tag] = 0;
+              }
+              tags[tag] += 1;
+            });
           return tags;
         }, {});
 
