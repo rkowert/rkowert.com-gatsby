@@ -57,7 +57,7 @@ That said, examining the literature from Internet Addiction and online video gam
 
 A smaller amount of cross-sectional research has emerged linking IGD to similar outcomes, including [depression](https://www.sciencedirect.com/science/article/pii/S0747563210002918) and [anxiety](https://www.liebertpub.com/doi/abs/10.1089/cyber.2009.0229) and other poorer mental health outcomes such as [lower self-esteem](https://www.sciencedirect.com/science/article/pii/S0747563210002918) and [life satisfaction](https://onlinelibrary.wiley.com/doi/abs/10.1111/add.12016).
 
-![Potential precursors and consequences of IGD](./IGD_INFOGRAPHIC.jpg 'Figure 1. Potential precursors and consequences of IGD')
+![Potential precursors and consequences of IGD](./IGD_INFOGRAPHIC.jpg "Figure 1. Potential precursors and consequences of IGD")
 
 The lack of studies examining the relationship between gaming, disordered gaming, and well-being outcomes grossly limits our understanding of IGD as a psychiatric condition. If IGD is to be retained as a diagnosable and treatable condition, clinicians, policy makers, educators, parents, and other professionals must be informed about the range and scope of its implications on players’ well-being. There is still a ways to go before IGD is fully understood in terms of its underlying causes and potential consequences.
 
