@@ -1,10 +1,11 @@
 ---
 layout: post
 title: 'Internet Gaming Disorder: Navigating through the Moral Panic'
-date: 2019-10-23 21:47:19
+date: 2019-10-23T21:47:19.000Z
 category: news
+tags:
+  - IGD
 ---
-
 This morning, the NY Times posted an article entitled “[Can You Really Be Addicted to Video Games?](https://www.nytimes.com/2019/10/22/magazine/can-you-really-be-addicted-to-video-games.html)”. This article told the story of Charlie Bracke and his descent into video game addiction. This article is just one of many that have following the classification of Internet Gaming Disorder (IGD) by the World Health Organization in September 2018. While this, and other articles like it, make for interesting stories, they are often sensationalized, full of generalized claims, and do little to push the narrative forward about what the scientific community does and does not know about video game addiction.
 
 To provide some clarity, this article will provide a summary of what the scientific community knows about the prevalence, diagnosis, and impact of IGD. Overall, there remains a lack of clarity about the connection between games themselves and disordered play.
@@ -35,8 +36,6 @@ Prevalence rates of IGD within the general population have yet to be established
 
 One of the key debates surrounding IGD is understanding it’s the underlying cause. Is it as a chronic condition, like substance addiction? Or a self-regulatory challenge, like gambling addiction? This is something that is still being debated within scientific communities. However, it is generally understood that IGD likely is, at least partially, driven by diminished external factors, such as diminished cognitive control over motivational drives that contribute to [decision making skills](https://www.sciencedirect.com/science/article/abs/pii/S0022395614002027) or ["a need frustration" for our daily psychological needs](https://onlinelibrary.wiley.com/doi/abs/10.1111/cdev.13007).
 
-One of the key debates surrounding IGD is understanding it’s the underlying cause. Is it as a chronic condition, like substance addiction? Or a self-regulatory challenge, like gambling addiction? This is something that is still being debated within scientific communities. However, it is generally understood that IGD likely is, at least partially, driven by diminished cognitive control over motivational drives, such as those that contribute to [decision making skills]( or drive our daily psychological needs.
-
 ## What does not cause IGD?
 
 There is no scientific evidence indicating that games themselves are the motivating force behind any kind of dysregulated gaming behavior. While games are often specifically created to keep players engaged, there is no research indicating that the mechanisms within them are cultivating addictive behaviors.
@@ -59,7 +58,7 @@ That said, examining the literature from Internet Addiction and online video gam
 
 A smaller amount of cross-sectional research has emerged linking IGD to similar outcomes, including [depression](https://www.sciencedirect.com/science/article/pii/S0747563210002918) and [anxiety](https://www.liebertpub.com/doi/abs/10.1089/cyber.2009.0229) and other poorer mental health outcomes such as [lower self-esteem](https://www.sciencedirect.com/science/article/pii/S0747563210002918) and [life satisfaction](https://onlinelibrary.wiley.com/doi/abs/10.1111/add.12016).
 
-![Potential precursors and consequences of IGD](./IGD_INFOGRAPHIC.jpg 'Figure 1. Potential precursors and consequences of IGD')
+![Potential precursors and consequences of IGD](/static/images/uploads/igd_infographic.jpg "Figure 1. Potential precursors and consequences of IGD")
 
 The lack of studies examining the relationship between gaming, disordered gaming, and well-being outcomes grossly limits our understanding of IGD as a psychiatric condition. If IGD is to be retained as a diagnosable and treatable condition, clinicians, policy makers, educators, parents, and other professionals must be informed about the range and scope of its implications on players’ well-being. There is still a ways to go before IGD is fully understood in terms of its underlying causes and potential consequences.
 
