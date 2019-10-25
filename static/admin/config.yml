@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rkowert/rkowert.com
   branch: master
   squash_merges: true
 publish_mode: editorial_workflow
