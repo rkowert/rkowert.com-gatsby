@@ -35,8 +35,6 @@ Prevalence rates of IGD within the general population have yet to be established
 
 One of the key debates surrounding IGD is understanding it’s the underlying cause. Is it as a chronic condition, like substance addiction? Or a self-regulatory challenge, like gambling addiction? This is something that is still being debated within scientific communities. However, it is generally understood that IGD likely is, at least partially, driven by diminished external factors, such as diminished cognitive control over motivational drives that contribute to [decision making skills](https://www.sciencedirect.com/science/article/abs/pii/S0022395614002027) or ["a need frustration" for our daily psychological needs](https://onlinelibrary.wiley.com/doi/abs/10.1111/cdev.13007).
 
-One of the key debates surrounding IGD is understanding it’s the underlying cause. Is it as a chronic condition, like substance addiction? Or a self-regulatory challenge, like gambling addiction? This is something that is still being debated within scientific communities. However, it is generally understood that IGD likely is, at least partially, driven by diminished cognitive control over motivational drives, such as those that contribute to [decision making skills]( or drive our daily psychological needs.
-
 ## What does not cause IGD?
 
 There is no scientific evidence indicating that games themselves are the motivating force behind any kind of dysregulated gaming behavior. While games are often specifically created to keep players engaged, there is no research indicating that the mechanisms within them are cultivating addictive behaviors.
