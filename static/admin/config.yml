@@ -64,7 +64,7 @@ collections:
     files:
       - label: 'About'
         name: 'about'
-        file: 'content/about.md'
+        file: 'content/about.mdx'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
