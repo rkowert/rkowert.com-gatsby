@@ -74,7 +74,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-data-table-component": "^3.6.0",
-    "react-dom": "^16.10.2",
+    "react-dom": "^16.13.0",
     "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
