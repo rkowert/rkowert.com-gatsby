@@ -3273,15 +3273,10 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bluebird@^3.0.5, bluebird@^3.5.5, bluebird@^3.7.2:
+bluebird@^3.0.5, bluebird@^3.5.1, bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
-
-bluebird@^3.5.1:
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
-  integrity sha512-FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==
 
 bmp-js@^0.1.0:
   version "0.1.0"
@@ -7436,10 +7431,10 @@ gatsby-transformer-remark@^2.6.30:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby-transformer-sharp@^2.2.23:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.5.1.tgz#6b9c903ffa2c187954d1b5317204d09a7703593d"
-  integrity sha512-LNR0Na9ycW/MmWo8OOENlG723mVyKGTUjOdLR7f2yUE8+MS5ReFbVr3bc3SQpTPjJD6lDmupt3bVMD9k79caTw==
+gatsby-transformer-sharp@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.5.3.tgz#0403c916ce3b96ce244a2b7bbcd11e0d4d8611e4"
+  integrity sha512-tUkH1uCdwSLeOqjptYQD6V/UH5U18UQPFzwKvhWRepcl//FvmCnOv5Kn03SpeBCuPeccxKt3kT3UVJxdOOGShw==
   dependencies:
     "@babel/runtime" "^7.9.6"
     bluebird "^3.7.2"
