@@ -69,9 +69,39 @@
     ],
     "editedVolumes": [
       {
+        "authors": "Kowert, R., & Quandt, T. (Eds.)",
+        "date": "2020",
+        "title": "The video game debate 2: Revisiting the physical, social, and psychological effects of video games",
+        "url": "https://www.amazon.com/Video-Game-Debate-Revisiting-Psychological/dp/0367366940/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=",
+        "publisher": {
+          "location": "New York",
+          "title": "Routledge"
+        }
+      },
+      {
+        "authors": "Kowert, R. (Ed.)",
+        "date": "2020",
+        "title": "Video games and well-being: Press Start",
+        "url": "https://www.amazon.com/Video-Games-Well-being-Palgrave-Cyberpsychology/dp/3030327698/ref=sr_1_fkmr0_1?dchild=1&keywords=Video+games+and+well-being%3A+Press+Start.+New+York%3A+Palgrave.&qid=1605893100&s=books&sr=1-1-fkmr0",
+        "publisher": {
+          "location": "New York",
+          "title": "Palgrave"
+        }
+      },
+      {
+        "authors": "Kowert, R., Ferguson, C., Rusch, D., & Fletcher, P.",
+        "date": "2020",
+        "title": "Digital Games and Mental Health",
+        "url": "https://www.frontiersin.org/research-topics/12085/digital-games-and-mental-health",
+        "publisher": {
+          "location": "Switzerland",
+          "title": "Special collection for Frontiers in Psychology"
+        }
+      },
+      {
         "authors": "Kowert, R.",
         "date": "2019",
-        "title": "Video games and well-being: Press Start.",
+        "title": "Video games and well-being: Press Start",
         "url": "https://www.palgrave.com/gp/book/9783030327699",
         "publisher": {
           "location": "New York",
@@ -100,6 +130,24 @@
       }
     ],
     "refereedJournalArticles": [
+      {
+        "authors": "Lowert, R.",
+        "date": "2020",
+        "title": "Dark participation in games",
+        "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.598947/full",
+        "publication": {
+          "title": "Frontiers in Psychology"
+        }
+      },
+      {
+        "authors": "Kowert, R. & Martson, H. R.",
+        "date": "2020",
+        "title": "What role can video games play in the COVID-19 pandemic?",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7453828/",
+        "publication": {
+          "title": "Emerald Open Research"
+        }
+      },
       {
         "authors": "Carras, M. C., Kalbarczyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
         "date": "2018",
@@ -272,6 +320,74 @@
       }
     ],
     "bookChapters": [
+      {
+        "authors": "Kowert, R., & Quandt, T.",
+        "date": "2020",
+        "title": "Revisiting old debates",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "The videogame debate 2: Revisiting the physical, social, and psychological effects of video games",
+          "url": "https://www.taylorfrancis.com/books/e/9780429351815",
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
+        }
+      },
+      {
+        "authors": "Quandt, T. & Kowert, R.",
+        "date": "2020",
+        "title": "The Video Game Debate: Where do we go from here",
+        "book": {
+          "authors": "R. Kowert & T. Quandt (Eds.)",
+          "title": "The video game debate 2: Revisiting the physical, social, andpsychological effects of video games",
+          "url": "https://www.taylorfrancis.com/books/e/9780429351815",
+          "publisher": {
+            "location": "New York",
+            "title": "Routledge"
+          }
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2020",
+        "title": "The storytelling of Final Fantasy",
+        "book": {
+          "authors": "A. Bean (Ed.)",
+          "title": "The Psychology of Final Fantasy",
+          "url": "https://www.amazon.com/Psychology-Final-Fantasy-Surpassing-Limit/dp/1734866004/ref=sr_1_1?dchild=1&keywords=Psychology+of+Final+Fantasy.&qid=1605893227&sr=8-1",
+          "publisher": {
+            "title": "Leyline Publishing"
+          }
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2020",
+        "title": "Video Games: An Introduction",
+        "book": {
+          "authors": "A. Bean, E. Daniels, & S. Sawyer (Eds.)",
+          "title": "Integrating Geek Culture Into Therapeutic Practice: The Clinician's Guide to Geek Therapy",
+          "url": "https://www.amazon.com/Integrating-Geek-Culture-Therapeutic-Practice/dp/1734866020/ref=sr_1_1?dchild=1&keywords=geek+therapy+leyline&qid=1605893240&sr=8-1",
+          "publisher": {
+            "title": "Leyline Publishing"
+          }
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2020",
+        "title": "Concluding thoughts",
+        "book": {
+          "authors": "R. Kowert (Ed.)",
+          "title": "Video games and well-being: Press Start",
+          "url": "https://www.amazon.com/Video-Games-Well-being-Palgrave-Cyberpsychology/dp/3030327698/ref=sr_1_1?dchild=1&keywords=video+games+and+wellbeing&qid=1605893277&sr=8-1",
+          "publisher": {
+            "location": "New York",
+            "title": "Palgrave"
+          }
+        }
+      },
       {
         "authors": "Kowert, R. & Kaye. L.",
         "date": "2018",
@@ -457,6 +573,24 @@
     ],
     "otherPublications": [
       {
+        "authors": "Kowert, R.",
+        "date": "2020, August 15",
+        "title": "Is video game addiction still a thing in the era of COVID-19?",
+        "url": "https://rkowert.medium.com/is-video-game-addiction-still-a-thing-in-the-era-of-covid-19-d5bfbacc4df1",
+        "publication": {
+          "title": "Medium"
+        }
+      },
+      {
+        "authors": "Kowert, R.",
+        "date": "2020, August 5",
+        "title": "Why Joe Rogan’s Hot Takes Matter",
+        "url": "https://rkowert.medium.com/why-joe-rogans-hot-takes-matter-f8cc61dcaf37",
+        "publication": {
+          "title": "What To Make Of A Study About Gaming And Sexism"
+        }
+      },
+      {
         "authors": "Kowert, R., & Quinn, S.",
         "date": "2017",
         "title": "ISGA Player Demographics Report",
@@ -529,6 +663,28 @@
   "invitedTalks": [
     {
       "authors": "Kowert, R.",
+      "date": "2020, November",
+      "title": "Digital Games in the “After Times.”",
+      "url": "https://www.youtube.com/watch?v=OybsXsNpGFw",
+      "extra": "Keynote lecture for the Game Studies Division of the National Communication Association",
+      "location": "Remote"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2020, July",
+      "title": "Parenting in an era of increased video games and screen time",
+      "extra": "Children and Screens: Institute of Digital Media and Child Development",
+      "location": "Remote"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2020, May",
+      "title": "Current discussions in game studies research",
+      "extra": "Nordic Games Conference",
+      "location": "Remote"
+    },
+    {
+      "authors": "Kowert, R.",
       "date": "2017, October",
       "title": "Challenging our beliefs about parenting in a digital world",
       "extra": "Keynote presented at BRAVE – Annual Women’s Conference",
@@ -560,6 +716,11 @@
     "conferencesOrganized": [
       {
         "title": "The International Games Summit on Mental Health Awareness",
+        "location": "Remote",
+        "date": "October 2020"
+      },
+      {
+        "title": "The International Games Summit on Mental Health Awareness",
         "location": "Toronto",
         "date": "October 2019"
       },
@@ -570,6 +731,56 @@
       }
     ],
     "panelsOrganized": [
+      {
+        "authors": "Kowert, R. (chair), Hodent, C., & Colder-Carras., M.",
+        "date": "2020",
+        "title": "Ethical immersion in games",
+        "extra": "Panel presented at TIGS 2020",
+        "location": "Remote"
+      },
+      {
+        "authors": "Flick, C. (chair), Kowert, R., & Deterding, S.",
+        "date": "2020",
+        "title": "Did Animal Crossing save us from COVID-19?",
+        "extra": "Panel presented at PAX Online",
+        "location": "Remote"
+      },
+      {
+        "authors": "Kowert, R. (chair), Whitta, G., Shanley, M., DePass, T., & Sheldon, T.",
+        "date": "2020",
+        "title": "Welcome Home: Games as social communities",
+        "extra": "Panel presented at PAX Online",
+        "location": "Remote"
+      },
+      {
+        "authors": "Ferguson, C. (chair), Kowert, R., Kaye, L., Etchells, P., & Smyth, M.",
+        "date": "2020",
+        "title": "Video games during the pandemic",
+        "extra": "Panel presented at Virtual Media Psychology Symposium: Connecting & Disconnecting in the new normal",
+        "location": "Remote"
+      },
+      {
+        "authors": "Dunlap, K. (chair), Shapiro, A., Kowert, R., ten Cate, H., & Eriksen, T.",
+        "date": "2020",
+        "title": "The Good of Games",
+        "url": "https://youtu.be/62wDwge18Q0",
+        "extra": "Panel presented at the Game Development Crisis Conference",
+        "location": "Remote"
+      },
+      {
+        "authors": "Kenreck, T. (chair), Kowert, R., Boccamazzo, R., & Dunlap, M.",
+        "date": "2020",
+        "title": "It is okay to not be okay",
+        "extra": "Panel presented on Todd Talks",
+        "location": "Remote"
+      },
+      {
+        "authors": "Guder, D. (chair), Kowert, R., Davis, A., Johns, A., & Robinson, H.",
+        "date": "2020",
+        "title": "Socializing and mental health during quarantine",
+        "extra": "Panel presented at Gen Con-versations",
+        "location": "Remote"
+      },
       {
         "authors": "Bean, A. (chair), Kowert, R., Tilton, S., & Daniel, S.",
         "date": "2019, March",
