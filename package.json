@@ -39,7 +39,6 @@
     "@mdx-js/react": "^1.5.1",
     "@svgr/webpack": "^5.4.0",
     "babel-plugin-styled-components": "^1.12.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "gatsby": "^2.16.5",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-alias-imports": "^1.0.5",
@@ -100,9 +99,11 @@
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "gatsby-plugin-eslint": "^2.0.4",
     "prettier": "^2.0.5",
@@ -132,20 +133,33 @@
     },
     "plugins": [
       "@typescript-eslint",
+      "import",
       "prettier"
     ],
     "rules": {
+      "@typescript-eslint/no-use-before-define": ["error"],
       "no-plusplus": [
         "error",
         {
           "allowForLoopAfterthoughts": true
         }
       ],
+      "no-use-before-define": "off",
       "quotes": [
         "error",
         "single"
       ],
       "semi": "error"
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "typescript": {
+          "alwaysTryTypes": true
+        }
+      }
     }
   }
 }
