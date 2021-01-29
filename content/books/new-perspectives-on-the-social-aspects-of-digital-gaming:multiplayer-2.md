@@ -2,12 +2,12 @@
 title: New Perspectives on the Social Aspects of Digital Gaming
 subtitle: Multiplayer 2
 cover: new-perspectives-on-the-social-aspects-of-digital-gaming:multiplayer-2.jpg
-isbn10: 1138643637
+isbn10: '1138643637'
 isbn13: 978-1138643635
 date: 2017-02-24
 productId:
-  amazon: 1138643637
-  indiebound: 9781138643635
+  amazon: '1138643637'
+  indiebound: '9781138643635'
 reviews:
   - author: Prof. James D. Ivory
     authorTitle: Department of Communication, Virginia Polytechnic Institute and State University

@@ -2,12 +2,12 @@
 title: The Video Game Debate
 subtitle: Unravelling the Physical, Social, and Psychological Effects of Video Games
 cover: the-video-game-debate.jpg
-isbn10: 1138831638
+isbn10: '1138831638'
 isbn13: 978-1138831636
 date: 2015-09-03
 productId:
-  amazon: 1138831638
-  indiebound: 9781138831636
+  amazon: '1138831638'
+  indiebound: '9781138831636'
 reviews:
   - author: Prof. Dr. Richard A. Bartle
     authorTitle: University of Essex

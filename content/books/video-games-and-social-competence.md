@@ -2,12 +2,12 @@
 title: Video Games and Social Competence
 subtitle:
 cover: video-games-and-social-competence.jpg
-isbn10: 1138804266
+isbn10: '1138804266'
 isbn13: 978-1138804265
 date: 2014-12-15
 productId:
-  amazon: 1138804266
-  indiebound: 9781138804265
+  amazon: '1138804266'
+  indiebound: '9781138804265'
 reviews:
   - author: Prof. Dr. Christopher J. Ferguson
     authorTitle: Stetson University

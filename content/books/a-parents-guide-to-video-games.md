@@ -2,12 +2,12 @@
 title: A Parent’s Guide to Video Games
 subtitle: The essential guide to understanding how video games impact your child's physical, social, and psychological well-being
 cover: a-parents-guide-to-video-games.jpg
-isbn10: 1537359835
+isbn10: '1537359835'
 isbn13: 978-1537359830
 date: 2016-11-30
 productId:
-  amazon: 1537359835
-  indiebound: 9781537359830
+  amazon: '1537359835'
+  indiebound: '9781537359830'
 reviews:
   - author: Dr. Cheryl K. Olson
     authorTitle: Co-founder of the Center for Mental Health and Media

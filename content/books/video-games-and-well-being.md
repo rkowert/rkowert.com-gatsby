@@ -2,11 +2,11 @@
 title: Video games and well-being
 subtitle: Press Start
 cover: video-games-and-well-being.jpg
-isbn10: 3030327698
+isbn10: '3030327698'
 isbn13: 978-3-030-32769-9
 date: 2020-01-03
 productId:
-  amazon: 3030327698
+  amazon: '3030327698'
 reviews:
   - author: Pete Etchells
     authorTitle: Author of Lost in a Good Game
