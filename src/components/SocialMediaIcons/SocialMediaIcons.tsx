@@ -5,8 +5,9 @@ import {
   FaInstagram,
   FaLinkedin,
   FaResearchgate,
+  FaTwitch,
   FaTwitter,
-  // FaYoutube,
+  FaYoutube,
 } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -29,15 +30,15 @@ const GoogleScholarIcon = () => (
   </svg>
 );
 
-const SocialMediaIcons = styled.div`
+const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 
   & > a {
     border-radius: 50%;
-    background: ${props => props.theme.socialMediaIcons.backgroundColor};
-    color: ${props => props.theme.socialMediaIcons.color};
+    background: ${(props) => props.theme.socialMediaIcons.backgroundColor};
+    color: ${(props) => props.theme.socialMediaIcons.color};
     padding: 0.4375rem;
     margin: 0 0.375rem 0.375rem;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -47,15 +48,21 @@ const SocialMediaIcons = styled.div`
       height: 100%;
     }
 
+    &:visited {
+      color: ${(props) => props.theme.socialMediaIcons.color};
+    }
+
+    &:focus,
     &:hover {
-      background: ${props => props.theme.socialMediaIcons.hoverBackgroundColor};
-      color: ${props => props.theme.color.link.normal};
+      background: ${(props) =>
+        props.theme.socialMediaIcons.hoverBackgroundColor};
+      color: ${(props) => props.theme.color.link.normal};
       text-decoration: none;
     }
   }
 `;
 
-export default () => (
+export const SocialMediaIcons: React.FC = () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -67,25 +74,27 @@ export default () => (
               instagram
               linkedin
               researchGate
+              twitch
               twitter
-              # youtube
+              youtube
             }
           }
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const {
         facebook,
         gscholar,
         instagram,
         linkedin,
         researchGate,
+        twitch,
         twitter,
-        // youtube,
+        youtube,
       } = data.site.siteMetadata.social;
       return (
-        <SocialMediaIcons>
+        <Container>
           <a href={`https://twitter.com/${twitter}`}>
             <ScreenReadersOnly>Twitter</ScreenReadersOnly>
             <FaTwitter aria-hidden="true" />
@@ -103,18 +112,22 @@ export default () => (
             <FaLinkedin aria-hidden="true" />
           </a>
           <a href={`https://www.researchgate.net/profile/${researchGate}`}>
-            <ScreenReadersOnly>researchGate</ScreenReadersOnly>
+            <ScreenReadersOnly>Research Gate</ScreenReadersOnly>
             <FaResearchgate aria-hidden="true" />
           </a>
           <a href={`https://scholar.google.ca/citations?user=${gscholar}`}>
-            <ScreenReadersOnly>gscholar</ScreenReadersOnly>
+            <ScreenReadersOnly>Google Scholar</ScreenReadersOnly>
             <GoogleScholarIcon aria-hidden="true" />
           </a>
-          {/* <a href={`https://www.youtube.com/channel/${youtube}`}>
-            <ScreenReadersOnly>youtube</ScreenReadersOnly>
+          <a href={`https://youtube.com/${youtube}`}>
+            <ScreenReadersOnly>YouTube</ScreenReadersOnly>
             <FaYoutube aria-hidden="true" />
-          </a> */}
-        </SocialMediaIcons>
+          </a>
+          <a href={`https://twitch.tv/${twitch}`}>
+            <ScreenReadersOnly>Twitch</ScreenReadersOnly>
+            <FaTwitch aria-hidden="true" />
+          </a>
+        </Container>
       );
     }}
   />
