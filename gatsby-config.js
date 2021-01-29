@@ -12,6 +12,7 @@ module.exports = {
       {
         name: 'Psychgeist',
         link: 'https://youtube.com/Psychgeist',
+        target: '_blank',
       },
       {
         name: 'CV',
@@ -24,6 +25,7 @@ module.exports = {
       {
         name: 'Pragmatic Princess',
         link: 'https://buildyourowncastle.com/',
+        target: '_blank',
       },
       {
         name: 'resources',
