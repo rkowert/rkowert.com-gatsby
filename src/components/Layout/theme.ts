@@ -29,7 +29,7 @@ const lightTheme: DefaultTheme = {
     logoHoverFill2: '#e0b9f1',
   },
   media: {
-    expandedNav: 'min-width: 60em',
+    expandedNav: 'min-width: 72em',
   },
   nav: {
     color: '#404041',

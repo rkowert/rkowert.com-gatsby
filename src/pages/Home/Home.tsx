@@ -1,17 +1,15 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { FaLongArrowAltRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import { rhythm } from 'utils/typography';
 
 import {
   About,
   BookExcerpt,
-  KeepCalmAndGameOn,
   Layout,
-  RecentBlogPosts,
+  Profile,
   SEO,
-  SocialMediaIcons,
+  YoutubeVideo,
   Welcome,
 } from 'components';
 
@@ -20,32 +18,43 @@ const HelloSection = styled.section`
   margin: 0 auto;
   max-width: 70rem;
 
-  @media (min-width: 57.18em) {
+  @media (min-width: 48em) {
     display: grid;
-    grid-column-gap: ${rhythm(2)};
-    grid-template-areas: 'left main';
-    grid-template-columns: 16rem minmax(30rem, 50rem);
+    grid-gap: ${rhythm(2)};
+    grid-template-columns: 16rem minmax(min-content, 50rem);
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      'Profile Welcome'
+      'Main Main';
+  }
+
+  @media (min-width: 60em) {
+    grid-row-gap: 0;
+    grid-template-areas:
+      'Profile Welcome'
+      'Profile Main';
   }
 `;
 
-const SocialMediaIconsContainer = styled.div`
-  display: none;
+const StyledProfile = styled(Profile)`
+  grid-area: Profile;
+`;
 
-  @media (min-width: 60em) {
-    display: block;
-  }
+const StyledWelcome = styled(Welcome)`
+  grid-area: Welcome;
+`;
+
+const Main = styled.div`
+  grid-area: Main;
+  margin-bottom: ${rhythm(2)};
 `;
 
 const AboutSection = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 0 auto;
-  max-width: 50rem;
   padding: ${rhythm(2)} 0;
   position: relative;
 
   &::before {
-    background: ${props => props.theme.stripedSections.backgroundColor};
+    background: ${(props) => props.theme.stripedSections.backgroundColor};
     content: '';
     position: absolute;
     width: 200vw;
@@ -61,35 +70,19 @@ const AboutSection = styled.section`
     height: 0;
     clear: both;
   }
-
-  & > div {
-    margin: ${rhythm(1)} auto 0;
-    max-width: 15rem;
-    order: 99;
-  }
-
-  @media (min-width: 48rem) {
-    display: block;
-
-    & > div {
-      float: right;
-      margin: 0 0 ${rhythm(2)} ${rhythm(2)};
-    }
-  }
 `;
 
 const BooksSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.06rem;
   padding: ${rhythm(2)} 0;
   margin: 0 auto;
   max-width: 60rem;
+`;
 
-  & h2 {
-    grid-column: 1 / span 2;
-    margin-bottom: 0;
-  }
+const BooksGrid = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.06rem;
+  margin-bottom: ${rhythm(2)};
 
   & > div {
     grid-column: 1 / span 2;
@@ -100,74 +93,43 @@ const BooksSection = styled.section`
   }
 `;
 
-export default function Home({
+const BookSpotlightVideo = styled(YoutubeVideo)`
+  margin-bottom: ${rhythm(2)};
+`;
+
+const Home: React.FC = ({
   data: {
     allImageSharp: { edges: images },
     booksQuery: { edges: books },
     postsQuery: { edges: posts },
   },
-}) {
-  return (
-    <Layout>
-      <SEO
-        title="Home"
-        keywords={['rachel', 'kowert', 'psychology', 'gaming']}
-      />
-      <main>
-        <HelloSection>
-          <div>
-            <Welcome />
-            <SocialMediaIconsContainer>
-              <SocialMediaIcons />
-            </SocialMediaIconsContainer>
-            {/* <LatestTweet /> */}
-            {/* <LatestInstagram /> */}
-          </div>
-          <div>
-            <h2>Recent Blog Posts</h2>
-            <RecentBlogPosts posts={posts} />
-            <p>
-              <Link to="/blog">
-                See more posts <FaLongArrowAltRight atia-hidden="true" />
-              </Link>
-            </p>
-          </div>
-        </HelloSection>
-        <AboutSection>
-          <h2 id="about">About Me</h2>
-          <KeepCalmAndGameOn />
+}): React.ReactElement => (
+  <Layout>
+    <SEO
+      title="Home"
+      keywords={['rachel', 'kowert', 'psychology', 'gaming', 'psychgeist']}
+    />
+    <main>
+      <HelloSection>
+        <StyledProfile />
+        <StyledWelcome />
+        <Main>
           <p>
-            I am currently the Research Director for{' '}
-            <a href="http://www.takethis.org/">Take This</a>, a non-profit
-            organization that provides mental health information and resources
-            to the gaming community and industry. I am also the Chief Scientific
-            Officer of{' '}
-            <a href="https://www.kitsuneanalytics.com/">Kitsune Analytics</a>.
+            For more on the psychology of games, please visit my YouTube
+            channel: <a href="https://youtube.com/c/Psyhgeist">Psychgeist</a>.
           </p>
-          <h3>Current Projects</h3>
-          <ul>
-            <li>
-              Examining the links between unintentional learning, knowledge
-              transfer, and psychological well-being within digital games
-            </li>
-            <li>
-              Assessing Internet Gaming Disorder as a primary or secondary
-              diagnosis
-            </li>
-            <li>
-              Identifying initiates to better understand and mitigate dark
-              participation within gaming cultures
-            </li>
-            <li>Reconceptualizing “video game involvement”</li>
-            <li>
-              Evaluating the potential for video game play to mitigate symptoms
-              of PTSD among veterans
-            </li>
-          </ul>
-          {/* <About /> */}
-        </AboutSection>
-        <BooksSection>
-          <h2>Books</h2>
+          <YoutubeVideo videoId="LpCuWV_BD38" />
+        </Main>
+      </HelloSection>
+      <AboutSection>
+        <About />
+      </AboutSection>
+      <BooksSection>
+        <h2>Books</h2>
+        <BookSpotlightVideo videoId="-GRfL_jlyjw" />
+
+        <h3>Latest books</h3>
+        <BooksGrid>
           {books.map(({ node }) => {
             const img = images.find(
               ({ node: { fluid: image } }) =>
@@ -182,13 +144,19 @@ export default function Home({
 
             return <BookExcerpt book={book} key={book.id} />;
           })}
-        </BooksSection>
-        <section className="Media" />
-        <section className="Contact" />
-      </main>
-    </Layout>
-  );
-}
+        </BooksGrid>
+        <p>
+          For the full catalog, please visit the <Link to="/books">Books</Link>{' '}
+          page.
+        </p>
+      </BooksSection>
+      <section className="Media" />
+      <section className="Contact" />
+    </main>
+  </Layout>
+);
+
+export default Home;
 
 export const pageQuery = graphql`
   query {

@@ -29,4 +29,4 @@ export { default as ProfilePhoto } from './ProfilePhoto';
 export { default as ScreenReadersOnly } from './ScreenReadersOnly';
 export { default as SEO } from './SEO';
 export { SocialMediaIcons } from './SocialMediaIcons';
-export { default as YoutubeVideo } from './YoutubeVideo';
+export { YoutubeVideo } from './YoutubeVideo';
