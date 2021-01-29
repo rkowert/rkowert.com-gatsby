@@ -16,7 +16,7 @@ const BlogPage = styled.div`
 
 const BlogSidebar = styled.div`
   & h3 {
-    border-bottom: 2px solid ${props => props.theme.color.separator};
+    border-bottom: 2px solid ${(props) => props.theme.color.separator};
     margin-bottom: ${rhythm(1 / 2)};
   }
 `;
@@ -27,14 +27,16 @@ const ThingsILove = styled.ul`
   }
 `;
 
-export default function({ children }) {
+export default function ({ children }) {
   return (
     <BlogPage>
       {children}
       <BlogSidebar>
         <h3>Things I Love</h3>
         <ThingsILove>
-          <li>Pragmatic Princess</li>
+          <li>
+            <a href="https://buildyourowncastle.com/">Pragmatic Princess</a>
+          </li>
           <li>
             <a href="http://www.takethis.org/">TakeThis</a>
           </li>

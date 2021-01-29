@@ -11,15 +11,8 @@ interface Props {
 }
 
 const Book = styled.div`
-  /* display: grid;
-  grid-template-columns: minmax(auto, 50rem) minmax(7.5rem, 15rem);
-  grid-gap: ${rhythm(2)}; */
-  margin-bottom: ${rhythm(1)};
-
-  & h2 {
-    /* grid-column: 1 / span 2; */
-    /* margin-bottom: 0; */
-  }
+  margin-bottom: ${rhythm(2)};
+  padding-top: ${rhythm(1)};
 `;
 
 const CoverAndBuy = styled.div`
@@ -60,13 +53,13 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h3`
-  color: ${props => props.theme.color.text.subdued};
+  color: ${(props) => props.theme.color.text.subdued};
   font-family: 'Muli', sans-serif;
   font-style: italic;
   font-weight: 300;
 `;
 
-export default function({ book }: Props) {
+export default function ({ book }: Props) {
   const {
     coverImage,
     frontmatter: { productId, reviews, subtitle, title },
@@ -93,7 +86,7 @@ export default function({ book }: Props) {
         </CoverAndBuy>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {reviews.length > 0 &&
-          reviews.map(review => (
+          reviews.map((review) => (
             <BookReview review={review} key={review.author} />
           ))}
         <div
