@@ -3,15 +3,15 @@ module.exports = {
     author: 'Dr. Rachel Kowert',
     description:
       'The web site of Dr. Rachel Kowert containing information on her research, publications, and current projects',
-    keywords: 'rachel kowert, psychology, research, gaming',
+    keywords: 'rachel kowert, psychology, research, gaming, psychgeist',
     navLinks: [
-      {
-        name: 'blog',
-        link: '/blog',
-      },
       {
         name: 'about',
         link: '/about',
+      },
+      {
+        name: 'Psychgeist',
+        link: 'https://youtube.com/Psychgeist',
       },
       {
         name: 'CV',
@@ -22,8 +22,16 @@ module.exports = {
         link: '/books',
       },
       {
+        name: 'Pragmatic Princess',
+        link: 'https://buildyourowncastle.com/',
+      },
+      {
         name: 'resources',
         link: '/resources',
+      },
+      {
+        name: 'blog',
+        link: '/blog',
       },
       {
         name: 'contact',
