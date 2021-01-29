@@ -93,7 +93,7 @@ const BooksGrid = styled.section`
   }
 `;
 
-const BookSpotlightVideo = styled(YoutubeVideo)`
+const BookSpotlight = styled.div`
   margin-bottom: ${rhythm(2)};
 `;
 
@@ -116,7 +116,7 @@ const Home: React.FC = ({
         <Main>
           <p>
             For more on the psychology of games, please visit my YouTube
-            channel: <a href="https://youtube.com/c/Psyhgeist">Psychgeist</a>.
+            channel: <a href="https://youtube.com/c/Psychgeist">Psychgeist</a>.
           </p>
           <YoutubeVideo videoId="LpCuWV_BD38" />
         </Main>
@@ -126,7 +126,15 @@ const Home: React.FC = ({
       </AboutSection>
       <BooksSection>
         <h2>Books</h2>
-        <BookSpotlightVideo videoId="-GRfL_jlyjw" />
+        <BookSpotlight>
+          <YoutubeVideo videoId="-GRfL_jlyjw" />
+          <br />
+          <p>
+            For more on the science behind the development of the stories within{' '}
+            <em>Pragmatic Princess</em>, see{' '}
+            <a href="https://buildyourowncastle.com">BuildYourOwnCastle.com</a>.
+          </p>
+        </BookSpotlight>
 
         <h3>Latest books</h3>
         <BooksGrid>
