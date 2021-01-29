@@ -1,5 +1,5 @@
 ---
-title: Video games and well-being
+title: Video Games and Well-being
 subtitle: Press Start
 cover: video-games-and-well-being.jpg
 isbn10: '3030327698'
