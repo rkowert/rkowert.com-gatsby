@@ -5,7 +5,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 
-import { ScreenReadersOnly } from 'components';
+import ScreenReadersOnly from 'components/ScreenReadersOnly';
 
 interface NavLinks {
   name: string;
@@ -30,7 +30,7 @@ const Label = styled.label`
   margin: 0;
   cursor: pointer;
 
-  @media (${props => props.theme.media.expandedNav}) {
+  @media (${(props) => props.theme.media.expandedNav}) {
     display: none;
   }
 `;
@@ -64,7 +64,7 @@ const Menu = styled.ul`
   max-width: 300px;
   margin: 0;
   padding: 4.03rem 0 0; /* 2.5rem + rhythm(1) */
-  background: ${props => props.theme.header.backgroundColor};
+  background: ${(props) => props.theme.header.backgroundColor};
   list-style-type: none;
   -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
   transform-origin: 100% 0;
@@ -74,7 +74,7 @@ const Menu = styled.ul`
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   box-shadow: -3px 3px 10px 0 rgba(0, 0, 0, 0.5);
 
-  @media (${props => props.theme.media.expandedNav}) {
+  @media (${(props) => props.theme.media.expandedNav}) {
     position: static;
     top: auto;
     right: auto;
@@ -95,7 +95,7 @@ const Menu = styled.ul`
     padding: 0.5em 1rem;
 
     & a {
-      color: ${props => props.theme.nav.color};
+      color: ${(props) => props.theme.nav.color};
       text-decoration: none;
       text-transform: capitalize;
 
@@ -104,11 +104,11 @@ const Menu = styled.ul`
       }
 
       &:hover {
-        color: ${props => props.theme.color.link.hover};
+        color: ${(props) => props.theme.color.link.hover};
       }
     }
 
-    @media (${props => props.theme.media.expandedNav}) {
+    @media (${(props) => props.theme.media.expandedNav}) {
       &:last-child {
         padding-right: 0;
       }
@@ -181,7 +181,7 @@ export default ({ navLinks }: Props) => {
         </Hamburger>
       </Label>
       <Menu>
-        {navLinks.map(link => (
+        {navLinks.map((link) => (
           <li key={link.name}>
             {link.target ? (
               <a href={link.link} target={link.target}>

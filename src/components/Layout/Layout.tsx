@@ -3,7 +3,9 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 
-import { KupoKode, SiteHeader, SocialMediaIcons } from 'components';
+import KupoKode from 'components/KupoKode';
+import { SiteHeader } from 'components/SiteHeader';
+import { SocialMediaIcons } from 'components/SocialMediaIcons';
 import { rhythm } from 'utils/typography';
 
 import { darkTheme, lightTheme } from './theme';
@@ -141,7 +143,7 @@ const Copyright = styled.p`
   }
 `;
 
-const Layout = ({ children }: Props) => {
+export const Layout: React.FC<Props> = ({ children }: Props) => {
   const darkMode = useDarkMode(false, {
     onChange: () => {},
   });
@@ -165,7 +167,7 @@ const Layout = ({ children }: Props) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
           <React.Fragment>
             <BodyStyle />
@@ -188,5 +190,3 @@ const Layout = ({ children }: Props) => {
     />
   );
 };
-
-export default Layout;

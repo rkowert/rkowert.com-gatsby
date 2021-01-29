@@ -1,2 +1,1 @@
-import SiteHeader from './SiteHeader';
-export default SiteHeader;
+export { SiteHeader } from './SiteHeader';

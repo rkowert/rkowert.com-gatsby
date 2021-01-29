@@ -27,7 +27,7 @@ const About = styled.div`
   }
 `;
 
-export default function() {
+export const About: React.FC = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -48,4 +48,4 @@ export default function() {
       )}
     />
   );
-}
+};
