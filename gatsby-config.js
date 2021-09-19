@@ -31,9 +31,13 @@ module.exports = {
         name: 'resources',
         link: '/resources',
       },
+      // {
+      //   name: 'blog',
+      //   link: '/blog',
+      // },
       {
-        name: 'blog',
-        link: '/blog',
+        name: 'press',
+        link: '/press',
       },
       {
         name: 'contact',
@@ -79,6 +83,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -119,6 +124,7 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
+        ignore: [],
       },
     },
     // {
@@ -182,19 +188,28 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
+    // {
+    //   resolve: 'gatsby-transformer-remark-frontmatter',
+    //   // default: { blacklist: [] }
+    //   options: {
+    //     // frontmatter fields to exclude, including all others
+    //     blacklist: ['templateKey']
+    //     // frontmatter fields to include, excluding all others
+    //     // whitelist: ['markdownField']
+    //   }
+    // },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Dr. Rachel Kowert',
-        /* eslint-disable @typescript-eslint/camelcase */
         short_name: 'Dr. Kowert',
         start_url: '/',
         background_color: '#a353c4',
         theme_color: '#a353c4',
-        /* eslint-enable @typescript-eslint/camelcase */
         display: 'minimal-ui',
         icon: 'src/images/logos/logo-1500.png', // This path is relative to the root of the site.
       },

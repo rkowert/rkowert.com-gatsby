@@ -84,7 +84,7 @@ theme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
 const typography = new Typography(theme);
 const { rhythm } = typography;
 
-const scale = (num: number) =>
+const scale = (num: number): string =>
   Object.entries(typography.scale(num))
     .map(
       ([k, v]) => `${k.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}: ${v}`

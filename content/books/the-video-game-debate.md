@@ -1,7 +1,7 @@
 ---
 title: The Video Game Debate
 subtitle: Unravelling the Physical, Social, and Psychological Effects of Video Games
-cover: the-video-game-debate.jpg
+cover: ./covers/the-video-game-debate.jpg
 isbn10: '1138831638'
 isbn13: 978-1138831636
 date: 2015-09-03

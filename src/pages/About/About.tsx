@@ -28,11 +28,11 @@ const Main = styled.main`
   }
 `;
 
-export default function() {
+export default function About() {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        query AboutPage {
           allMdx(filter: { fields: { slug: { eq: "about" } } }) {
             edges {
               node {
@@ -42,7 +42,7 @@ export default function() {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <Layout>
           <SEO
             title="About Me"

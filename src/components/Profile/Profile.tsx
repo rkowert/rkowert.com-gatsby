@@ -5,6 +5,7 @@ import { ProfilePhoto, SocialMediaIcons } from 'components';
 import { rhythm } from 'utils/typography';
 
 const ProfilePhotoContainer = styled((props) => <ProfilePhoto {...props} />)`
+  display: block;
   border-radius: 50%;
   grid-row: 1 / span 2;
   margin: 0 auto;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 interface Props {
   className?: string;
@@ -10,21 +10,23 @@ export default function BookCover({ className }: Props) {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        query BookCover {
           placeholderImage: file(relativePath: { eq: "profile-photo.jpg" }) {
             childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
+              gatsbyImageData(
+                width: 300
+                placeholder: TRACED_SVG
+                layout: CONSTRAINED
+              )
             }
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         return (
-          <Img
+          <GatsbyImage
+            image={data.placeholderImage.childImageSharp.gatsbyImageData}
             className={className}
-            fluid={data.placeholderImage.childImageSharp.fluid}
             alt="Photo of Dr. Rachel Kowert"
           />
         );

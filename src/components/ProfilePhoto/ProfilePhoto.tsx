@@ -1,30 +1,33 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 interface Props {
   className?: string;
 }
 
-export default function({ className }: Props) {
+export default function ProfilePhoto({ className }: Props) {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        query ProfilePhoto {
           profilePhoto: file(relativePath: { eq: "profile-photo.jpg" }) {
             childImageSharp {
-              fluid(maxWidth: 300, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
+              gatsbyImageData(
+                width: 300
+                quality: 100
+                placeholder: TRACED_SVG
+                layout: CONSTRAINED
+              )
             }
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         return (
-          <Img
+          <GatsbyImage
+            image={data.profilePhoto.childImageSharp.gatsbyImageData}
             className={className}
-            fluid={data.profilePhoto.childImageSharp.fluid}
             alt="Photo of Dr. Rachel Kowert"
           />
         );

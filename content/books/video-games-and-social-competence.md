@@ -1,7 +1,7 @@
 ---
 title: Video Games and Social Competence
 subtitle:
-cover: video-games-and-social-competence.jpg
+cover: ./covers/video-games-and-social-competence.jpg
 isbn10: '1138804266'
 isbn13: 978-1138804265
 date: 2014-12-15

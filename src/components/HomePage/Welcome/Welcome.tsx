@@ -22,7 +22,7 @@ interface Props {
 export const Welcome: React.FC<Props> = ({ className }) => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
-      query {
+      query Welcome {
         allMarkdownRemark(filter: { fields: { slug: { eq: "welcome" } } }) {
           edges {
             node {

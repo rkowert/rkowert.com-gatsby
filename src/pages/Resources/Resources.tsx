@@ -9,10 +9,7 @@ const H3 = styled.h3`
   margin-bottom: ${rhythm(1 / 2)};
 `;
 
-interface Props {}
-
-export default function CVPage(props: Props) {
-  const {} = props;
+export default function CVPage() {
   return (
     <Layout>
       <SEO title="Resources" />

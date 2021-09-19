@@ -1,20 +1,22 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import styled from 'styled-components';
 
 import { Book, Layout, SEO } from 'components';
+import { BooksPageQuery } from 'types/graphql';
 
 const Main = styled.main`
   margin: 0 auto;
   max-width: 65rem; /* 50rem + 15rem */
 `;
 
+type Props = PageProps<BooksPageQuery>;
+
 export default function Books({
   data: {
     allMarkdownRemark: { edges: books },
-    allImageSharp: { edges: images },
   },
-}) {
+}: Props): React.ReactElement {
   return (
     <Layout>
       <SEO
@@ -24,14 +26,10 @@ export default function Books({
       <Main>
         <h1>Books</h1>
         {books.map(({ node }) => {
-          const img = images.find(
-            ({ node: { fluid: image } }) =>
-              image.originalName === node.frontmatter.cover
-          );
-          // const mdReviews = book.reviews.map((_, index) => book.fields.frontmattermd.reviews[index]);
           const book = {
             ...node,
-            coverImage: img ? img.node : null,
+            path: node.fields.path,
+            slug: node.fields.slug,
           };
 
           return <Book book={book} key={book.id} />;
@@ -42,7 +40,7 @@ export default function Books({
 }
 
 export const pageQuery = graphql`
-  query {
+  query BooksPage {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "books" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -63,7 +61,17 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            cover
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                  width: 300
+                )
+              }
+              extension
+              publicURL
+            }
             date(formatString: "MMMM DD, YYYY")
             # isbn10
             # isbn13
@@ -78,16 +86,6 @@ export const pageQuery = graphql`
             }
             subtitle
             title
-          }
-        }
-      }
-    }
-    allImageSharp(filter: { fields: { collection: { eq: "images" } } }) {
-      edges {
-        node {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            originalName
           }
         }
       }

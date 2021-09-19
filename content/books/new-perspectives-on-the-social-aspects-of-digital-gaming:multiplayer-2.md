@@ -1,7 +1,7 @@
 ---
 title: New Perspectives on the Social Aspects of Digital Gaming
 subtitle: Multiplayer 2
-cover: new-perspectives-on-the-social-aspects-of-digital-gaming:multiplayer-2.jpg
+cover: ./covers/new-perspectives-on-the-social-aspects-of-digital-gaming:multiplayer-2.jpg
 isbn10: '1138643637'
 isbn13: 978-1138643635
 date: 2017-02-24

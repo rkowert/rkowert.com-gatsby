@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { ConferenceProceeding as ConferenceProceedingType } from 'types/cv';
 
 interface Props {
-  proceeding: CV.ConferenceProceeding;
+  proceeding: ConferenceProceedingType;
 }
 
 export default function ConferenceProceeding({

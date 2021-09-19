@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { BookChapter as BookChapterType } from 'types/cv';
 
 interface Props {
-  chapter: CV.BookChapter;
+  chapter: BookChapterType;
 }
 
 export default function BookChapter({ chapter }: Props) {
   const authors = chapter.authors.replace(/\.$/, '');
-  const book = chapter.book;
+  const { book } = chapter;
   const publisherMarkup = book.publisher
     ? `${book.publisher.location}: ${book.publisher.title}.`
     : '';

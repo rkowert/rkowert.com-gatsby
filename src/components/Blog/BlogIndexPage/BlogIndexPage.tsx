@@ -40,7 +40,7 @@ const BlogPagination = styled.nav`
   }
 `;
 
-export default function({
+export default function BlogIndexPage({
   data: {
     allMarkdownRemark: { edges },
   },
@@ -51,7 +51,7 @@ export default function({
   const isLast = currentPage === numPages;
   const prevPage = getBlogIndexPagePath(currentPage - 1);
   const nextPage = getBlogIndexPagePath(currentPage + 1);
-  const posts = edges.map(edge => (
+  const posts = edges.map((edge) => (
     <BlogPostExcerpt key={edge.node.id} post={edge.node} />
   ));
   const title = `${isFirst ? '' : `Page ${currentPage} | `}Blog`;
@@ -81,7 +81,7 @@ export default function({
 }
 
 export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query BlogIndexPage($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "blog-posts" } } }
       limit: $limit

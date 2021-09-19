@@ -1,7 +1,7 @@
 ---
 title: Video Games and Well-being
 subtitle: Press Start
-cover: video-games-and-well-being.jpg
+cover: ./covers/video-games-and-well-being.jpg
 isbn10: '3030327698'
 isbn13: 978-3-030-32769-9
 date: 2020-01-03

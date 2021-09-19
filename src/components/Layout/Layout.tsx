@@ -145,7 +145,7 @@ const Copyright = styled.p`
 
 export const Layout: React.FC<Props> = ({ children }: Props) => {
   const darkMode = useDarkMode(false, {
-    onChange: () => {},
+    onChange: () => null,
   });
 
   return (

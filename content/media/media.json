@@ -1,0 +1,42 @@
+[
+  {
+    "name": "NPR",
+    "logo": "./logos/npr.png",
+    "url": "https://www.npr.org/"
+  },
+  {
+    "name": "The Atlantic",
+    "logo": "./logos/the-atlantic.svg",
+    "url": "https://www.theatlantic.com/"
+  },
+  {
+    "name": "Wired",
+    "logo": "./logos/wired.svg",
+    "url": "https://www.wired.com/"
+  },
+  {
+    "name": "The Wall Street Journal",
+    "logo": "./logos/wsj.svg",
+    "url": "https://www.wsj.com/"
+  },
+  {
+    "name": "The Washington Post",
+    "logo": "./logos/washington-post.svg",
+    "url": "https://www.washingtonpost.com/"
+  },
+  {
+    "name": "Kotaku",
+    "logo": "./logos/kotaku.svg",
+    "url": "https://kotaku.com/"
+  },
+  {
+    "name": "Polygon",
+    "logo": "./logos/polygon.svg",
+    "url": "https://www.polygon.com/"
+  },
+  {
+    "name": "Game Informer",
+    "logo": "./logos/game-informer.svg",
+    "url": "https://www.gameinformer.com/"
+  }
+]

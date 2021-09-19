@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { TagCloud } from 'components';
 import { rhythm } from 'utils/typography';
 
-const BlogPage = styled.div`
+const Container = styled.div`
   @media (min-width: 48em) {
     display: grid;
     grid-template-columns: minmax(auto, 48rem) minmax(12rem, 16rem);
@@ -27,9 +27,9 @@ const ThingsILove = styled.ul`
   }
 `;
 
-export default function ({ children }) {
+export default function BlogPage({ children }) {
   return (
-    <BlogPage>
+    <Container>
       {children}
       <BlogSidebar>
         <h3>Things I Love</h3>
@@ -56,6 +56,6 @@ export default function ({ children }) {
         <h3>Tag Cloud</h3>
         <TagCloud />
       </BlogSidebar>
-    </BlogPage>
+    </Container>
   );
 }

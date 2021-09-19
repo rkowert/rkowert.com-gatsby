@@ -21,14 +21,14 @@ interface Props {
   };
 }
 
-export default function({
+export default function TagPage({
   data: {
     allMarkdownRemark: { edges },
   },
   pageContext,
 }: Props) {
   const { tag } = pageContext;
-  const posts = edges.map(edge => (
+  const posts = edges.map((edge) => (
     <BlogPostExcerpt key={edge.node.id} post={edge.node} />
   ));
   return (

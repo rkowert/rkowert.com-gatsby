@@ -45,19 +45,19 @@ const BlogNavigation = styled.nav`
   }
 `;
 
-const GITHUB_USERNAME = 'rkowert';
-const GITHUB_REPO_NAME = 'rkowert.com';
+// const GITHUB_USERNAME = 'rkowert';
+// const GITHUB_REPO_NAME = 'rkowert.com';
 
-export default function({ data, pageContext }: Props) {
+export default function BlogPostPage({ data, pageContext }: Props) {
   const { markdownRemark: post } = data;
   const { next, prev } = pageContext;
-  const lang = 'en';
-  const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog/${
-    post.fields.slug
-  }/index${lang === 'en' ? '' : `.${lang}`}.md`;
-  const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://rkowert.com${post.fields.path}`
-  )}`;
+  // const lang = 'en';
+  // const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog/${
+  //   post.fields.slug
+  // }/index${lang === 'en' ? '' : `.${lang}`}.md`;
+  // const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
+  //   `https://rkowert.com${post.fields.path}`
+  // )}`;
 
   return (
     <Layout>
@@ -116,7 +116,7 @@ export default function({ data, pageContext }: Props) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query BlogPostPage($path: String!) {
     markdownRemark(fields: { path: { eq: $path } }) {
       excerpt
       fields {

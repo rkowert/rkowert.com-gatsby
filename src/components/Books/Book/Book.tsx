@@ -1,16 +1,21 @@
 import * as React from 'react';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
 
-import { AmazonBuyButton, BookReview, IndieboundBuyButton } from 'components';
+import {
+  AmazonBuyButton,
+  BookReview,
+  IndieboundBuyButton,
+  PermalinkHeader,
+} from 'components';
 import { Book as BookType } from 'types';
 import { rhythm } from 'utils/typography';
+import { BookCoverImage } from '../BookCoverImage/BookCoverImage';
 
 interface Props {
   book: BookType;
 }
 
-const Book = styled.div`
+const Container = styled.div`
   margin-bottom: ${rhythm(2)};
   padding-top: ${rhythm(1)};
 `;
@@ -48,10 +53,6 @@ const BuyButtons = styled.p`
   }
 `;
 
-const Title = styled.h2`
-  font-weight: 800;
-`;
-
 const Subtitle = styled.h3`
   color: ${(props) => props.theme.color.text.subdued};
   font-family: 'Muli', sans-serif;
@@ -59,20 +60,19 @@ const Subtitle = styled.h3`
   font-weight: 300;
 `;
 
-export default function ({ book }: Props) {
+export default function Book({ book }: Props) {
   const {
-    coverImage,
-    frontmatter: { productId, reviews, subtitle, title },
+    frontmatter: { cover, productId, reviews, subtitle, title },
   } = book;
 
   return (
-    <Book>
-      <Title>{title}</Title>
+    <Container>
+      <PermalinkHeader label={title} level={2} showIcon={false} />
       <div>
         <CoverAndBuy>
-          {coverImage && (
+          {cover && (
             <BookCover>
-              <Img fluid={coverImage.fluid} alt={`Cover of book, ${title}`} />
+              <BookCoverImage image={cover} alt={`Cover of book, ${title}`} />
             </BookCover>
           )}
           <BuyButtons>
@@ -95,6 +95,6 @@ export default function ({ book }: Props) {
           }}
         />
       </div>
-    </Book>
+    </Container>
   );
 }

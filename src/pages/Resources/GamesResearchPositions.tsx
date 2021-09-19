@@ -101,7 +101,7 @@ export default function GamesResearchPositions() {
       link: row[7] || '',
       focus: row[8] || '',
     }),
-    renderGrid: rows => (
+    renderGrid: (rows) => (
       <Grid
         rows={rows}
         columns={[
@@ -110,17 +110,17 @@ export default function GamesResearchPositions() {
           {
             name: 'university',
             title: 'University/Research Center/Network',
-            getCellValue: row => formatData(row.university),
+            getCellValue: (row) => formatData(row.university),
           },
           {
             name: 'department',
             title: 'Department/Faculty/School',
-            getCellValue: row => formatData(row.department),
+            getCellValue: (row) => formatData(row.department),
           },
           {
             name: 'program',
             title: 'Degree Program(s)',
-            getCellValue: row => formatData(row.program),
+            getCellValue: (row) => formatData(row.program),
           },
         ]}
       >

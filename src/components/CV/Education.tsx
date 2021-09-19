@@ -1,12 +1,12 @@
 import React from 'react';
-import { CV } from 'types';
+import type { Education as EducationType } from 'types/cv';
 
 interface Props {
-  education: CV.Education;
+  education: EducationType;
 }
 
 export default function Education({
-  education: { degree, source, url, year },
+  education: { degree, source, url },
 }: Props) {
   const sourceMarkup = url ? <a href={url}>{source}</a> : source;
   return (

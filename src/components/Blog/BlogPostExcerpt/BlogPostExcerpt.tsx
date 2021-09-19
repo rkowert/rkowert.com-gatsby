@@ -11,8 +11,8 @@ interface Props {
   post: BlogPost;
 }
 
-const BlogPostExcerpt = styled.div`
-  border-bottom: 2px solid ${props => props.theme.color.separator};
+const Container = styled.div`
+  border-bottom: 2px solid ${(props) => props.theme.color.separator};
   margin-bottom: ${rhythm(1)};
 `;
 
@@ -21,7 +21,7 @@ const Title = styled.h3`
 `;
 
 const Date = styled.p`
-  color: ${props => props.theme.color.text.subdued};
+  color: ${(props) => props.theme.color.text.subdued};
   font-family: 'Muli', sans-serif;
   font-weight: 300;
 `;
@@ -38,9 +38,9 @@ const ContinueReadingLink = styled(Link)`
   }
 `;
 
-export default function({ post }: Props) {
+export default function BlogPostExcerpt({ post }: Props) {
   return (
-    <BlogPostExcerpt key={post.id}>
+    <Container key={post.id}>
       <Title>
         <Link to={post.fields.path}>{post.frontmatter.title}</Link>
       </Title>
@@ -64,6 +64,6 @@ export default function({ post }: Props) {
           Continue reading <FaLongArrowAltRight atia-hidden="true" />
         </ContinueReadingLink>
       </p>
-    </BlogPostExcerpt>
+    </Container>
   );
 }

@@ -1,7 +1,7 @@
 ---
 title: A Parent’s Guide to Video Games
 subtitle: The essential guide to understanding how video games impact your child's physical, social, and psychological well-being
-cover: a-parents-guide-to-video-games.jpg
+cover: ./covers/a-parents-guide-to-video-games.jpg
 isbn10: '1537359835'
 isbn13: 978-1537359830
 date: 2016-11-30

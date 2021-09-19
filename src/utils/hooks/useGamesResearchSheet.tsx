@@ -2,9 +2,9 @@ import React, { useEffect, useMemo, useState, ReactNode } from 'react';
 import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 
-import { default as MuiCircularProgress } from '@material-ui/core/CircularProgress';
+import MuiCircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 import { GamesResearchRow } from 'types';
 
@@ -36,7 +36,7 @@ export default function useGamesResearchSheet<RowType extends Row>({
   const darkMode = useDarkMode();
   const muiTheme = useMemo(
     () =>
-      createMuiTheme({
+      createTheme({
         palette: {
           type: darkMode.value ? 'dark' : 'light',
         },
@@ -49,19 +49,20 @@ export default function useGamesResearchSheet<RowType extends Row>({
 
   useEffect(() => {
     fetch(url)
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return response.json();
         }
         throw new Error('Network response was not ok.');
       })
-      .then(responseJson => {
+      .then((responseJson) => {
         if (!responseJson.values) {
           throw new Error('Network response was missing values.');
         }
         setRows(responseJson.values.slice(headerRows).map(mapper));
       })
-      .catch(error => console.error(error));
+      // eslint-disable-next-line no-console
+      .catch((error) => console.error(error));
   }, []);
 
   const gridMarkup = (

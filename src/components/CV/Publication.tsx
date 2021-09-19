@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { Publication as PublicationType } from 'types/cv';
 
 interface Props {
-  publication: CV.Publication;
+  publication: PublicationType;
 }
 
-function formatEdition(edition: CV.Publication['edition']) {
-  if (edition == null) return;
+function formatEdition(edition: PublicationType['edition']) {
+  if (edition == null) return null;
 
   const matches = edition.match(/^(\d+)(\(\d+\))$/);
   if (matches && matches.length === 3) {

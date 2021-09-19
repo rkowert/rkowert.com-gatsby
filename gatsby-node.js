@@ -185,7 +185,8 @@ exports.createPages = async ({ actions, graphql }) => {
 };
 
 // Replacing '/' would result in empty string which is invalid
-const removeTrailingSlash = str => (str === '/' ? str : str.replace(/\/$/, ''));
+const removeTrailingSlash = (str) =>
+  str === '/' ? str : str.replace(/\/$/, '');
 
 /* eslint-disable no-console */
 const DEBUG_PAGE_PATHS = false;
@@ -196,16 +197,14 @@ exports.onCreatePage = ({ page, actions, reporter }) => {
   const newPage = { ...page };
   if (DEBUG_PAGE_PATHS) {
     reporter.info(
-      `-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nComponent path: ${
-        page.componentPath
-      }`
+      `-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nComponent path: ${page.componentPath}`
     );
   }
 
   // Ignore index.tsx files
   if (/index\.tsx$/.test(page.componentPath)) {
     if (DEBUG_PAGE_PATHS) {
-      reporter.info('  Ingoring index file');
+      reporter.info('  Ignoring index file');
     }
     deletePage(page);
     return;
@@ -217,7 +216,7 @@ exports.onCreatePage = ({ page, actions, reporter }) => {
       reporter.info('  Moving "/Home" to "/"');
     }
     deletePage(page);
-    // Create a new page but with '/' as path
+    // Re-create the page but with '/' as path
     createPage({
       ...page,
       path: '/',
@@ -249,9 +248,7 @@ exports.onCreatePage = ({ page, actions, reporter }) => {
   if (newPage.path !== page.path) {
     if (DEBUG_PAGE_PATHS) {
       reporter.info(
-        `  Path has changed!\n    Old path: ${page.path}\n    New path: ${
-          newPage.path
-        }`
+        `  Path has changed!\n    Old path: ${page.path}\n    New path: ${newPage.path}`
       );
     }
     // Replace new page with old page

@@ -10,7 +10,7 @@ const Label = styled.span`
   margin-bottom: ${rhythm(1 / 4)};
 `;
 
-const TagList = styled.ul`
+const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
@@ -50,12 +50,12 @@ interface Props {
   tags: string[];
 }
 
-export default function({ tags }: Props) {
+export default function TagList({ tags }: Props) {
   return tags ? (
     <React.Fragment>
       <Label>Tagged with:</Label>
-      <TagList>
-        {tags.map(tag => {
+      <List>
+        {tags.map((tag) => {
           const tagKey = slugize(tag);
           return (
             <Tag key={tagKey}>
@@ -63,7 +63,7 @@ export default function({ tags }: Props) {
             </Tag>
           );
         })}
-      </TagList>
+      </List>
     </React.Fragment>
   ) : null;
 }

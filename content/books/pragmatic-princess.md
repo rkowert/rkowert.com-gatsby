@@ -1,7 +1,7 @@
 ---
 title: Pragmatic Princess
 subtitle: 26 Superb Stories of Self-Sufficiency
-cover: pragmatic-princess-cover.jpg
+cover: ./covers/pragmatic-princess-cover.jpg
 isbn10: '0578583690'
 isbn13: 978-0578583690
 date: 2019-12-19

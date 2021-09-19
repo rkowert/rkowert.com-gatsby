@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { Book as BookType } from 'types/cv';
 
 interface Props {
-  book: CV.Book;
+  book: BookType;
 }
 
 export default function Book({ book }: Props) {

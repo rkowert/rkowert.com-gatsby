@@ -1,7 +1,7 @@
 ---
 title: The Video Game Debate 2
 subtitle: Revisiting the Physical, Social, and Psychological Effects of Video Games
-cover: the-video-game-debate-2.jpg
+cover: ./covers/the-video-game-debate-2.jpg
 isbn10: '0367366940'
 isbn13: 978-0367366940
 date: 2020-11-30

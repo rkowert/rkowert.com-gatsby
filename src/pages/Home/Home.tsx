@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import { rhythm } from 'utils/typography';
 
@@ -12,6 +12,9 @@ import {
   YoutubeVideo,
   Welcome,
 } from 'components';
+import { HomePageQuery } from 'types/graphql';
+
+type Props = PageProps<HomePageQuery>;
 
 /* 3.06rem + 16rem + 3.06rem + 30rem + 3.06rem = 57.18rem */
 const HelloSection = styled.section`
@@ -97,87 +100,74 @@ const BookSpotlight = styled.div`
   margin-bottom: ${rhythm(2)};
 `;
 
-const Home: React.FC = ({
+export default function Home({
   data: {
-    allImageSharp: { edges: images },
     booksQuery: { edges: books },
-    postsQuery: { edges: posts },
   },
-}): React.ReactElement => (
-  <Layout>
-    <SEO
-      title="Home"
-      keywords={['rachel', 'kowert', 'psychology', 'gaming', 'psychgeist']}
-    />
-    <main>
-      <HelloSection>
-        <StyledProfile />
-        <StyledWelcome />
-        <Main>
+}: Props): React.ReactElement {
+  return (
+    <Layout>
+      <SEO
+        title="Home"
+        keywords={['rachel', 'kowert', 'psychology', 'gaming', 'psychgeist']}
+      />
+      <main>
+        <HelloSection>
+          <StyledProfile />
+          <StyledWelcome />
+          <Main>
+            <p>
+              For more on the psychology of games, please visit her YouTube
+              channel: <a href="https://youtube.com/c/Psychgeist">Psychgeist</a>
+              .
+            </p>
+            <YoutubeVideo videoId="LpCuWV_BD38" />
+          </Main>
+        </HelloSection>
+        <AboutSection>
+          <About />
+        </AboutSection>
+        <BooksSection>
+          <h2>Books</h2>
+          <BookSpotlight>
+            <YoutubeVideo videoId="-GRfL_jlyjw" />
+            <br />
+            <p>
+              For more on the science behind the development of the stories
+              within <em>Pragmatic Princess</em>, see{' '}
+              <a href="https://buildyourowncastle.com">
+                BuildYourOwnCastle.com
+              </a>
+              .
+            </p>
+          </BookSpotlight>
+
+          <h3>Latest books</h3>
+          <BooksGrid>
+            {books.map(({ node }) => {
+              const book = {
+                ...node,
+                path: node.fields.path,
+                slug: node.fields.slug,
+              };
+
+              return <BookExcerpt book={book} key={book.id} />;
+            })}
+          </BooksGrid>
           <p>
-            For more on the psychology of games, please visit my YouTube
-            channel: <a href="https://youtube.com/c/Psychgeist">Psychgeist</a>.
+            For the full catalog, please visit the{' '}
+            <Link to="/books">Books</Link> page.
           </p>
-          <YoutubeVideo videoId="LpCuWV_BD38" />
-        </Main>
-      </HelloSection>
-      <AboutSection>
-        <About />
-      </AboutSection>
-      <BooksSection>
-        <h2>Books</h2>
-        <BookSpotlight>
-          <YoutubeVideo videoId="-GRfL_jlyjw" />
-          <br />
-          <p>
-            For more on the science behind the development of the stories within{' '}
-            <em>Pragmatic Princess</em>, see{' '}
-            <a href="https://buildyourowncastle.com">BuildYourOwnCastle.com</a>.
-          </p>
-        </BookSpotlight>
-
-        <h3>Latest books</h3>
-        <BooksGrid>
-          {books.map(({ node }) => {
-            const img = images.find(
-              ({ node: { fluid: image } }) =>
-                image.originalName === node.frontmatter.cover
-            );
-            const book = {
-              ...node,
-              coverImage: img ? img.node : null,
-              path: node.fields.path,
-              slug: node.fields.slug,
-            };
-
-            return <BookExcerpt book={book} key={book.id} />;
-          })}
-        </BooksGrid>
-        <p>
-          For the full catalog, please visit the <Link to="/books">Books</Link>{' '}
-          page.
-        </p>
-      </BooksSection>
-      <section className="Media" />
-      <section className="Contact" />
-    </main>
-  </Layout>
-);
-
-export default Home;
+        </BooksSection>
+        <section className="Media" />
+        <section className="Contact" />
+      </main>
+    </Layout>
+  );
+}
 
 export const pageQuery = graphql`
-  query {
-    allImageSharp(filter: { fields: { collection: { eq: "images" } } }) {
-      edges {
-        node {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            originalName
-          }
-        }
-      }
-    }
+  query HomePage {
     booksQuery: allMarkdownRemark(
       filter: { fields: { collection: { eq: "books" } } }
       limit: 4
@@ -192,7 +182,17 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            cover
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                  width: 300
+                )
+              }
+              extension
+              publicURL
+            }
             date(formatString: "MMMM DD, YYYY")
             subtitle
             title
@@ -200,26 +200,26 @@ export const pageQuery = graphql`
         }
       }
     }
-    postsQuery: allMarkdownRemark(
-      filter: { fields: { collection: { eq: "blog-posts" } } }
-      limit: 3
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-          excerpt(format: HTML, pruneLength: 350)
-          fields {
-            path
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-          timeToRead
-        }
-      }
-    }
+    # postsQuery: allMarkdownRemark(
+    #   filter: { fields: { collection: { eq: "blog-posts" } } }
+    #   limit: 3
+    #   sort: { order: DESC, fields: [frontmatter___date] }
+    # ) {
+    #   edges {
+    #     node {
+    #       id
+    #       excerpt(format: HTML, pruneLength: 350)
+    #       fields {
+    #         path
+    #         slug
+    #       }
+    #       frontmatter {
+    #         date(formatString: "MMMM DD, YYYY")
+    #         title
+    #       }
+    #       timeToRead
+    #     }
+    #   }
+    # }
   }
 `;

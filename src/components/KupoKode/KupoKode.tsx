@@ -13,7 +13,6 @@ a:link{color:#cc0066 !important;font-family:"Comic Sans MS", "Marker Felt", sans
 `;
 
 const kupoifyHeadings = () => {
-  const i = 6;
   for (let i = 2; i < 7; ++i) {
     // Get all headings of this level
     const headings = document.getElementsByTagName(`h${i}`);
@@ -28,7 +27,7 @@ const kupoifyHeadings = () => {
   }
 };
 
-export default function() {
+export default function KupKode() {
   const [moogles, setMoogles] = useState([]);
 
   function addMoogle() {

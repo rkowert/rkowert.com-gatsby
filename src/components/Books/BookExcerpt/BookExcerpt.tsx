@@ -1,31 +1,41 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
-import { AmazonBuyButton, BookReview, IndieboundBuyButton } from 'components';
 import { Book as BookType } from 'types';
 import { rhythm } from 'utils/typography';
+import { BookCoverImage } from '../BookCoverImage/BookCoverImage';
 
 interface Props {
-  book: BookType;
+  book: Partial<BookType>;
 }
 
-const BookExcerpt = styled.div`
-  display: grid;
-  grid-template-columns: minmax(7.5rem, 15rem) minmax(13rem, 1fr);
-  grid-gap: ${rhythm(1)};
-
+const Container = styled.div`
   /* margin-bottom: 1.53rem; */
-  border-bottom: 2px solid ${props => props.theme.color.separator};
+  border-bottom: 2px solid ${(props) => props.theme.color.separator};
 
   & h2 {
     grid-column: 1 / span 2;
     margin-bottom: 0;
   }
 
-  @media (min-width: 68em) {
+  @media (min-width: 25em) {
+    display: grid;
+    grid-template-columns: minmax(7.5rem, 15rem) minmax(13rem, 1fr);
+    grid-gap: ${rhythm(1)};
+  }
+`;
+
+const BookCoverWrapper = styled.div`
+  float: left;
+  width: 7.5rem;
+  margin: 0 ${rhythm(1 / 2)} 0 0;
+
+  @media (min-width: 25em) {
+    float: none;
+    width: auto;
+    margin: 0;
   }
 `;
 
@@ -34,7 +44,12 @@ const BookCover = styled.div`
 `;
 
 const PublishedDate = styled.p`
-  color: ${props => props.theme.color.text.subdued};
+  color: ${(props) => props.theme.color.text.subdued};
+  margin-bottom: ${rhythm(1 / 4)};
+
+  @media (min-width: 25em) {
+    margin-bottom: ${rhythm(1)};
+  }
 `;
 
 const Title = styled.h3`
@@ -42,7 +57,7 @@ const Title = styled.h3`
 `;
 
 const Subtitle = styled.h4`
-  color: ${props => props.theme.color.text.subdued};
+  color: ${(props) => props.theme.color.text.subdued};
   font-family: 'Muli', sans-serif;
   font-style: italic;
   font-weight: 300;
@@ -57,12 +72,10 @@ const ContinueReadingLink = styled(Link)`
   }
 `;
 
-export default function({ book }: Props) {
+export default function BookExcerpt({ book }: Props) {
   const {
-    coverImage,
-    frontmatter: { date, subtitle, title },
+    frontmatter: { cover, date, subtitle, title },
     path,
-    slug,
   } = book;
 
   const publishDate = new Intl.DateTimeFormat(undefined, {
@@ -71,17 +84,17 @@ export default function({ book }: Props) {
   }).format(new Date(date));
 
   return (
-    <BookExcerpt>
-      <div>
+    <Container>
+      <BookCoverWrapper>
         <Link to={path}>
-          {coverImage && (
+          {cover && (
             <BookCover>
-              <Img fluid={coverImage.fluid} alt={`Cover of book, ${title}`} />
+              <BookCoverImage image={cover} alt={`Cover of book, ${title}`} />
             </BookCover>
           )}
         </Link>
         <PublishedDate>Published {publishDate}</PublishedDate>
-      </div>
+      </BookCoverWrapper>
       <div>
         <Link to={path}>
           <Title>{title}</Title>
@@ -98,6 +111,6 @@ export default function({ book }: Props) {
           </ContinueReadingLink>
         </p>
       </div>
-    </BookExcerpt>
+    </Container>
   );
 }

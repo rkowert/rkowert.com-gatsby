@@ -41,7 +41,7 @@ export default function GamesResearchTwitter() {
       website: row[3] || '',
       notes: row[4] || '',
     }),
-    renderGrid: rows => (
+    renderGrid: (rows) => (
       <Grid
         rows={rows}
         columns={[
@@ -49,7 +49,7 @@ export default function GamesResearchTwitter() {
           {
             name: 'twitterHandle',
             title: 'Twitter Handle',
-            getCellValue: row => (
+            getCellValue: (row) => (
               <a href={`http://twitter.com/${row.twitterHandle}`}>
                 {row.twitterHandle}
               </a>
@@ -62,7 +62,7 @@ export default function GamesResearchTwitter() {
           {
             name: 'website',
             title: 'Website',
-            getCellValue: row => <Linkify>{row.website}</Linkify>,
+            getCellValue: (row) => <Linkify>{row.website}</Linkify>,
           },
           {
             name: 'notes',

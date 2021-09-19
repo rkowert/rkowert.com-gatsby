@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import { CV, Layout, PermalinkHeader, ProfilePhoto, SEO } from 'components';
-import { CV as CVType } from 'types';
+import { Award } from 'types/cv';
 import { rhythm } from 'utils/typography';
 
 import noise from '../components/Layout/noise.png';
@@ -13,7 +13,7 @@ interface Props {
   data: {
     awardsQuery: {
       edges: {
-        node: CVType.Award;
+        node: Award;
       }[];
     };
   };
@@ -425,11 +425,11 @@ export default function CVPage(props: Props) {
               label="Teaching and Supervision Experience"
               level={2}
             />
-            {cv.teachingAndSupervisionExperience.map(position => (
+            {cv.teachingAndSupervisionExperience.map((position) => (
               <div key={position.location}>
                 <b>{position.location}</b>
                 <ul>
-                  {position.courses.map(course => (
+                  {position.courses.map((course) => (
                     <li key={`${course.date}-${course.title}`}>
                       {course.title} ({course.date})
                     </li>
@@ -442,7 +442,7 @@ export default function CVPage(props: Props) {
           <Section>
             <PermalinkHeader label="Service to Profession" level={2} />
             <ul>
-              {cv.serviceToProfession.map(service => (
+              {cv.serviceToProfession.map((service) => (
                 <li
                   dangerouslySetInnerHTML={{
                     __html: `${service.title}, ${service.date}`,
@@ -456,7 +456,7 @@ export default function CVPage(props: Props) {
           <Section>
             <PermalinkHeader label="Reviewing Experience" level={2} />
             <ul>
-              {cv.reviewingExperience.map(entry => (
+              {cv.reviewingExperience.map((entry) => (
                 <li key={`${entry.date}-${entry.title}`}>
                   <i>{entry.title}</i>, {entry.date}
                 </li>
@@ -470,7 +470,7 @@ export default function CVPage(props: Props) {
               level={2}
             />
             <ul>
-              {cv.departmentalAndUniversityService.map(entry => (
+              {cv.departmentalAndUniversityService.map((entry) => (
                 <li key={`${entry.date}-${entry.title}`}>
                   {entry.title}, {entry.date}
                 </li>
@@ -509,7 +509,7 @@ export default function CVPage(props: Props) {
           <Section>
             <PermalinkHeader label="Professional Memberships" level={2} />
             <ul>
-              {cv.professionalMemberships.map(entry => (
+              {cv.professionalMemberships.map((entry) => (
                 <li key={`${entry.date}-${entry.title}`}>
                   <a href={entry.url}>{entry.title}</a> (Joined {entry.date})
                 </li>
@@ -533,7 +533,7 @@ export default function CVPage(props: Props) {
 }
 
 export const pageQuery = graphql`
-  query {
+  query CVPage {
     awardsQuery: allMarkdownRemark(
       filter: { fields: { collection: { eq: "awards" } } }
       sort: { order: DESC, fields: [frontmatter___date] }

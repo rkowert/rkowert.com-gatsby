@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { JournalArticle as JournalArticleType } from 'types/cv';
 
 import Publication from './Publication';
 
 interface Props {
-  article: CV.JournalArticle;
+  article: JournalArticleType;
 }
 
 export default function JournalArticle({ article }: Props) {

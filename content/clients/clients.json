@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Mental Health Foundation (UK)",
+    "logo": "./logos/mental-health-foundation.png",
+    "url": "https://www.mentalhealth.org.uk/"
+  },
+  {
+    "name": "Curry's PC World",
+    "logo": "./logos/currys-pcworld.png",
+    "url": "https://www.currys.co.uk/"
+  },
+  {
+    "name": "ESRB",
+    "logo": "./logos/esrb.svg",
+    "url": "https://www.esrb.org/"
+  },
+  {
+    "name": "Entertainment Software Association (ESA)",
+    "logo": "./logos/esa.svg",
+    "url": "https://www.theesa.com/"
+  },
+  {
+    "name": "ISGA (international social games association)",
+    "logo": "./logos/isga.png",
+    "url": "https://www.i-sga.org/"
+  }
+]

@@ -59,7 +59,7 @@ export default function Ludodemia() {
       pubmed: row[11] || '',
       abstract: row[12] || '',
     }),
-    renderGrid: rows => (
+    renderGrid: (rows) => (
       <Grid
         rows={rows}
         columns={[
@@ -71,7 +71,7 @@ export default function Ludodemia() {
           {
             name: 'title',
             title: 'Title',
-            getCellValue: row =>
+            getCellValue: (row) =>
               row.link ? <a href={row.link}>{row.title}</a> : row.title,
           },
           { name: 'publisher', title: 'Publisher' },

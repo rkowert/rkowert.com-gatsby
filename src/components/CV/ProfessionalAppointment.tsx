@@ -1,8 +1,8 @@
 import React from 'react';
-import { CV } from 'types';
+import { ProfessionalAppointment as ProfessionalAppointmentType } from 'types/cv';
 
 interface Props {
-  appointment: CV.ProfessionalAppointment;
+  appointment: ProfessionalAppointmentType;
 }
 
 export default function ProfessionalAppointment({

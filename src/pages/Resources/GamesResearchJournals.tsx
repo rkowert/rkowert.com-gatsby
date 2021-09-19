@@ -118,21 +118,21 @@ export default function GamesResearchJournals() {
       journalReviewerUrl: row[9] || '',
       submissionGuidelinesUrl: row[14] || '',
     }),
-    renderGrid: rows => (
+    renderGrid: (rows) => (
       <Grid
         rows={rows}
         columns={[
           {
             name: 'title',
             title: 'Journal',
-            getCellValue: row =>
+            getCellValue: (row) =>
               row.url ? <a href={row.url}>{row.title}</a> : row.title,
           },
           { name: 'discipline', title: 'Discipline' },
           {
             name: 'publisher',
             title: 'Publisher',
-            getCellValue: row =>
+            getCellValue: (row) =>
               row.publisherUrl ? (
                 <a href={row.publisherUrl}>{row.publisher}</a>
               ) : (
@@ -142,32 +142,32 @@ export default function GamesResearchJournals() {
           {
             name: 'frequency',
             title: 'Frequency (pubs/yr)',
-            getCellValue: row => formatData(row.frequency),
+            getCellValue: (row) => formatData(row.frequency),
           },
           {
             name: 'issn',
             title: 'ISSN',
-            getCellValue: row => formatData(row.issn),
+            getCellValue: (row) => formatData(row.issn),
           },
           {
             name: 'eissn',
             title: 'eISSN',
-            getCellValue: row => formatData(row.eissn),
+            getCellValue: (row) => formatData(row.eissn),
           },
           {
             name: 'h5Index',
             title: 'H5 Index',
-            getCellValue: row => formatData(row.h5Index),
+            getCellValue: (row) => formatData(row.h5Index),
           },
           {
             name: 'h5Median',
             title: 'H5 Median',
-            getCellValue: row => formatData(row.h5Median),
+            getCellValue: (row) => formatData(row.h5Median),
           },
           {
             name: 'impactFactor',
             title: 'Impact Factor',
-            getCellValue: row => formatData(row.impactFactor),
+            getCellValue: (row) => formatData(row.impactFactor),
           },
         ]}
       >

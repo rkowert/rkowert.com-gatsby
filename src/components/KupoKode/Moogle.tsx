@@ -11,7 +11,7 @@ import moogle7 from './images/moogle7.png';
 import moogle8 from './images/moogle8.png';
 import moogle9 from './images/moogle9.png';
 
-const Moogle = styled.div`
+const Container = styled.div`
   position: fixed;
   z-index: 10000;
   outline: 0;
@@ -37,7 +37,7 @@ interface Props {
   top: string;
 }
 
-export default function({
+export default function Moogle({
   index,
   left,
   mirrored = false,
@@ -70,13 +70,13 @@ export default function({
   }
 
   return (
-    <Moogle
+    <Container
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
       onClick={onClick}
       style={style}
     >
       <img src={images[index]} />
-    </Moogle>
+    </Container>
   );
 }

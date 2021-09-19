@@ -23,12 +23,12 @@ export default function SEO({
   lang = 'en',
   meta = [],
   keywords = [],
-  slug = '',
+  // slug = '',
   title,
 }: Props) {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      query SEO {
         site {
           siteMetadata {
             author

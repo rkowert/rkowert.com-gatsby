@@ -5,7 +5,7 @@ import bgImage from './images/keepcalm.png';
 import bulletImage from './images/kcago-bullet.png';
 import shipImage from './images/kcago-ship.png';
 
-const KeepCalmAndGameOn = styled.div`
+const Container = styled.div`
   /* display: none; */
   position: relative;
 
@@ -111,12 +111,16 @@ const Bullet = styled(Ship)`
   animation-name: ${KcagoBullet};
 `;
 
-export default function() {
+interface Props {
+  className?: string;
+}
+
+export default function KeepCalmAndGameOn({ className }: Props) {
   return (
-    <KeepCalmAndGameOn>
+    <Container className={className}>
       <img className="kcago-bg" src={bgImage} alt="Keep Calm and Game On" />
       <Ship src={shipImage} alt="Space ship" />
       <Bullet src={bulletImage} alt="Space ship projectile" />
-    </KeepCalmAndGameOn>
+    </Container>
   );
 }

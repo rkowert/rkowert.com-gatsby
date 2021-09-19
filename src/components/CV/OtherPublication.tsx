@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { CV } from 'types';
+import type { OtherPublication as OtherPublicationType } from 'types/cv';
 
 import Publication from './Publication';
 
 interface Props {
-  publication: CV.OtherPublication;
+  publication: OtherPublicationType;
 }
 
 export default function OtherPublication({
