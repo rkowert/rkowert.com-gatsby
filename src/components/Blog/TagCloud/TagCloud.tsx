@@ -39,7 +39,7 @@ export default function TagCloud() {
       render={({ allMarkdownRemark: { edges } }) => {
         const tags = edges.reduce((edgeTags, { node }) => {
           node.frontmatter.tags?.forEach((tag) => {
-            if (tags[tag] == null) {
+            if (edgeTags[tag] == null) {
               // eslint-disable-next-line no-param-reassign
               edgeTags[tag] = 0;
             }
