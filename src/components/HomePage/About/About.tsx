@@ -165,7 +165,7 @@ export const About = () => {
         <li>Workshops</li>
       </HorizontalList>
 
-      <h3>I've worked with</h3>
+      <h3>Previous collaborations</h3>
       <LogoGrid logos={removeNodes(clients)} />
     </Container>
   );

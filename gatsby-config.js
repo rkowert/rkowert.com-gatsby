@@ -210,8 +210,9 @@ module.exports = {
         start_url: '/',
         background_color: '#a353c4',
         theme_color: '#a353c4',
-        display: 'minimal-ui',
+        display: 'browser',
         icon: 'src/images/logos/logo-1500.png', // This path is relative to the root of the site.
+        theme_color_in_head: false, // This will avoid adding theme-color meta tag.
       },
     },
     {
@@ -221,16 +222,9 @@ module.exports = {
         respectDNT: true,
       },
     },
-    // No longer needed. gatsby-plugin-manifest provides favicon support
-    // {
-    //   resolve: 'gatsby-plugin-favicon',
-    //   options: {
-    //     logo: './src/images/logos/logo-1500.png',
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // This (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-netlify-cms',
   ],
 };
