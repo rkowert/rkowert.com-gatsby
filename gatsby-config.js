@@ -3,6 +3,7 @@ module.exports = {
     author: 'Dr. Rachel Kowert',
     description:
       'The web site of Dr. Rachel Kowert containing information on her research, publications, and current projects',
+    image: '/logo-1500.png',
     keywords: 'rachel kowert, psychology, research, gaming, psychgeist',
     navLinks: [
       {

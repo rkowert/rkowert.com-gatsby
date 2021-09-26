@@ -33,6 +33,7 @@ export default function SEO({
           siteMetadata {
             author
             description
+            image
             siteUrl
             title
           }
@@ -42,7 +43,9 @@ export default function SEO({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const metaImage = image ? `${site.siteMetadata.siteUrl}${image}` : null;
+  const metaImage = `${site.siteMetadata.siteUrl}${
+    image || site.siteMetadata.image
+  }`;
   // const url = `${site.siteMetadata.siteUrl}${slug}`;
 
   return (
