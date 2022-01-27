@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Linkify from 'linkifyjs/react';
+import Linkify from 'linkify-react';
 import {
   IntegratedFiltering,
   IntegratedSorting,
@@ -21,7 +21,7 @@ import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '12KRZjgy8EMICH4RFsEVMYIrnlupeJt1aCEfkIqDEi7U';
 
-interface GamesResearchTwitterRow {
+export interface GamesResearchTwitterRow {
   name: string;
   twitterHandle: string;
   affiliations: string;

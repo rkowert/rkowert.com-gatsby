@@ -63,16 +63,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-svgr',
-      options: {
-        svgoConfig: {
-          plugins: {
-            prefixIds: false,
-          },
-        },
-      },
-    },
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {

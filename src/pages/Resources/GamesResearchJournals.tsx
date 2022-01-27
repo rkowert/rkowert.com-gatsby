@@ -25,7 +25,7 @@ import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1sNdqBAtiJXFPqSwGax41Al0fhk3O_hJEB3_jMCkTLjw';
 
-interface GamesResearchJournalRow {
+export interface GamesResearchJournalRow {
   title: string;
   url: string;
   discipline: string;
