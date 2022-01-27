@@ -67,9 +67,14 @@ module.exports = {
       resolve: 'gatsby-plugin-svgr',
       options: {
         svgoConfig: {
-          plugins: {
-            prefixIds: false,
-          },
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: { prefixIds: false },
+              },
+            },
+          ],
         },
       },
     },

@@ -22,7 +22,7 @@ import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1vJgmbqVGJNzys5Eqe4Ub-oK9mGSLQBqRNjjBVUOCzt0';
 
-interface GamesResearchArticleRow {
+export interface GamesResearchArticleRow {
   category: string;
   subCategory: string;
   format: string;

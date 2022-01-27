@@ -7,15 +7,23 @@ import Paper from '@material-ui/core/Paper';
 import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 import { GamesResearchRow } from 'types';
+import { GamesResearchJournalRow } from 'pages/Resources/GamesResearchJournals';
+import { GamesResearchTwitterRow } from 'pages/Resources/GamesResearchTwitter';
+import { GamesResearchArticleRow } from 'pages/Resources/Ludodemia';
 
 interface Row {
   [key: string]: string;
 }
 
+type GamesResearchRowType =
+  | GamesResearchJournalRow
+  | GamesResearchTwitterRow
+  | GamesResearchArticleRow;
+
 interface Props {
   headerRows?: number;
-  mapper: (row: string[]) => GamesResearchRow<any>;
-  renderGrid: (rows: GamesResearchRow<any>[]) => ReactNode;
+  mapper: (row: string[]) => GamesResearchRow<GamesResearchRowType>;
+  renderGrid: (rows: GamesResearchRow<GamesResearchRowType>[]) => ReactNode;
   sheetKey: string;
 }
 
@@ -39,9 +47,6 @@ export default function useGamesResearchSheet<RowType extends Row>({
       createTheme({
         palette: {
           type: darkMode.value ? 'dark' : 'light',
-        },
-        typography: {
-          useNextVariants: true,
         },
       }),
     [darkMode]

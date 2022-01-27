@@ -91,4 +91,5 @@ const scale = (num: number): string =>
     )
     .join('\n');
 
+// eslint-disable-next-line no-restricted-exports
 export { rhythm, scale, typography as default };
