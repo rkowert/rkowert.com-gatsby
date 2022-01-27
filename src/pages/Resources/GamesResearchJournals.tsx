@@ -20,28 +20,10 @@ import {
 import styled from 'styled-components';
 
 import { Layout, SEO } from 'components';
-import { GamesResearchRow } from 'types';
+import { GamesResearchJournalRow, GamesResearchRow } from 'types';
 import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1sNdqBAtiJXFPqSwGax41Al0fhk3O_hJEB3_jMCkTLjw';
-
-export interface GamesResearchJournalRow {
-  title: string;
-  url: string;
-  discipline: string;
-  publisher: string;
-  publisherUrl: string;
-  frequency: string;
-  issn: string;
-  eissn: string;
-  h5Index: string;
-  h5Median: string;
-  impactFactor: string;
-  wordLimit: string;
-  briefWordLimit: string;
-  journalReviewerUrl: string;
-  submissionGuidelinesUrl: string;
-}
 
 const formatData = (data: string, format?: string) => {
   if (format === 'url') {

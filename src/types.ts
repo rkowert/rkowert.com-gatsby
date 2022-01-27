@@ -50,3 +50,21 @@ export interface Book {
 }
 
 export type GamesResearchRow<T> = { [K in keyof T]: T[K] };
+
+export interface GamesResearchJournalRow {
+  title: string;
+  url: string;
+  discipline: string;
+  publisher: string;
+  publisherUrl: string;
+  frequency: string;
+  issn: string;
+  eissn: string;
+  h5Index: string;
+  h5Median: string;
+  impactFactor: string;
+  wordLimit: string;
+  briefWordLimit: string;
+  journalReviewerUrl: string;
+  submissionGuidelinesUrl: string;
+}
