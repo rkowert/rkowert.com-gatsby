@@ -11,7 +11,7 @@ export default function ConferenceProceeding({
 }: Props) {
   const authorsMarkup = authors.replace(/\.$/, '');
   const titleMarkup = url ? <a href={url}>{title}</a> : title;
-  const conferenceMarkup = `${conference.title}. ${conference.location}.`;
+  const conferenceMarkup = `${conference.title}. ${conference.location}`;
 
   return (
     <span>

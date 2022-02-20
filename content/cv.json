@@ -69,6 +69,24 @@
     ],
     "editedVolumes": [
       {
+        "authors": "R. Kowert & T. Quandt (Eds.)",
+        "date": "2022",
+        "title": "Debates in Media Studies",
+        "publisher": {
+          "location": "New York",
+          "title": "Routledge"
+        }
+      },
+      {
+        "authors": "Kowert, R., Ferguson, C., Rusch, D., & Fletcher, P. (Eds.)",
+        "date": "2021",
+        "title": "Video Games and Mental Health",
+        "publisher": {
+          "location": "Lausanne",
+          "title": "Frontiers Media SA"
+        }
+      },
+      {
         "authors": "Kowert, R., & Quandt, T. (Eds.)",
         "date": "2020",
         "title": "The video game debate 2: Revisiting the physical, social, and psychological effects of video games",
@@ -130,6 +148,33 @@
       }
     ],
     "refereedJournalArticles": [
+      {
+        "authors": "Kowert, R., & Daniel, E.",
+        "date": "2021",
+        "title": "The one-and-a-half sided parasocial relationship: The curious case of live streaming",
+        "publication": {
+          "title": "Computers in Human Behaviour Reports",
+          "edition": "4"
+        }
+      },
+      {
+        "authors": "Dunlap, K., & Kowert, R.",
+        "date": "2021",
+        "title": "A 3D model of mental health representation in games",
+        "publication": {
+          "title": "Loading",
+          "edition": "14(24)",
+          "pages": "122–133"
+        }
+      },
+      {
+        "authors": "Kowert. R., Ferguson, C., Fletcher, P., & Rusch, D.",
+        "date": "2021",
+        "title": "Digital Games and Mental Health",
+        "publication": {
+          "title": "Frontiers in Psychology"
+        }
+      },
       {
         "authors": "Kowert, R.",
         "date": "2020",
@@ -320,6 +365,41 @@
       }
     ],
     "bookChapters": [
+      {
+        "authors": "Kowert, R. (forthcoming)",
+        "date": "2022",
+        "title": "Creating Social and Emotional Bridges",
+        "book": {
+          "authors": "L. Chow (Ed.)",
+          "title": "Changing the Game"
+        }
+      },
+      {
+        "authors": "Dunlap, K., & Kowert, R. (forthcoming)",
+        "date": "2022",
+        "title": "The monstrosity of stigma: Mental health representation in video games",
+        "book": {
+          "authors": "M. Meriläinen, Blom, J., Hassan, L., & Stang, S. (Eds)",
+          "title": "Monstrosity in Contemporary Game Cultures and Societies",
+          "publisher": {
+            "location": "Amsterdam",
+            "title": "Amsterdam University Press"
+          }
+        }
+      },
+      {
+        "authors": "Kowert, R., & Ferguson, C.",
+        "date": "2021",
+        "title": "The psychology of digital games",
+        "book": {
+          "authors": "L. Migliore, C. McGee, & M. Moore (Eds.)",
+          "title": "Handbook of Esports Medicine: Clinical Aspects of Competitive Video Gaming",
+          "publisher": {
+            "location": "New York",
+            "title": "Springer"
+          }
+        }
+      },
       {
         "authors": "Kowert, R., & Quandt, T.",
         "date": "2020",
@@ -551,6 +631,16 @@
     ],
     "conferenceProceedings": [
       {
+        "authors": "Kowert, R., & Cook, C.",
+        "date": "2022",
+        "title": "The toxicity of our (virtual) cities: Prevalence of dark participation in games and perceived effectiveness of reporting tools",
+        "url": "https://scholarspace.manoa.hawaii.edu/bitstream/10125/79724/0313.pdf",
+        "conference": {
+          "title": "HICSS",
+          "location": "Remote"
+        }
+      },
+      {
         "authors": "Kowert, R. & Oldmeadow, J.A.",
         "date": "2012",
         "title": "The Stereotype of Online Gamers: New Characterization or Recycled Prototype?",
@@ -572,6 +662,14 @@
       }
     ],
     "otherPublications": [
+      {
+        "authors": "Whitby, M., Kowert, R.",
+        "date": "2022",
+        "title": "Designing games to challenge the stigma around mental health",
+        "publication": {
+          "title": "A White Paper by Take This"
+        }
+      },
       {
         "authors": "Kowert, R.",
         "date": "2020, August 15",
@@ -661,6 +759,33 @@
     }
   ],
   "invitedTalks": [
+    {
+      "authors": "Kowert, R. (moderator), Kanojia, A., Al-Rawi, A., Marasa, J., & Lamphere-Englund, G.",
+      "date": "2021, December",
+      "title": "Understanding the motivation and Misuse of Gaming Exploitation",
+      "extra": "United Nations Office of Counter-Terrorism Expert Roundtable on Video Games and Violent Extremism",
+      "location": "Remote"
+    },
+    {
+      "authors": "Balkam, S. (moderator), Kowert, R., Vance, P., & Walsh, C.",
+      "date": "2021, December",
+      "title": "Chums, Cheaters and Creeps: An educational webinar about keeping online play safe for everyone",
+      "extra": "Panel hosted by the Electronic Software Association (ESA) for US Congress",
+      "location": "Remote"
+    },
+    {
+      "authors": "Martey, R. (moderator), Kowert, R., Consalvo, M., & Chee, F.",
+      "date": "2021, October",
+      "title": "Annenberg Conversations on Gender: Gender, Ethics, and Play in Video Game Communities and Industry",
+      "location": "Remote"
+    },
+    {
+      "authors": "Kowert, R.",
+      "date": "2021, October",
+      "title": "New Research Review in Games and Mental Health",
+      "extra": "TIGS 2021",
+      "location": "Remote"
+    },
     {
       "authors": "Kowert, R.",
       "date": "2020, November",
@@ -839,6 +964,33 @@
       }
     ],
     "papersPresented": [
+      {
+        "authors": "Kowert, R., & Daniel, E.",
+        "date": "2022, May",
+        "title": "The one-and-a-half sided parasocial relationship: The curious case of live streaming",
+        "conference": {
+          "title": "ICA 2022: One World, One Network",
+          "location": "Remote"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Newhouse, A.",
+        "date": "2022, March",
+        "title": "The landscape of extremist behaviours in games",
+        "conference": {
+          "title": "Games Developer Conference (GDC)",
+          "location": "Remote"
+        }
+      },
+      {
+        "authors": "Kowert, R., & Cook, C.",
+        "date": "2022, January",
+        "title": "The toxicity of our (virtual) cities: Prevalence of dark participation in games and perceived effectiveness of reporting tools",
+        "conference": {
+          "title": "HICSS 2022",
+          "location": "Remote"
+        }
+      },
       {
         "authors": "Colder Carras, M., Kalbarcyk, A., Wells, K., Banks, J., Kowert, R., Koonce, C., & Latkin, C.",
         "date": "2018, April",
@@ -1173,6 +1325,20 @@
     }
   ],
   "selectedPressAndMedia": [
+    {
+      "authors": "Sloat, S.",
+      "date": "2022, February 6",
+      "title": "How to Take Advantage of Wordle’s Best Brain Side-effect",
+      "url": "https://www.inverse.com/mind-body/wordle",
+      "source": "Inverse"
+    },
+    {
+      "authors": "Morenne, B.",
+      "date": "2022, January 9",
+      "title": "The Metaverse’s Effects on Mental Health: Trivial or Troubling?",
+      "url": "https://www.wsj.com/articles/the-metaverses-effects-on-mental-health-trivial-or-troubling-11641740414",
+      "source": "The Wall Street Journal"
+    },
     {
       "authors": "Hernandez, S. (Interviewer), Kowert, R. (Interviewee)",
       "date": "2016, December 20",

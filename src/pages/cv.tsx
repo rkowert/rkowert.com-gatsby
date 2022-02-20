@@ -372,7 +372,10 @@ export default function CVPage(props: Props) {
                 key={`${talk.date}-${talk.title}`}
               >
                 {talk.authors.replace(/\.$/, '')}. ({talk.date}). {talk.title}.{' '}
-                <i dangerouslySetInnerHTML={{ __html: talk.extra }} />.{' '}
+                {talk.extra && (
+                  <i dangerouslySetInnerHTML={{ __html: talk.extra }} />
+                )}
+                {talk.extra && '. '}
                 {talk.location}.
               </CV.DatedEntry>
             ))}

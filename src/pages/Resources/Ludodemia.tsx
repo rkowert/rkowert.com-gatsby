@@ -17,26 +17,10 @@ import {
 } from '@devexpress/dx-react-grid-material-ui';
 
 import { Layout, SEO } from 'components';
-import { GamesResearchRow } from 'types';
+import type { GamesResearchRow, GamesResearchArticleRow } from 'types';
 import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1vJgmbqVGJNzys5Eqe4Ub-oK9mGSLQBqRNjjBVUOCzt0';
-
-export interface GamesResearchArticleRow {
-  category: string;
-  subCategory: string;
-  format: string;
-  year: string;
-  authors: string;
-  title: string;
-  publisher: string;
-  link: string;
-  doi: string;
-  isbn10: string;
-  isbn13: string;
-  pubmed: string;
-  abstract: string;
-}
 
 export default function Ludodemia() {
   const gridMarkup = useGamesResearchSheet<

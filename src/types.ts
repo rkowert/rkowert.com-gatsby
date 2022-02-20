@@ -68,3 +68,39 @@ export interface GamesResearchJournalRow {
   journalReviewerUrl: string;
   submissionGuidelinesUrl: string;
 }
+
+export interface GamesResearchTwitterRow {
+  name: string;
+  twitterHandle: string;
+  affiliations: string;
+  website: string;
+  notes: string;
+}
+
+export interface GamesResearchPositionRow {
+  continent: string;
+  country: string;
+  university: string;
+  department: string;
+  program: string;
+  group: string;
+  contact: string;
+  link: string;
+  focus: string;
+}
+
+export interface GamesResearchArticleRow {
+  category: string;
+  subCategory: string;
+  format: string;
+  year: string;
+  authors: string;
+  title: string;
+  publisher: string;
+  link: string;
+  doi: string;
+  isbn10: string;
+  isbn13: string;
+  pubmed: string;
+  abstract: string;
+}

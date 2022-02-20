@@ -18,22 +18,10 @@ import {
 import styled from 'styled-components';
 
 import { Layout, SEO } from 'components';
-import { GamesResearchRow } from 'types';
+import type { GamesResearchRow, GamesResearchPositionRow } from 'types';
 import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1eEfAlQIc2H3eesYjiEOiOddKZ3KPRIl-zMHAZFV-abo';
-
-interface GamesResearchPositionRow {
-  continent: string;
-  country: string;
-  university: string;
-  department: string;
-  program: string;
-  group: string;
-  contact: string;
-  link: string;
-  focus: string;
-}
 
 const formatData = (data: string) => {
   return /^\?$/.test(data) || data.trim().length === 0 ? (

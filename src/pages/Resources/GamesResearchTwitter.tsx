@@ -16,18 +16,10 @@ import {
 } from '@devexpress/dx-react-grid-material-ui';
 
 import { Layout, SEO } from 'components';
-import { GamesResearchRow } from 'types';
+import type { GamesResearchRow, GamesResearchTwitterRow } from 'types';
 import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '12KRZjgy8EMICH4RFsEVMYIrnlupeJt1aCEfkIqDEi7U';
-
-export interface GamesResearchTwitterRow {
-  name: string;
-  twitterHandle: string;
-  affiliations: string;
-  website: string;
-  notes: string;
-}
 
 export default function GamesResearchTwitter() {
   const gridMarkup = useGamesResearchSheet<

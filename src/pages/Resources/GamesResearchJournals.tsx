@@ -20,7 +20,7 @@ import {
 import styled from 'styled-components';
 
 import { Layout, SEO } from 'components';
-import { GamesResearchJournalRow, GamesResearchRow } from 'types';
+import type { GamesResearchJournalRow, GamesResearchRow } from 'types';
 import { useGamesResearchSheet } from 'utils/hooks';
 
 const SHEET_KEY = '1sNdqBAtiJXFPqSwGax41Al0fhk3O_hJEB3_jMCkTLjw';

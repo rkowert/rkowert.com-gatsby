@@ -6,10 +6,12 @@ import MuiCircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
 import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
-import { GamesResearchRow } from 'types';
-import { GamesResearchJournalRow } from 'pages/Resources/GamesResearchJournals';
-import { GamesResearchTwitterRow } from 'pages/Resources/GamesResearchTwitter';
-import { GamesResearchArticleRow } from 'pages/Resources/Ludodemia';
+import type {
+  GamesResearchArticleRow,
+  GamesResearchRow,
+  GamesResearchJournalRow,
+  GamesResearchTwitterRow,
+} from 'types';
 
 interface Row {
   [key: string]: string;
